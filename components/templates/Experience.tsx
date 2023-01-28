@@ -1,6 +1,8 @@
 import styled from "@emotion/styled";
 import { Title, Text, Group, Accordion, Box, Badge } from "@mantine/core";
 import { arsenal, ibmKr, montserrat } from "types/TextType";
+import { createStyles } from "@mantine/core";
+import { relative } from "node:path/win32";
 
 const Experience = () => {
   const itemList = expData.map((item, index) => (
@@ -128,6 +130,7 @@ const ExperienceItem = ({
   description,
   site,
 }: ExpProps) => {
+  const { classes } = useStyles();
   return (
     <Group noWrap>
       <Box
@@ -142,7 +145,7 @@ const ExperienceItem = ({
         <Badge color="indigo" radius="sm" className={ibmKr.className}>
           {where}
         </Badge>
-        <Text fz="lg" fw={600}>
+        <Text fz="lg" fw={600} sx={{ paddingTop: "4px" }}>
           {title}
         </Text>
       </Box>
@@ -153,25 +156,38 @@ const ExperienceItem = ({
             display: "flex",
             justifyContent: "space-between",
             alignItems: "end",
-            marginBottom: 6,
+            paddingTop: theme.spacing.xs,
+            paddingBottom: theme.spacing.xs,
           })}
         >
           <Text className={montserrat.className} size={12}>
             {from} ~ {to}
           </Text>
           {site ? (
-            <Badge
-              radius="sm"
-              variant="gradient"
-              gradient={{ from: "#ed6ea0", to: "#ff9c75", deg: 35 }}
-              component="a"
-              href={site}
-              target="_blank"
-              className={montserrat.className}
-              fw={400}
-            >
-              site
-            </Badge>
+            <Box className={classes.wrapBadge}>
+              <div className={classes.wrapLottieTwinkle}>
+                <lottie-player
+                  id="secondLottie"
+                  autoplay
+                  loop
+                  mode="normal"
+                  src="https://assets5.lottiefiles.com/packages/lf20_mdsD1ta4jU.json"
+                  style={{ width: "40px", height: "40px" }}
+                ></lottie-player>
+              </div>
+              <Badge
+                radius="sm"
+                variant="gradient"
+                gradient={{ from: "#ed6ea0", to: "#ff9c75", deg: 35 }}
+                component="a"
+                href={site}
+                target="_blank"
+                className={montserrat.className}
+                fw={400}
+              >
+                site
+              </Badge>
+            </Box>
           ) : null}
         </Box>
         <Text size="sm" color="dimmed" fw={400} className={ibmKr.className}>
@@ -181,3 +197,19 @@ const ExperienceItem = ({
     </Group>
   );
 };
+
+const useStyles = createStyles((theme, _params, getRef) => ({
+  wrapBadge: {
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+    position: "relative",
+  },
+
+  wrapLottieTwinkle: {
+    position: "absolute",
+    top: "-18px",
+    left: "-29px",
+    transform: "rotate(-9deg)",
+  },
+}));
