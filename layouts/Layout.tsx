@@ -1,7 +1,8 @@
 import styled from "@emotion/styled";
 import About from "components/templates/About";
-import Experience from "components/templates/Experience";
 import Header from "components/templates/Header";
+import Experience from "components/templates/Experience";
+import Project from "components/templates/Project";
 
 export default function AppShellDemo() {
   return (
@@ -9,6 +10,7 @@ export default function AppShellDemo() {
       <Header />
       <About />
       <Experience />
+      <Project />
     </WrapLayout>
   );
 }
