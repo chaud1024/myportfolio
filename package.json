@@ -19,5 +19,18 @@
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "typescript": "4.9.4"
+  },
+  "devDependencies": {
+    "@emotion/react": "^11.10.5",
+    "@emotion/server": "^11.10.0",
+    "@emotion/styled": "11.10.4",
+    "@mantine/carousel": "^5.10.2",
+    "@mantine/core": "^5.10.2",
+    "@mantine/hooks": "^5.10.2",
+    "@mantine/next": "^5.10.2",
+    "embla-carousel-react": "^7.0.9",
+    "embla-carousel-autoplay": "^7.0.9",
+    "@lottiefiles/lottie-player": "^1.6.3",
+    "@lottiefiles/lottie-interactivity": "^1.6.1"
   }
 }
