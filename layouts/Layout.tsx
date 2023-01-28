@@ -3,6 +3,7 @@ import About from "components/templates/About";
 import Header from "components/templates/Header";
 import Experience from "components/templates/Experience";
 import Project from "components/templates/Project";
+import Footer from "components/templates/Footer";
 
 export default function AppShellDemo() {
   return (
@@ -11,6 +12,7 @@ export default function AppShellDemo() {
       <About />
       <Experience />
       <Project />
+      <Footer />
     </WrapLayout>
   );
 }
