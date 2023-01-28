@@ -1,7 +1,7 @@
 import styled from "@emotion/styled";
-import { Flex, Title, Text, Box } from "@mantine/core";
+import { Flex, Title, Text } from "@mantine/core";
 import Image from "next/image";
-import { arsenal } from "../../types/TextType";
+import { arsenal } from "types/TextType";
 import { useEffect, useRef } from "react";
 
 const About = () => {
