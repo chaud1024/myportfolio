@@ -4,6 +4,7 @@ import Image from "next/image";
 import { arsenal } from "types/TextType";
 import { create } from "@lottiefiles/lottie-interactivity";
 import { useEffect, useRef } from "react";
+import { relative } from "node:path/win32";
 
 const About = () => {
   const containerRef: any = useRef<HTMLDivElement>(null);
@@ -58,15 +59,17 @@ const About = () => {
         <div>
           현재 포트폴리오는 React, Next.js, Mantine(emotion)으로 제작했습니다.
         </div>
-        <lottie-player
-          id="firstLottie"
-          ref={containerRef}
-          autoplay
-          loop
-          mode="normal"
-          src="https://assets1.lottiefiles.com/packages/lf20_bevi1628.json"
-          style={{ width: "450px", height: "450px" }}
-        ></lottie-player>
+        <LottieWrap>
+          <lottie-player
+            id="firstLottie"
+            ref={containerRef}
+            autoplay
+            loop
+            mode="normal"
+            src="https://assets1.lottiefiles.com/packages/lf20_bevi1628.json"
+            style={{ width: "450px", height: "450px" }}
+          ></lottie-player>
+        </LottieWrap>
       </div>
     </Wrap>
   );
@@ -79,4 +82,11 @@ const Wrap = styled.div({
   display: "flex",
   justifyContent: "space-between",
   padding: "64px 16px 72px",
+  position: "relative",
+});
+
+const LottieWrap = styled.div({
+  position: "absolute",
+  top: "-52px",
+  left: "326px",
 });
