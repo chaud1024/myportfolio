@@ -1,12 +1,13 @@
-import styled from "@emotion/styled";
-import { Flex, Title, Text } from "@mantine/core";
+import { Title, Text, Box } from "@mantine/core";
 import Image from "next/image";
 import { arsenal } from "types/TextType";
 import { create } from "@lottiefiles/lottie-interactivity";
 import { useEffect, useRef } from "react";
-import { relative } from "node:path/win32";
+import { createStyles } from "@mantine/core";
 
 const About = () => {
+  const { classes } = useStyles();
+
   const containerRef: any = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -35,14 +36,8 @@ const About = () => {
     return () => {};
   }, [containerRef]);
   return (
-    <Wrap>
-      <Flex
-        gap="md"
-        justify="flex-start"
-        align="flex-start"
-        direction="column"
-        wrap="wrap"
-      >
+    <Box className={classes.wrap}>
+      <Box className={classes.wrapLeft}>
         <Text>Hi there,</Text>
         <Title className={arsenal.className}>
           Im Bora, Front-end Developer
@@ -53,13 +48,7 @@ const About = () => {
           width={500}
           height={600}
         />
-      </Flex>
-
-      <div>
-        <div>
-          현재 포트폴리오는 React, Next.js, Mantine(emotion)으로 제작했습니다.
-        </div>
-        <LottieWrap>
+        <Box className={classes.wrapLottie}>
           <lottie-player
             id="firstLottie"
             ref={containerRef}
@@ -69,24 +58,47 @@ const About = () => {
             src="https://assets1.lottiefiles.com/packages/lf20_bevi1628.json"
             style={{ width: "450px", height: "450px" }}
           ></lottie-player>
-        </LottieWrap>
-      </div>
-    </Wrap>
+        </Box>
+      </Box>
+
+      <Box className={classes.wrapRight}>
+        <div>
+          현재 포트폴리오는 React, Next.js, Mantine(emotion)으로 제작했습니다.
+        </div>
+      </Box>
+    </Box>
   );
 };
 
 export default About;
 
-const Wrap = styled.div({
-  width: "100%",
-  display: "flex",
-  justifyContent: "space-between",
-  padding: "64px 16px 72px",
-  position: "relative",
-});
+const useStyles = createStyles((theme, _params, getRef) => ({
+  wrap: {
+    width: "100%",
+    display: "flex",
+    justifyContent: "space-between",
+    padding: "64px 16px 72px",
+  },
 
-const LottieWrap = styled.div({
-  position: "absolute",
-  top: "-52px",
-  left: "326px",
-});
+  wrapLeft: {
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "flex-start",
+    gap: theme.spacing.md,
+    position: "relative",
+  },
+
+  wrapRight: {
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "flex-start",
+    gap: theme.spacing.md,
+    marginTop: "64px",
+  },
+
+  wrapLottie: {
+    position: "absolute",
+    top: "-110px",
+    left: "284px",
+  },
+}));
