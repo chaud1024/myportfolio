@@ -49,9 +49,9 @@ const expData: ExpProps[] = [
     from: "2019. 01.",
     to: "2020. 09.",
     description:
-      "지방의회의 조직·권한·의원선거와 지방자치단체의 장의 선임방법 기타 지방자치단체의 조직과 운영에 관한 사항은 법률로 정한다.",
+      "어학연수 후 IELTS 6.5 level을 취득하여 현지 로컬 카페인 Columbus Coffee에서 바리스타로 근무했습니다.",
     content:
-      "지방의회의 조직·권한·의원선거와 지방자치단체의 장의 선임방법 기타 지방자치단체의 조직과 운영에 관한 사항은 법률로 정한다. 국회는 국정을 감사하거나 특정한 국정사안에 대하여 조사할 수 있으며, 이에 필요한 서류의 제출 또는 증인의 출석과 증언이나 의견의 진술을 요구할 수 있다.",
+      "뉴질랜드 오클랜드에서 인생 첫 독립을 했습니다. 8개월간의 어학연수 후 IELTS 6.5를 취득하였고, 현지인들로 구성된 뉴질랜드 프랜차이즈 카페인 Columbus Coffee Mt.Wellington 점에서 바리스타로 근무했습니다. 처음에는 모든 고객, 팀원들과 영어로만 대화하기 두려웠지만, 곧 자신감있게 제 견해를 표하고 다양한 주제로 커뮤니케이션 할 수 있게 되어 큰 성취감을 얻었습니다.",
     site: null,
   },
   {
@@ -60,9 +60,9 @@ const expData: ExpProps[] = [
     from: "2020. 11.",
     to: "2021. 03.",
     description:
-      "지방의회의 조직·권한·의원선거와 지방자치단체의 장의 선임방법 기타 지방자치단체의 조직과 운영에 관한 사항은 법률로 정한다.",
+      "웹사이트 디자인 제작과 기본적인 HTML, CSS, JavaScript를 이해하고 웹사이트의 뼈대를 구현할 수 있습니다.",
     content:
-      "지방의회의 조직·권한·의원선거와 지방자치단체의 장의 선임방법 기타 지방자치단체의 조직과 운영에 관한 사항은 법률로 정한다. 국회는 국정을 감사하거나 특정한 국정사안에 대하여 조사할 수 있으며, 이에 필요한 서류의 제출 또는 증인의 출석과 증언이나 의견의 진술을 요구할 수 있다.",
+      "오클랜드에서 Covid-19로 인해 카페에서 근무가 불가능했던 기간 동안 생활코딩을 접했습니다. 그때 IT직군에 대해 관심을 갖게 되었고, 귀국 후 국비지원 교육을 통해 웹사이트 디자인의 이해와 제작 툴 사용법, 그리고 HTML, CSS, JavaScript의 기초에 대해 배우고, 웹디자이너/퍼블리셔로서의 커리어를 쌓는 시작점이 되었습니다",
     site: null,
   },
   {
@@ -71,9 +71,8 @@ const expData: ExpProps[] = [
     from: "2021. 04.",
     to: "2021. 08.",
     description:
-      "지방의회의 조직·권한·의원선거와 지방자치단체의 장의 선임방법 기타 지방자치단체의 조직과 운영에 관한 사항은 법률로 정한다.",
-    content:
-      "지방의회의 조직·권한·의원선거와 지방자치단체의 장의 선임방법 기타 지방자치단체의 조직과 운영에 관한 사항은 법률로 정한다. 국회는 국정을 감사하거나 특정한 국정사안에 대하여 조사할 수 있으며, 이에 필요한 서류의 제출 또는 증인의 출석과 증언이나 의견의 진술을 요구할 수 있다.",
+      "웹디자이너로서 쇼핑몰의 상품상세화면 제작하고 자사몰의 상품 출고 및 재고 관리를 했습니다.",
+    content: ".",
     site: "https://smartstore.naver.com/orandamarket",
   },
   {
@@ -138,7 +137,7 @@ const ExperienceItem = ({
           padding: theme.spacing.xs,
           borderRadius: theme.radius.md,
           cursor: "pointer",
-          width: "66%",
+          width: "44%",
         })}
       >
         <Badge color="indigo" radius="sm" className={ibmKr.className}>
@@ -148,7 +147,7 @@ const ExperienceItem = ({
           {title}
         </Text>
       </Box>
-      <div>
+      <Box sx={{ width: "54%" }}>
         <Box
           sx={(theme) => ({
             fontSize: theme.fontSizes.sm,
@@ -192,7 +191,7 @@ const ExperienceItem = ({
         <Text size="sm" color="dimmed" fw={400} className={ibmKr.className}>
           {description}
         </Text>
-      </div>
+      </Box>
     </Group>
   );
 };
