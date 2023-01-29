@@ -2,7 +2,6 @@ import styled from "@emotion/styled";
 import { Title, Text, Group, Accordion, Box, Badge } from "@mantine/core";
 import { arsenal, ibmKr, montserrat } from "types/TextType";
 import { createStyles } from "@mantine/core";
-import { relative } from "node:path/win32";
 
 const Experience = () => {
   const itemList = expData.map((item, index) => (
