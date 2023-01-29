@@ -56,7 +56,7 @@ const expData: ExpProps[] = [
   },
   {
     title: "웹디자인 & 퍼블리셔 교육",
-    where: "그린컴퓨터학원 부산본점",
+    where: "그린컴퓨터학원 부산본관",
     from: "2020. 11.",
     to: "2021. 03.",
     description:
