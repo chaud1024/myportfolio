@@ -8,10 +8,11 @@ import {
   Title,
   Button,
   useMantineTheme,
+  Box,
 } from "@mantine/core";
 import { useRef } from "react";
 import Autoplay from "embla-carousel-autoplay";
-import { arsenal } from "types/TextType";
+import { arsenal, ibmKr } from "types/TextType";
 
 const useStyles = createStyles((theme) => ({
   card: {
@@ -22,93 +23,114 @@ const useStyles = createStyles((theme) => ({
     alignItems: "flex-start",
     backgroundSize: "cover",
     backgroundPosition: "center",
+    boxShadow:
+      "2px 0px 4px 0px rgba(17, 0, 0, 0.29),7px -5px 10px -11px rgba(39, 39, 39, 0.79);",
+    borderRadius: theme.spacing.md,
   },
 
   title: {
-    fontFamily: `Greycliff CF, ${theme.fontFamily}`,
+    fontFamily: `${ibmKr}, ${theme.fontFamily}`,
     fontWeight: 900,
-    color: theme.white,
+    color: theme.colors.gray[0],
     lineHeight: 1.2,
     fontSize: 32,
     marginTop: theme.spacing.xs,
+    marginBottom: theme.spacing.xs,
+    filter: "drop-shadow(4px 6px 6px rgba(0, 0, 0, 0.66))",
   },
 
   category: {
-    color: theme.white,
+    color: theme.colors.gray[0],
     opacity: 0.7,
     fontWeight: 700,
     textTransform: "uppercase",
+  },
+
+  description: {
+    color: theme.white,
+    fontWeight: 400,
+    filter: "drop-shadow(4px 6px 6px rgba(0, 0, 0, 0.66))",
+  },
+
+  wrapInfo: {
+    background: "linear-gradient(to top, rgba(0,0,0,0.684), rgba(0,0,0,0.3))",
+    padding: "24px",
+    boxSizing: "border-box",
+    height: "100%",
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "space-between",
+    borderRadius: theme.spacing.sm,
+  },
+
+  button: {
+    width: "fit-content",
+    marginBottom: theme.spacing.xs,
   },
 }));
 
 interface CardProps {
   image: string;
   title: string;
+  description: string;
   category: string;
 }
 
-function Card({ image, title, category }: CardProps) {
+function Card({ image, title, description, category }: CardProps) {
   const { classes } = useStyles();
 
   return (
-    <Paper
-      shadow="md"
-      p="xl"
-      radius="md"
-      sx={{ backgroundImage: `url(${image})` }}
-      className={classes.card}
-    >
-      <div>
-        <Text className={classes.category} size="xs">
-          {category}
-        </Text>
-        <Title order={3} className={classes.title}>
-          {title}
-        </Title>
-      </div>
-      <Button variant="white" color="dark">
-        Read article
-      </Button>
+    <Paper sx={{ backgroundImage: `url(${image})` }} className={classes.card}>
+      <Box className={classes.wrapInfo}>
+        <div>
+          <Text className={classes.category} size="xs">
+            {category}
+          </Text>
+          <Title order={3} className={classes.title}>
+            {title}
+          </Title>
+          <Text className={classes.description}>{description}</Text>
+        </div>
+        <Button variant="white" color="dark" className={classes.button}>
+          View the site
+        </Button>
+      </Box>
     </Paper>
   );
 }
 
 const data = [
   {
-    image:
-      "https://images.unsplash.com/photo-1508193638397-1c4234db14d8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&q=80",
-    title: "Best forests to visit in North America",
-    category: "nature",
+    image: "/img/devrel.png",
+    title: "Dev-rel",
+    description: "기업 기술블로그 큐레이션 사이트의 프론트엔드 개발",
+    category: "팀 데브렐",
   },
   {
-    image:
-      "https://images.unsplash.com/photo-1559494007-9f5847c49d94?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&q=80",
-    title: "Hawaii beaches review: better than you think",
-    category: "beach",
+    image: "/img/busanbeachweather.png",
+    title: "부산해수욕장날씨",
+    description:
+      "부산해수욕장 이용객들을 위한 날씨, 수온 등 정보 제공 사이트 디자인 제작 및 프론트엔드 개발",
+    category: "DX Sprint",
   },
   {
-    image:
-      "https://images.unsplash.com/photo-1608481337062-4093bf3ed404?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&q=80",
-    title: "Mountains at night: 12 best locations to enjoy the view",
-    category: "nature",
+    image: "/img/technomade_admin.png",
+    title: "테크노메이드 어드민 웹사이트",
+    description: "주문, 원단, CS관리 등 어드민 사이트 디자인 제작 및 퍼블리싱",
+    category: "로앤피플",
   },
   {
-    image:
-      "https://images.unsplash.com/photo-1507272931001-fc06c17e4f43?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&q=80",
-    title: "Aurora in Norway: when to visit for best experience",
-    category: "nature",
+    image: "/img/technomade_user.png",
+    title: "테크노메이드 웹사이트",
+    description:
+      "사용자 화면 내 문의, 고객경험, 고객정보 등 게시판 디자인 제작 및 퍼블리싱",
+    category: "로앤피플",
   },
   {
-    image:
-      "https://images.unsplash.com/photo-1510798831971-661eb04b3739?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&q=80",
-    title: "Best places to visit this winter",
-    category: "tourism",
-  },
-  {
-    image:
-      "https://images.unsplash.com/photo-1582721478779-0ae163c05a60?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&q=80",
-    title: "Active volcanos reviews: travel at your own risk",
-    category: "nature",
+    image: "/img/seahan.png",
+    title: "상품 상세페이지 및 배너",
+    description: "상품판매 촉진을 위한 상품 상세설명 페이지와 이미지 배너 제작",
+    category: "새한그레인",
   },
 ];
 
@@ -128,14 +150,16 @@ const Project = () => {
         Projects I participated
       </Title>
       <Carousel
-        slideSize="50%"
-        breakpoints={[{ maxWidth: "sm", slideSize: "100%", slideGap: 2 }]}
-        slideGap="xl"
+        withIndicators
+        height={440}
+        slideSize="33.333333%"
+        slideGap="md"
+        breakpoints={[
+          { maxWidth: "md", slideSize: "50%" },
+          { maxWidth: "sm", slideSize: "100%", slideGap: 0 },
+        ]}
+        loop
         align="start"
-        slidesToScroll={mobile ? 1 : 2}
-        plugins={[autoplay.current]}
-        onMouseEnter={autoplay.current.stop}
-        onMouseLeave={autoplay.current.reset}
       >
         {slides}
       </Carousel>
