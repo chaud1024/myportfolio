@@ -27,7 +27,7 @@ const Experience = () => {
     <Box className={classes.wrap}>
       <Box className={classes.wrapExperienceTitle}>
         <Title className={arsenal.className}>What I have done</Title>
-        <Box>
+        <Box className={classes.wrapLottieProject}>
           <lottie-player
             ref={ref}
             src="https://assets8.lottiefiles.com/packages/lf20_DbCYKfCXBZ.json"
@@ -218,6 +218,13 @@ const useStyles = createStyles((theme, _params, getRef) => ({
     display: "flex",
     flexDirection: "column",
     justifyContent: "space-between",
+    position: "relative",
+  },
+
+  wrapLottieProject: {
+    position: "absolute",
+    top: "25%",
+    left: "0",
   },
 
   wrapAccordion: {
