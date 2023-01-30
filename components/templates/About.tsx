@@ -1,18 +1,25 @@
 import Image from "next/image";
 import { useEffect, useRef } from "react";
-import { Title, Text, Box, Divider } from "@mantine/core";
+import { Title, Text, Box, Divider, Flex } from "@mantine/core";
 import { createStyles } from "@mantine/core";
 import { arsenal, ibmKr, montserrat } from "types/TextType";
 import { create } from "@lottiefiles/lottie-interactivity";
+import {
+  IconPhoneCall,
+  IconMailForward,
+  IconBrandGithub,
+} from "@tabler/icons-react";
 
 const About = () => {
   const { classes } = useStyles();
 
+  const ref = useRef(null);
   const containerRef: any = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     import("@lottiefiles/lottie-player");
   });
+
   useEffect(() => {
     containerRef.current.addEventListener(
       "load",
@@ -71,26 +78,58 @@ const About = () => {
   return (
     <Box className={classes.wrap}>
       <Box className={classes.wrapLeft}>
-        <Text className={montserrat.className}>Hi there,</Text>
-        <Title className={arsenal.className}>
-          Im Bora, Front-end Developer
-        </Title>
-        <Image
-          src="https://images.unsplash.com/photo-1617037448248-6bd7b4a0d038?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=764&q=80"
-          alt="profile shot"
-          width={500}
-          height={600}
-        />
-        <Box className={classes.wrapLottie}>
-          <lottie-player
-            id="firstLottie"
-            ref={containerRef}
-            autoplay
-            loop
-            mode="normal"
-            src="https://assets1.lottiefiles.com/packages/lf20_bevi1628.json"
-            style={{ width: "450px", height: "450px" }}
-          ></lottie-player>
+        <Box>
+          <Box className={classes.wrapLottieHello}>
+            <lottie-player
+              ref={ref}
+              src="https://assets4.lottiefiles.com/packages/lf20_rbtawnwz.json"
+              background="transparent"
+              speed="1.5"
+              style={{ width: "300px", height: "300px" }}
+              loop
+              autoplay
+            ></lottie-player>
+          </Box>
+
+          <Title className={arsenal.className}>
+            Im Bora, Front-end Developer
+          </Title>
+
+          <Image
+            src="https://images.unsplash.com/photo-1617037448248-6bd7b4a0d038?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=764&q=80"
+            alt="profile shot"
+            width={500}
+            height={600}
+          />
+        </Box>
+
+        <Box>
+          <Title className={arsenal.className}>Contact Me</Title>
+          <Box>
+            <Flex gap={8}>
+              <IconPhoneCall size={24} stroke={2} />
+              <Text>+82 10 9019 1865</Text>
+            </Flex>
+            <Flex gap={8}>
+              <IconMailForward size={24} stroke={2} />
+              <Text>chaud1024@gmail.com</Text>
+            </Flex>
+            <Flex gap={8}>
+              <IconBrandGithub size={24} stroke={2} />
+              <Text>https://github.com/chaud1024/</Text>
+            </Flex>
+          </Box>
+          <Box className={classes.wrapLottieMail}>
+            <lottie-player
+              id="firstLottie"
+              ref={containerRef}
+              autoplay
+              loop
+              mode="normal"
+              src="https://assets1.lottiefiles.com/packages/lf20_mwawjro9.json"
+              style={{ width: "300px", height: "300px" }}
+            ></lottie-player>
+          </Box>
         </Box>
       </Box>
 
@@ -141,7 +180,6 @@ const About = () => {
             fz={"lg"}
             className={arsenal.className}
           />
-
           <Box className={classes.wrapSkill}>{skillGitList}</Box>
         </Box>
       </Box>
@@ -236,6 +274,7 @@ const useStyles = createStyles((theme, _params, getRef) => ({
     alignItems: "flex-start",
     gap: theme.spacing.md,
     position: "relative",
+    paddingTop: theme.spacing.lg,
   },
 
   wrapRight: {
@@ -247,10 +286,16 @@ const useStyles = createStyles((theme, _params, getRef) => ({
     marginTop: "64px",
   },
 
-  wrapLottie: {
+  wrapLottieHello: {
     position: "absolute",
-    top: "-110px",
-    left: "284px",
+    top: "-13%",
+    left: "-72px",
+  },
+
+  wrapLottieMail: {
+    position: "absolute",
+    bottom: "0",
+    right: "0",
   },
 
   wrapSkillBox: {
@@ -286,8 +331,8 @@ const useStyles = createStyles((theme, _params, getRef) => ({
       backgroundColor: "#ed6ea0",
       position: "absolute",
       top: "50%",
-      transform: "translateY(-50%)",
       left: "-16px",
+      transform: "translateY(-50%)",
     },
   },
 }));
