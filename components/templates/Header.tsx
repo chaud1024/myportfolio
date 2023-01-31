@@ -1,9 +1,26 @@
-import styled from "@emotion/styled";
-import { Flex, Title, Text } from "@mantine/core";
+import { createStyles } from "@mantine/core";
+import { Flex, Title, Text, Box } from "@mantine/core";
+import { Link } from "react-scroll";
+
+const headersData = [
+  {
+    label: "About",
+    id: "about",
+  },
+  {
+    label: "Experiences",
+    id: "experiences",
+  },
+  {
+    label: "Projects",
+    id: "projects",
+  },
+];
 
 const Header = () => {
+  const { classes } = useStyles();
   return (
-    <Wrap>
+    <Box className={classes.wrapHeader}>
       <Title>포트폴리오 사이트</Title>
       <Flex
         gap="lg"
@@ -12,21 +29,32 @@ const Header = () => {
         direction="row"
         wrap="wrap"
       >
-        <Text>메뉴1</Text>
-        <Text>메뉴2</Text>
-        <Text>메뉴3</Text>
+        {headersData.map((item) => (
+          <Text key={item.id}>
+            <Link to={item.id} spy={true} smooth={true}>
+              {item.label}
+            </Link>
+          </Text>
+        ))}
       </Flex>
-    </Wrap>
+    </Box>
   );
 };
 
 export default Header;
 
-const Wrap = styled.div({
-  width: "100%",
-  display: "flex",
-  justifyContent: "space-between",
-  padding: "16px",
-  borderBottom: "1px solid",
-  borderColor: "#ccc",
-});
+const useStyles = createStyles((theme, _params) => ({
+  wrapHeader: {
+    width: "1280px",
+    display: "flex",
+    justifyContent: "space-between",
+    padding: theme.spacing.md,
+    borderBottom: "1px solid",
+    borderColor: "#ccc",
+    position: "fixed",
+    top: 0,
+    left: "auto",
+    backgroundColor: theme.white,
+    zIndex: 999,
+  },
+}));
