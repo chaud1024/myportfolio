@@ -145,7 +145,7 @@ const Project = () => {
   const autoplay = useRef(Autoplay({ delay: 2000 }));
 
   return (
-    <Wrap>
+    <Wrap id="projects">
       <Title className={arsenal.className} sx={{ marginBottom: "64px" }}>
         Projects I participated
       </Title>
