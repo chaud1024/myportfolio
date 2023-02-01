@@ -1,7 +1,7 @@
 import { Title, Text, Accordion, Box } from "@mantine/core";
 import { arsenal } from "types/TextType";
 import { createStyles } from "@mantine/core";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef } from "react";
 import ExperienceItem from "components/organisms/ExperienceItem";
 import { expData } from "data/experienceData";
 
@@ -64,6 +64,7 @@ const useStyles = createStyles((theme, _params, getRef) => ({
     flexDirection: "column",
     justifyContent: "space-between",
     position: "relative",
+    marginTop: theme.spacing.md,
   },
 
   wrapLottieProject: {

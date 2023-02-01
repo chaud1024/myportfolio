@@ -1,77 +1,57 @@
 import { useEffect, useRef } from "react";
-import { Text, Box } from "@mantine/core";
+import { Text, Box, Flex } from "@mantine/core";
 import { createStyles } from "@mantine/core";
 import { ibmKr, montserrat } from "types/TextType";
-import { create } from "@lottiefiles/lottie-interactivity";
 
 import AboutSkills from "components/organisms/AboutSkills";
 import Contact from "components/organisms/Contact";
 import AboutProfile from "components/organisms/AboutProfile";
+import Image from "next/image";
+import HandAnimation from "components/atoms/HandAnimation";
 
 const About = () => {
   const { classes } = useStyles();
 
   const ref = useRef(null);
-  const containerRef: any = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     import("@lottiefiles/lottie-player");
   });
 
-  useEffect(() => {
-    containerRef.current.addEventListener(
-      "load",
-      (e: React.ChangeEvent<HTMLDivElement>) => {
-        // configure the interactivity library
-        create({
-          mode: "scroll",
-          player: "#firstLottie",
-          actions: [
-            {
-              visibility: [0, 1],
-              type: "seek",
-              frames: [0, 120],
-            },
-          ],
-        });
-      }
-    );
-
-    return () => {};
-  }, [containerRef]);
-
   return (
     <Box className={classes.wrap} id="about">
       <Box className={classes.wrapLeft}>
-        <Box>
-          <AboutProfile />
-          <Box className={classes.wrapLottieHello}>
-            <lottie-player
-              ref={ref}
-              src="https://assets4.lottiefiles.com/packages/lf20_rbtawnwz.json"
-              background="transparent"
-              speed="1.5"
-              style={{ width: "300px", height: "300px" }}
-              loop
-              autoplay
-            ></lottie-player>
-          </Box>
+        <AboutProfile />
+        <Box className={classes.wrapLottieHello}>
+          <lottie-player
+            ref={ref}
+            src="https://assets4.lottiefiles.com/packages/lf20_rbtawnwz.json"
+            background="transparent"
+            speed="1.5"
+            style={{ width: "300px", height: "300px" }}
+            loop
+            autoplay
+          ></lottie-player>
         </Box>
-
-        <Box>
+        <Box className={classes.wrapContact}>
           <Contact />
-          <Box className={classes.wrapLottieMail}>
-            <lottie-player
-              id="firstLottie"
-              ref={containerRef}
-              autoplay
-              loop
-              mode="normal"
-              src="https://assets1.lottiefiles.com/packages/lf20_mwawjro9.json"
-              style={{ width: "300px", height: "300px" }}
-            ></lottie-player>
-          </Box>
         </Box>
+        <Flex className={classes.wrapDesc}>
+          <Text className={ibmKr.className}>
+            <Box className={classes.wrapHandAnimation}>
+              <HandAnimation symbol="👋" label="sheep" />
+            </Box>
+            안녕하세요,
+          </Text>
+          <Text className={ibmKr.className}>
+            더 나은 코드, 더 효율적인 개발을 위해 끊임없이 공부하고 노력하는
+            프론트엔드 개발자 김보라입니다.
+          </Text>
+          <Text className={ibmKr.className}>
+            다양한 경험에서 비롯된 빠른 적응과 커뮤니케이션 스킬, 그리고
+            도전정신이 저의 장점입니다.
+          </Text>
+        </Flex>
       </Box>
 
       <Box className={classes.wrapRight}>
@@ -91,7 +71,7 @@ const About = () => {
 
 export default About;
 
-const useStyles = createStyles((theme, _params) => ({
+const useStyles = createStyles((theme, _params, getRef) => ({
   wrap: {
     width: "100%",
     display: "flex",
@@ -107,6 +87,47 @@ const useStyles = createStyles((theme, _params) => ({
     gap: theme.spacing.md,
     position: "relative",
     paddingTop: theme.spacing.lg,
+
+    [`.${getRef("wrapContact")}`]: {
+      position: "fixed",
+      margin: "0 auto",
+      transform: "translateX(-72px)",
+      bottom: "120px",
+    },
+  },
+
+  wrapDesc: {
+    width: "66%",
+    padding: theme.spacing.xl,
+    gap: theme.spacing.xl,
+    flexDirection: "column",
+    position: "absolute",
+    bottom: 0,
+    right: 0,
+  },
+
+  wrapHandAnimation: {
+    position: "absolute",
+    left: "-56px",
+    top: "-34px",
+  },
+
+  descIcon: {
+    fontSize: theme.fontSizes.xl,
+  },
+
+  wrapContact: {
+    ref: getRef("wrapContact"),
+    ["&:before"]: {
+      content: `""`,
+      width: "1px",
+      height: "114px",
+      backgroundColor: "#000",
+      position: "absolute",
+      bottom: "-58%",
+      left: "50%",
+      transform: "translateX(-50%)",
+    },
   },
 
   wrapRight: {
