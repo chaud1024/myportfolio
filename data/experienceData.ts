@@ -28,7 +28,7 @@ export const expData: ExpProps[] = [
     description:
       "2주간 진행된 해커톤 DX Sprint 행사에 디자이너/프론트엔드 개발자로 참가해 최우수상 수상을 했습니다.",
     content:
-      "프론트엔드 개발자가 되기 위해 공부하던 중, 해커톤 참가해 다른 개발자들과 협업하여 처음으로 프론트엔드 개발자 역할을 수행해냈습니다. Atomic Design System을 도입해 컴포넌트 단위 개발과 TypeScript에 대한 기초를 공부할 수 있었고, 단시간에 집중도 높은 개발을 해냈다는 값진 경험을 했습니다.",
+      "프론트엔드 개발자가 되기 위해 공부하던 중, 해커톤에 참가해 다른 개발자들과 협업하여 프론트엔드 개발자 역할을 수행해냈습니다. Atomic Design System을 도입해 컴포넌트 단위 개발과 TypeScript에 대한 기초를 공부할 수 있었고, 단시간에 집중도 높은 개발을 해냈다는 값진 경험을 했습니다.",
     site: "https://busanbeachweather.com",
   },
   {
