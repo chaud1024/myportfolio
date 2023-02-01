@@ -48,6 +48,10 @@ const skillData: SkillProps = {
       imgsrc: "/logo/photoshop.png",
     },
     {
+      title: "illustrator",
+      imgsrc: "/logo/illustrator.png",
+    },
+    {
       title: "Figma",
       imgsrc: "/logo/figma.png",
     },
