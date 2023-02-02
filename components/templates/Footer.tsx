@@ -60,7 +60,7 @@ const Footer = () => {
             mt={"lg"}
             className={montserrat.className}
           >
-            Copyright @Bora Kim
+            Copyright @Bora Kim, 2023
           </Text>
         </Box>
       </Box>
