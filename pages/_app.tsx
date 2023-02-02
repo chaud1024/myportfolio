@@ -27,8 +27,6 @@ export default function App({ Component, pageProps }: AppProps) {
 
         lineHeight: 1.6,
 
-        // fontFamily: "IBM Plex Sans KR, sans-serif",
-
         headings: {
           sizes: {
             h1: { fontSize: 34, lineHeight: 1.8, fontWeight: 700 },
