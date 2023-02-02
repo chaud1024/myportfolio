@@ -6,7 +6,6 @@ import { ibmKr, montserrat } from "types/TextType";
 import AboutSkills from "components/organisms/AboutSkills";
 import Contact from "components/organisms/Contact";
 import AboutProfile from "components/organisms/AboutProfile";
-import Image from "next/image";
 import HandAnimation from "components/atoms/HandAnimation";
 
 const About = () => {
@@ -59,7 +58,7 @@ const About = () => {
           현재 포트폴리오는
           <span className={montserrat.className}>
             {" "}
-            React, Next.js, Mantine(emotion)
+            Next.js, TypeScript, Mantine(emotion)
           </span>
           으로 제작했습니다.
         </Text>
