@@ -1,6 +1,7 @@
 import "@/styles/globals.css";
 import type { AppProps } from "next/app";
 import { MantineProvider } from "@mantine/core";
+import Head from "next/head";
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
@@ -48,6 +49,11 @@ export default function App({ Component, pageProps }: AppProps) {
         },
       }}
     >
+      <Head>
+        <title>Bora Kim, Front-end Developer</title>
+        <meta charSet="utf-8" />
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+      </Head>
       <Component {...pageProps} />
     </MantineProvider>
   );
