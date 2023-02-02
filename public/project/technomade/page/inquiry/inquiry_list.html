@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="../../css/reset.css">
+    <link rel="stylesheet" href="../../css/common.css">
+    <link rel="stylesheet" href="../../css/layout.css">
+    <link rel="stylesheet" href="../../css/page.css">
+    <script src="../../js/sub-menu.js"></script>
+
+    <title>유저 문의하기 목록</title>
+</head>
+
+<body>
+    <div class="wrap">
+
+        <!----------------------------HEADER---------------------------->
+        <header class="header">
+            <div class="header-top">
+                <div class="userInfo">
+                    <ul>
+                      <li><a href="../login/sign_in.html" class="login">로그인</a></li>
+                      <li><a href="../mypage/myp_userinfo_wrap.html" class="mypage">마이페이지</a></li>
+                      <li><a href="../../index.html" class="login-out">로그아웃</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="header-bottom">
+                <div class="inner">
+                    <h1 class="logo">
+                        <a href="../../index.html"><img src="../../img/common/logo.png" alt="테크노메이드로고"></a>
+                    </h1>
+                    <nav>
+                        <ul class="nav-menu">
+                            <li><a href="../../index.html">테크노메이드</a></li>
+                            <li><a href="../measure/measure_first.html">제작하기</a></li>
+                            <li class="active"><a href="../inquiry/inquiry_list.html">문의하기</a></li>
+                            <li class="last"><a href="../review/review_list.html">고객경험</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </header>
+
+
+        <!----------------------------SUB CONTAINER---------------------------->
+        <div class="sub-container">
+
+            <div class="sub-banner">
+                <div class="inner">
+                    <h3 lang="en" class="wc">Creat your own. Find your style</h3>
+                    <div class="wc">
+                        특정한 시기에 유행하는 복식의 형식. 패션.<br>
+                        논리적이거나 추상적인 이유보다는 사소한 취향에 따라서 변한다.<br>
+                        우리는 그 사소한 취향을 귀를 기울인다.
+                    </div>
+                </div>
+
+            </div>
+            <!--sub-banner-->
+
+            <div class="sub-wrap">
+                <div class="sub-inner">
+
+                    <div class="sub-title-wrap">
+                        <h2 class="sub-title">문의하기</h2>
+                        <p class="sub-title-desc"> 문의 사항을 남겨주시면 24시간 내 친절히 답변해드리겠습니다.</p>
+                    </div>
+
+
+                    <div class="sub-cont-wrap">
+                        
+                        <div class="sub-cont-filter inquiry">
+                     
+
+                            <div class="filter-list left">
+                               
+                               <select class="sel-box inp-select halfadd" id="" title="문의 카테고리">
+                                    <option value="전체">전체</option>                   
+                                    <option value="제품문의">제품문의</option>                   
+                                    <option value="결제문의">결제문의</option>                   
+                                    <option value="배송문의">배송문의</option>                       
+                                </select>
+
+                           
+                               <div class="search-wrap">
+                                <div class="cmn-input-area">
+                                    <label class="cmn-label" for="">검색</label>
+                                    <input type="text" id="" class="cmn-input" placeholder="검색어를 입력해주세요.">
+                                    <button type="button" onclick="" class="btn-search">검색</button>
+                                </div>
+                               </div>
+
+                            </div>
+
+                            <div class="filter-list right">
+                              <div class="btn-wrap ">
+                                <a href="./inquiry_write.html" class="btn-wrAdd">등록</a>
+                              </div>
+                            </div> 
+                        
+
+                        </div>
+                        <!-- sub-cont-filter end -->
+
+
+                        
+                        <div class="user-tbl">
+                            <table>
+                                <caption>문의글 테이블</caption>
+                                <colgroup>
+                                    <col width="10%" />
+                                    <col width="20%" />
+                                    <col width="30%" />
+                                    <col width="10%" />
+                                    <col width="10%" />
+                                    <col width="10%" />   
+                                </colgroup>
+                                <thead>
+                                    <tr>
+                                        <th><span lang="en">No.</span></th>
+                                        <th>카테고리</th>
+                                        <th>문의제목</th>
+                                        <th>작성자</th>
+                                        <th>작성일</th>
+                                        <th>답변상태</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                   
+                                    <tr class="view">
+                                        <td><span lang="en">02</span></td>
+                                        <td>배송문의</td>
+                                        <td>
+                                            <a href="./inquiry_view.html">
+                                                배송되어 오는 데 얼마나 걸리나요?배송되어 오는 데 얼마나 걸리나요?배송되어 오는 데 얼마나 걸리나요?배송되어 오는 데 얼마나 걸리나요?
+                                            </a>
+                                        </td>
+                                        <td><span lang="en">홍**</span></td>
+                                        <td><span lang="en">21-10-08 10:00</span></td>
+                                        <td>
+                                          <div class="state pending">답변대기</div>
+                                        </td>
+                                    </tr>
+
+                                
+                                    <tr class="view">
+                                        <td><span lang="en">01</span></td>
+                                        <td>결제문의</td>
+                                        <td>
+                                            <a href="javascript:subPage('inquiry_lock')">
+                                                무통장입금했는데 확인부탁드립니다
+                                                <span class="secret-icon">
+                                                    <svg width="10" height="13" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path
+                                                            d="M4.786.5C2.916.5 1.41 2.03 1.41 3.929V4.5H.286v8h9v-8H8.16v-.571C8.16 2.029 6.655.5 4.786.5Zm0 1.143c1.28 0 2.25.985 2.25 2.286V4.5h-4.5v-.571c0-1.301.97-2.286 2.25-2.286Zm0 5.714c.618 0 1.125.514 1.125 1.143s-.507 1.143-1.125 1.143A1.137 1.137 0 0 1 3.66 8.5c0-.629.506-1.143 1.125-1.143Z"
+                                                            fill="#000" /></svg>
+                                                </span>
+                                            </a>
+                                        </td>
+                                        <td><span lang="en">홍**</span></td>
+                                        <td><span lang="en">21-10-08 10:00</span></td>
+                                        
+                                        <td>
+                                           
+                                                <div class="state done">답변완료</div>
+                                           
+                                        </td>
+                                    </tr>
+
+
+                                  
+
+                                </tbody>
+                            </table>
+                        </div>
+                        <!-- .user-tbl end -->
+
+                        <div class="page-no">
+                            <div class="page-no-wrap">
+                                <a class="page-no-a" href="">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M17.41 17.2375L10.9757 11.5L17.41 5.7625L15.4291 4L7 11.5L15.4291 19L17.41 17.2375Z"
+                                            fill="#2B2727" />
+                                    </svg>
+                                </a>
+                                <a class="page-no-a active" href="">
+                                    <span>1</span>
+                                </a>
+                                <a class="page-no-a" href="">
+                                    <span>2</span>
+                                </a>
+                                <a class="page-no-a" href="">
+                                    <span>3</span>
+                                </a>
+                                <a class="page-no-a" href="">
+                                    <span>4</span>
+                                </a>
+                                <a class="page-no-a" href="">
+                                    <span>5</span>
+                                </a>
+                                <a class="page-no-a" href="">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M7 17.2375L13.4343 11.5L7 5.7625L8.98085 4L17.41 11.5L8.98085 19L7 17.2375Z"
+                                            fill="#2B2727" />
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div><!-- .-wrap end -->
+                <!--Produc Wrap-->
+
+
+            </div>
+            <!--sub-inner-->
+        </div>
+        <!--sub-wrap-->
+
+    </div>
+    <!-----끝 #sub-container----->
+
+
+
+    <!----------------------------FOOTER---------------------------->
+    <footer class="footer">
+
+        <div class="footer-top">
+            <div class="inner">
+                <ul class="f-menu">
+                    <li><a href="#" class="wc">회사소개</a></li>
+                    <li><a href="#" class="wc ll">개인정보처리방침</a></li>
+                    <li><a href="#" class="wc ll">이용약관</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="inner">
+                <h2 class="logo-f">
+                    <a href="#"><img src="../../img/common/logo-f.png" alt="테크노메이드로고-푸터"></a>
+                </h2>
+                <div class="f-contact wc">
+                    <h4 class="f-title" lang="en">Contact</h4>
+                    <p lang="en">1577-1234</p>
+                    <p lang="en">AM: 9:00 - PM: 6:00 <span lang="ko">(주말 및 공휴일 휴무)</span></p>
+                </div>
+                <div class="f-bank wc">
+                    <h4 class="f-title wc" lang="en">Bank Account</h4>
+                    <div>
+                        국민은행 <span lang="en">0000-0000-0000</span> <br>
+                        국민은행 <span lang="en">0000-0000-0000</span> <br>
+                        예금주 : <span></span> 테크노메이드
+                    </div>
+                </div>
+                <div class="f-info wc">
+                    <h4 class="f-title wc" lang="en">Company</h4>
+                    <div>
+                        <span>상호명: 테크노메이드</span>
+                        <span class="ll">owner : 홍길동</span>
+                        <span class="ll">tel: 000-000-0000</span>
+                    </div>
+                    <div>
+                        <span>business no: 000-00-00000</span>
+                        <span class="ll">personal info manager : 장동석</span>
+                    </div>
+                    <div>
+                        address. 대구광역시 북구 호암로 51, 2층 201호(침산동, 대구창조경제혁신센터)
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--footer-bottom-->
+
+    </footer>
+
+
+
+    </div>
+    <!--끝--#Wrap-->
+
+    
+
+</body>
+
+</html>

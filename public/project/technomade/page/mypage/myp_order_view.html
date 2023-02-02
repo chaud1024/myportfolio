@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+    <title>마이페이지 주문내역</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="../../css/reset.css">
+    <link rel="stylesheet" href="../../css/common.css">
+    <link rel="stylesheet" href="../../css/layout.css">
+    <link rel="stylesheet" href="../../css/page.css">
+
+    <script src="../../js/sub-menu.js"></script>
+  
+    
+
+</head>
+<body>
+    <div class="wrap">
+
+        <!----------------------------HEADER---------------------------->
+        <header class="header">
+            <div class="header-top">
+                <div class="userInfo">
+                    <ul>
+                        <li><a href="../login/sign_in.html" class="login">로그인</a></li>
+                        <li><a href="../mypage/myp_useinfo_wrap.html" class="mypage">마이페이지</a></li>
+                        <li><a href="../login/sign_in.html" class="login-out">로그아웃</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="header-bottom">
+                <div class="inner">
+                    <h1 class="logo">
+                        <a href="index.html"><img src="../../img/common/logo.png" alt="테크노메이드로고"></a>
+                    </h1>
+                    <nav>
+                        <ul class="nav-menu">
+                            <li ><a href="../../index.html">테크노메이드</a></li>
+                            <li><a href="../measure/measure_first.html">제작하기</a></li>
+                            <li><a href="../inquiry/inquiry_list.html">문의하기</a></li>
+                            <li class="last"><a href="../review/review_list.html">고객경험</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </header>
+
+
+        <!----------------------------SUB CONTAINER---------------------------->
+        <div class="sub-container">
+
+            <div class="sub-banner">
+                <div class="inner">
+                    <h3 lang="en" class="wc">Creat your own. Find your style</h3>
+                    <div class="wc">
+                        특정한 시기에 유행하는 복식의 형식. 패션.<br>
+                        논리적이거나 추상적인 이유보다는 사소한 취향에 따라서 변한다.<br>
+                        우리는 그 사소한 취향을 귀를 기울인다.
+                    </div>
+                </div>
+
+            </div>
+            <!--sub-banner-->
+
+            <div class="sub-wrap">
+                <div class="sub-inner">
+
+                    <div class="sub-title-wrap myp_order">
+                        <h2 class="sub-title">주문내역 상세</h2>
+                    </div>
+                    <!-- .sub-title-wrap end -->
+
+
+
+
+
+                    <div class="">
+                        <div class="myp-cont">
+                            <div class="myp-cont-title userinfo-title">
+                                <h1>주문상품정보</h1>
+                            </div>
+                            
+                            <div class="myp-tbl tbl-ord">
+                            
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th>주문번호</th>
+                                            <th>주문상품상세정보</th>
+                                            <th>수량</th>
+                                            <th>결제금액</th>
+                                            <th>배송정보</th>
+                                            <th>주문상태</th>
+                                        </tr>
+                                    </thead>
+
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <p lang="en" class="ord-info">No.202110210008<br>
+                                                <span lang="en" class="ord-info">21-10-08  10:00</span>
+                                                </p>
+                                            </td>
+
+                                            <td class="ord-detail ord-view">
+                                                <div class="ord-detail-img">
+                                                    <img src="https://via.placeholder.com/98" alt="">
+                                                </div>
+                                                <div class="ord-detail-text">
+                                                <p lang="en">일자 5부 카라없음 무릎아래 <span>린넨 3야드</span></p>   
+                                                </div>
+                                            </td>
+
+                                            <td lang="en">1</td>
+                                            <td class="price" lang="en">198,000원</td>
+                                            <td class="delivery">
+                                                <p>대한통운<span class="shoppingNum" lang="en"><a href="">-</a></span></p>
+                                            
+                                            </td>
+                                            <td class="wd-fix"><span class="state pending">결제대기</span></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            
+                                </div><!-- .myp-orderlist-table end -->
+
+                            </div>
+                            <!-- .myp-tbl end -->
+                        </div>
+                        <!-- .myp-cont end 상품정보 -->
+
+
+
+                        <!-- 주문자정보 -->
+                        <div class="">
+                            <div class="myp-cont">
+                                <div class="myp-cont-title userinfo-title">
+                                    <h1>주문자정보</h1>
+                                </div>
+                                
+                                <div class="myp-tbl tbl-ord tbl-ord-view">
+                                
+                                    <table class="tbl-order-info">
+                                        
+                                        <tbody>
+                                                <tr> 
+                                                    <td>주문고객</td>
+                                                    <td>홍 길동</td>  
+                                                </tr>
+                                                <tr>
+                                                    <td>닉네임</td>
+                                                    <td lang="en">jeongsujin@lawshop.io</td>
+                                                </tr>                                                 
+                                        </tbody>
+                                    </table>
+                                
+                                    </div><!-- .myp-orderlist-table end -->
+    
+                                </div>
+                                <!-- .myp-tbl end -->
+                            </div>
+                            <!-- .myp-cont end 주문자정보 -->
+
+
+
+
+
+                            <!-- 배송지정보 -->
+                        <div class="">
+                            <div class="myp-cont">
+                                <div class="myp-cont-title userinfo-title">
+                                    <h1>배송지정보</h1>
+                                </div>
+                                
+                                <div class="myp-tbl tbl-ord">
+                                
+                                    <table class="tbl-delivery-info">
+                                
+                                        <tbody>
+                                            <tr> 
+                                                <td>받으시는분</td>
+                                                <td>홍 길동</td>  
+                                            </tr>
+                                            <tr>
+                                                <td>우편번호</td>
+                                                <td lang="en">00000</td>
+                                            </tr>                                                 
+                                            <tr>
+                                                <td>주소</td>
+                                                <td lang="en">부산광역시 해운대구 센텀중앙로 97 센텀스카이비즈 3705호</td>
+                                            </tr>
+                                            <tr>
+                                                <td>일반전화</td>
+                                                <td lang="en">000 - 000 - 0000</td>
+                                            </tr>
+                                            <tr>
+                                                <td>휴대전화</td>
+                                                <td lang="en">010 - 0000 - 0000</td>
+                                            </tr>
+                                            <tr>
+                                                <td>배송메세지</td>
+                                                <td>배송 전 연락 바랍니다.</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                
+                                    </div><!-- .myp-orderlist-table end -->
+    
+                                </div>
+                                <!-- .myp-tbl end -->
+                            </div>
+                            <!-- .myp-cont end 배송지정보 -->
+
+                        <!-- 결제정보 -->
+                        <div class="">
+                            <div class="myp-cont">
+                                <div class="myp-cont-title userinfo-title">
+                                    <h1>결제정보</h1>
+                                </div>
+                                
+                                <div class="myp-tbl tbl-ord">
+                                
+                                    <table class="tbl-payment-info">
+    
+                                        <tbody>
+                                            <tr> 
+                                                <td>총 주문금액</td>
+                                                <td lang="en">198,000원</td>  
+                                            </tr>
+                                            <tr> 
+                                                <td>원단 가격</td>
+                                                <td lang="en">30,000원</td>  
+                                            </tr>
+                                            <tr> 
+                                                <td>원단 종류</td>
+                                                <td>린넨</td>  
+                                            </tr>
+                                            <tr> 
+                                                <td>필요 원단량</td>
+                                                <td lang="en">3 야드</td>  
+                                            </tr>
+                                            <tr> 
+                                                <td>원단 공임비</td>
+                                                <td lang="en">30,000원</td>  
+                                            </tr>
+                                            <tr> 
+                                                <td lang="en">수량</td>
+                                                <td lang="en">1</td>  
+                                            </tr>
+                                            <tr> 
+                                                <td>배송비</td>
+                                                <td lang="en">3,000원</td>  
+                                            </tr>
+                                            <tr>
+                                                <td>총 결제금액</td>
+                                                <td lang="en">198,000원</td>
+                                            </tr>                                                 
+                                    </tbody>
+                                    </table>
+                                    <div class="payment-info">
+                                        <p>( 원단가격 x 필요원단량 + 공임비 ) x 수량 + 배송비 = <span>최종결제금액</span></p>
+                                        <p lang="en">198,000원</p>
+                                    </div>
+                                
+                                    </div><!-- .myp-orderlist-table end -->
+    
+                                </div>
+                                <!-- .myp-tbl end -->
+                            </div>
+                            <!-- .myp-cont end 결제정보 -->
+
+                            
+
+
+
+                    </div>
+                    <!-- .myp-wrap end -->
+                </div>
+                <!--sub-inner-->
+
+            </div>
+            <!--sub-wrap-->
+
+        </div>
+        <!-----끝 #sub-container----->
+
+
+
+        <!----------------------------FOOTER---------------------------->
+        <footer class="footer">
+
+            <div class="footer-top">
+                <div class="inner">
+                    <ul class="f-menu">
+                        <li><a href="#" class="wc">회사소개</a></li>
+                        <li><a href="#" class="wc ll">개인정보처리방침</a></li>
+                        <li><a href="#" class="wc ll">이용약관</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div class="inner">
+                    <h2 class="logo-f">
+                        <a href="#"><img src="../../img/common/logo-f.png" alt="테크노메이드로고-푸터"></a>
+                    </h2>
+                    <div class="f-contact wc">
+                        <h4 class="f-title" lang="en">Contact</h4>
+                        <p lang="en">1577-1234</p>
+                        <p lang="en">AM: 9:00 - PM: 6:00 <span lang="ko">(주말 및 공휴일 휴무)</span></p>
+                    </div>
+                    <div class="f-bank wc">
+                        <h4 class="f-title wc" lang="en">Bank Account</h4>
+                        <div>
+                            국민은행 <span lang="en">0000-0000-0000</span> <br>
+                            국민은행 <span lang="en">0000-0000-0000</span> <br>
+                            예금주 : <span></span> 테크노메이드
+                        </div>
+                    </div>
+                    <div class="f-info wc">
+                        <h4 class="f-title wc" lang="en">Company</h4>
+                        <div>
+                            <span>상호명: 테크노메이드</span>
+                            <span class="ll">owner : 홍길동</span>
+                            <span class="ll">tel: 000-000-0000</span>
+                        </div>
+                        <div>
+                            <span>business no: 000-00-00000</span>
+                            <span class="ll">personal info manager : 장동석</span>
+                        </div>
+                        <div>
+                            address. 대구광역시 북구 호암로 51, 2층 201호(침산동, 대구창조경제혁신센터)
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--footer-bottom-->
+
+        </footer>
+
+
+
+    </div>
+    <!--끝--#Wrap-->
+
+
+</body>
+</html>

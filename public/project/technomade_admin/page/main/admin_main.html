@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../css/common.css">
+    <link rel="stylesheet" href="../../css/reset.css">
+    <link rel="stylesheet" href="../../css/layout.css">
+    <link rel="stylesheet" href="../../css/admin.css">
+    <title>온디멘드 어드민 메인</title>
+</head>
+<body>
+
+    <div class="adm-wrap">
+
+
+        <!---------------------------- HEADER ---------------------------->
+
+        <header class="header adm-header">
+            <div class="header-top">
+                <div class="userInfo">
+                    <ul>
+                      <li><a href="" class="login">로그인</a></li>
+                      <li><a href="" class="login-out">관리자 로그아웃</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="header-bottom">
+                <div class="inner">
+                    <h1 class="logo">
+                        <a href="../main/admin_main.html"><img src="../../img/common/adm_logo_w_x2.png" alt="테크노메이드로고"></a>
+                    </h1>
+                    <nav>
+                        <ul class="nav-menu">
+                            <li><a href="../order/admin_order_list.html">주문관리</a></li>
+                            <li><a href="../user/admin_user_list.html">회원관리</a></li>
+                            <li><a href="../inquiry/admin_inquiry_list.html">문의관리</a></li>
+                            <li><a href="../review/admin_review_list.html">후기관리</a></li>
+                            <li><a href="../fabric/admin_fabric_list.html">원단관리</a></li>
+                            <li>
+                                <a href="">카테고리</a>
+                                <ul class="nav-sub-menu">
+                                    <li><a href="../category/admin_cate_inquiry.html">문의관리</a></li>
+                                    <li><a href="../category/admin_cate_style.html">스타일관리</a></li>
+                                    <li><a href="../category/admin_cate_fabric.html">원단관리</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="../partner/admin_partner_dtl.html">협력업체</a></li>
+                            <li class="last"><a href="../member/admin_member_list.html">관리자</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </header>
+        <!---------------------------- HEADER ---------------------------->
+
+        <!---------------------------- SUB CONTAINER ---------------------------->
+        <div class="sub-container">
+
+            <div class="sub-wrap">
+                <div class="sub-inner">
+
+                    <div class="wrap__today">
+                        <div class="today-info">
+                            <ul>
+                                <li class="tday">오늘</li>
+                                <li>2021-10-15</li>
+                                <li>10:15 기준</li>
+                            </ul>                    
+                        </div>
+        
+                        <div class="today-odr">
+                            <ul>
+                                <li>주문 <span>(20건)</span></li>
+                                <li class="amt">2,000,000 <span>원</span></li>
+                            </ul>
+                        </div>
+
+                        <div class="today-pay">
+                            <ul>
+                                <li>결제 <span>(8건)</span></li>
+                                <li class="amt">800,000 <span>원</span></li>
+                            </ul>
+                        </div>
+
+                    </div>
+                    <!------------------- .wrap-today end ------------------->
+
+                    <div class="wrap__adm-main">
+
+                        <div class="atcl adm-smry">
+                            <div class="atcl-titl">
+                                <h3>주문관리</h3>
+                                <span class="dir_w"><a href="../order/admin_order_list.html">더보기<img src="../../img/icon/dir_w.png" alt=""></a></span>
+                            </div>
+                            <!------- .atcl-titl end ----->
+
+                            <div class="atcl-cont">
+                                <ul>
+                                    <li class="top">
+                                        <div class="titl-cont-smry">새로운 주문</div>
+                                        <div class="link-cont-smry"><a href="../order/admin_order_list.html">20건</a></div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!------- .atcl-cont end ----->
+                        </div>
+                        <!----- .atcl .adm-smry end ----->
+
+
+                        <div class="atcl adm-smry">
+                            <div class="atcl-titl">
+                                <h3>회원관리</h3>
+                                <span class="dir_w"><a href="../user/admin_user_list.html">더보기<img src="../../img/icon/dir_w.png" alt=""></a></span>
+                            </div>
+                            <!------- .atcl-titl end ----->
+
+                            <div class="atcl-cont">
+                                <ul>
+                                    <li class="top">
+                                        <div class="titl-cont-smry">새로운 회원</div>
+                                        <div class="link-cont-smry"><a href="../user/admin_user_list.html">10명</a></div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!----- .atcl .adm-smry end ----->
+
+
+                        <div class="atcl adm-smry">
+                            <div class="atcl-titl">
+                                <h3>문의관리</h3>
+                                <span class="dir_w"><a href="../inquiry/admin_inquiry_list.html">더보기<img src="../../img/icon/dir_w.png" alt=""></a></span>
+                            </div>
+                            <!------- .atcl-titl end ----->
+
+                            <div class="atcl-cont">
+                                <ul>
+                                    <li class="top">
+                                        <div class="titl-cont-smry">
+                                            <span>새로운 문의</span>
+                                        </div>
+                                        <div class="link-cont-smry"><a href="../inquiry/admin_inquiry_list.html">20건</a></div>
+                                    </li>
+                                    <li>
+                                        <div class="titl-cont-smry">
+                                            <span>배송문의</span>
+                                        </div>
+                                        <div class="link-cont-smry"><a href="../inquiry/admin_inquiry_list.html">10건</a></div>
+                                    </li>
+                                    <li>
+                                        <div class="titl-cont-smry">
+                                            <span>제품문의</span>
+                                        </div>
+                                        <div class="link-cont-smry"><a href="../inquiry/admin_inquiry_list.html">8건</a></div>
+                                    </li>
+                                    <li class="last">
+                                        <div class="titl-cont-smry">
+                                            <span>결제문의</span>
+                                        </div>
+                                        <div class="link-cont-smry"><a href="../inquiry/admin_inquiry_list.html">2건</a></div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!------- .atcl-cont end ----->
+                        </div>
+                        <!----- .atcl .adm-smry end ----->
+
+
+                        <div class="atcl adm-smry">
+                            <div class="atcl-titl">
+                                <h3>후기관리</h3>
+                                <span class="dir_w"><a href="../review/admin_review_list.html">더보기<img src="../../img/icon/dir_w.png" alt=""></a></span>
+                            </div>
+                            <!------- .atcl-titl end ----->
+                            
+                            <div class="atcl-cont">
+                                <ul>
+                                    <li class="top">
+                                        <div class="titl-cont-smry">새로운 후기</div>
+                                        <div class="link-cont-smry"><a href="../review/admin_review_list.html">10건</a></div>
+                                    </li>
+                                    <li>
+                                        <div class="titl-cont-smry">
+                                            <a href="../review/admin_review_content.html" class="adm-rvw-titl tbl-ellipsis">굉장히 마음에 들어요!</a>
+                                        </div>
+                                        <div class="link-cont-smry"><span class="adm-rvw-date" lang="en">21-10-08 10:00</span></div>
+                                    </li>
+                                    <li>
+                                        <div class="titl-cont-smry">
+                                            <a href="../review/admin_review_content.html" class="adm-rvw-titl tbl-ellipsis">굉장히 마음에 들어요!</a>
+                                        </div>
+                                        <div class="link-cont-smry"><span class="adm-rvw-date" lang="en">21-10-08 10:00</span></div>
+                                    </li>
+                                    <li class="last">
+                                        <div class="titl-cont-smry">
+                                            <a href="../review/admin_review_content.html" class="adm-rvw-tit tbl-ellipsis">굉장히 마음에 들어요 굉장히 마음에 들어요 굉장히 마음에 들어요 굉장히 마음에 들어요 굉장히 마음에 들어요!</a>
+                                        </div>
+                                        <div class="link-cont-smry"><span class="adm-rvw-date" lang="en">21-10-08 10:00</span></div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!------- .atcl-cont end ----->
+                        </div>
+                        <!----- .atcl .adm-smry end ----->
+
+
+                    </div>
+                    <!------------------- .wrap__adm-main end ------------------->
+
+
+                </div>
+                <!------------------- .sub-inner end ------------------->
+
+
+            </div>
+            <!------------------- .sub-wrap end ------------------->
+
+
+        </div>
+        <!------------------- .sub-container end ------------------->
+        <!---------------------------- SUB CONTAINER ---------------------------->
+
+    
+    </div>
+    <!--------------- .adm-wrap end ---------------->
+
+</body>
+</html>

@@ -1,0 +1,89 @@
+@charset "utf-8";
+
+
+
+/**********************************************MAIN******************************************/
+
+
+.main-contanier{position: relative; width:100%; }
+.inner{max-width: 1400px; margin: 0 auto;}
+
+.visual-wrap{position: relative; padding: 150px 0;background: #f3f3f3;}
+.visual-wrap::before{display: block;content: '';position: absolute; top: 0; right: 50%;width: 100%;height: 100%;background: #f3f3f3;}
+.visual-wrap::after{display: block;content: '';position: absolute;top: 0;left: 50%;width: 100%;height: 100%;background:#f3f3f3;}
+
+.main-visual{position: relative;display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: 100%; place-items: center;min-height: 820px; z-index: 1;}
+.main-info{ width:100%;}
+.main-info .tit-arrow{  position: relative; font-size:16px; font-weight: 500;margin-bottom: 50px;}
+.main-info .tit-arrow::after{content: "";background: #191919; width: 1px;height: 30px;display: block; margin: 15px 0 0 ;}
+.main-info .visual-title{position: relative;}
+.main-info .visual-title h2{ font-size:76px; font-weight: 400; line-height: 1.25;margin-bottom: 30px;}
+.main-info .visual-title p{font-size:19px; }
+
+.btn-more{ background: #191919; width: 180px;height: 50px; line-height: 50px;text-align: center; margin-top: 50px;}
+.btn-more a{font-size:15px; color:#fff; }
+.main-visual .main-img{ display:flex;align-items:flex-end; background:url(../img/main/main-visual.jpg)no-repeat;width:100%; height:100%;margin-left: 20%;}
+.main-visual .caption{ position: absolute;top:50%;  right:-14%;  padding:0 0 10px 0;  transform:rotate(-90deg); border-bottom: 2px solid #191919;}
+.main-visual .caption h6{ font-size:15px; letter-spacing: 1;}
+
+
+/* brandstory */
+.brandstory {position: relative;  margin: 100px auto;}
+.philosophy .inner{display: flex; justify-content:space-between; align-items: center;}
+.brand-txt{padding: 48px 0;}
+
+.brand-txt .smalltxt{font-size: 19px; }
+.brand-txt .smalltxt::after{ content: "";display: block; margin: 10px 0;width: 1px;height: 19px; background: #363636;}
+.brand-txt .br-maintxt{padding:20px 0; font-size:45px;}
+.brand-txt .br-maintxt > span{display: block;}
+.brandmiddle{font-size:19px;}
+.brand-imgBox{position: relative; margin: 15% auto 0;  padding-bottom: 100px; display: flex; flex-wrap: wrap;justify-content: space-between;}
+
+.brandImg{max-width:550px;}
+
+.brandImg.left .brimgBox{margin-top: -100px;}
+.brandImg .brimgBox { }
+.brandImg .brimgBox img {width:100%;box-shadow: 40px 40px 60px rgb(0 0 0 / 15%);}
+
+.brandImg .brand-contxt{ text-align: left;}
+.brandImg .brand-contxt h2 {font-size: 42px;font-weight: 400; line-height:42px; padding-bottom: 40px;letter-spacing: -1.2px;}
+.brandImg .brand-contxt p { font-size: 18px; color: #999;}
+
+.brandImg.left .brand-contxt{margin-top: 60px;}
+.brandImg.right .brand-contxt{margin-bottom: 60px;}
+
+.brandtrans{ position: absolute;  top: 50%; left: -35%; padding: 0 0 10px 0;transform: rotate(-90deg);}
+.brandtrans p{font-weight: 700; font-size: 65px;color: #f4f4f4;}
+
+.brandtrans2{ position: absolute;  bottom: 13%; right: -13%; padding: 0 0 10px 0;transform: rotate(-90deg);}
+.brandtrans2 > p{ font-size: 18px;color: #918f8f;letter-spacing: 2.45px;}
+.brandtrans2 .brand-bar{background: #c0c0c0;width: 1px;height: 80px;display: block;transform: rotate(-90deg);position: absolute;bottom: -35%;right: -66px;}
+
+
+/* philosophy */
+.philosophy {position: relative;padding: 100px 0; background: #faf7f2; display: flex;justify-content: space-between;width: 100%;align-items: flex-start;}
+.philosophy .ph-txtbox{width: 40%;padding: 50px 0;}
+.philosophy .ph-txtbox .ph-small{ font-size:19px;}
+.philosophy .ph-txtbox .ph-title{ font-size: 60px; padding: 20px 0; }
+.philosophy .ph-txtbox .ph-midd {display: block; font-size:21px; padding-bottom: 55px;}
+.philosophy .ph-txtbox p{ font-size:19px; }
+
+.philosophy .ph-imgbox{ width: 45%;}
+.philosophy .ph-imgbox ul{width: 100%;display: flex;justify-content: space-around;align-items: center;flex-wrap: wrap;}
+.philosophy .ph-imgbox ul li{width: 100%;}
+.philosophy .ph-imgbox ul li img{ width:100%;box-shadow: 40px 40px 60px rgb(0 0 0 / 15%);}
+.philosophy .ph-imgbox .description{ font-size:19px; text-align: center; padding:40px 0;}
+
+/* contact */
+
+.contact_wrap{ position: relative; background: url(../img/main/main-visual.jpg)no-repeat;  background-size: cover; padding: 120px 0;}
+.contact_wrap .overlay {position: absolute; top: 0; left: 0; bottom: 0; right: 0;background: rgba(31,31,31,0.85);}
+.contact-txt{position:relative;  width:100%;  max-width:1400px;  text-align: center; margin: 0 auto; color:#fff; padding:40px 0 50px;}
+
+.contact-txt span{font-size:19px;}
+.contact_txt_main {font-size: 42px; }
+.contact_btnWrap{position: relative;text-align: center; padding-top: 30px;}
+.contact_btnWrap .contact_btn {display: inline-block; background:#fff;color:#191919; font-size: 16px; width: 200px; height: 62px;line-height: 62px;margin: 0 7px;}
+
+.contact_btnWrap .measureBtn{}
+.contact_btnWrap .contactBtn{ background:#f2c551;color:#fff;}

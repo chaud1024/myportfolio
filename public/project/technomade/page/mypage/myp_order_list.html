@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+    <title>마이페이지 주문내역</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="../../css/reset.css">
+    <link rel="stylesheet" href="../../css/common.css">
+    <link rel="stylesheet" href="../../css/layout.css">
+    <link rel="stylesheet" href="../../css/page.css">
+
+    <script src="../../js/sub-menu.js"></script>
+  
+    
+
+</head>
+<body>
+    <div class="wrap">
+
+        <!----------------------------HEADER---------------------------->
+        <header class="header">
+            <div class="header-top">
+                <div class="userInfo">
+                    <ul>
+                        <li><a href="../login/sign_in.html" class="login">로그인</a></li>
+                        <li><a href="../mypage/myp_useinfo_wrap.html" class="mypage">마이페이지</a></li>
+                        <li><a href="../login/sign_in.html" class="login-out">로그아웃</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="header-bottom">
+                <div class="inner">
+                    <h1 class="logo">
+                        <a href="index.html"><img src="../../img/common/logo.png" alt="테크노메이드로고"></a>
+                    </h1>
+                    <nav>
+                        <ul class="nav-menu">
+                            <li class="active"><a href="../../index.html">테크노메이드</a></li>
+                            <li><a hef="../measure/measure_first.html">제작하기</a></li>
+                            <li><a href="../inquiry/inquiry_list.html">문의하기</a></li>
+                            <li class="last"><a href="../review/review_list.html">고객경험</a></li>
+                        </ul>r
+                    </nav>
+                </div>
+            </div>
+        </header>
+
+
+        <!----------------------------SUB CONTAINER---------------------------->
+        <div class="sub-container">
+
+            <div class="sub-banner">
+                <div class="inner">
+                    <h3 lang="en" class="wc">Creat your own. Find your style</h3>
+                    <div class="wc">
+                        특정한 시기에 유행하는 복식의 형식. 패션.<br>
+                        논리적이거나 추상적인 이유보다는 사소한 취향에 따라서 변한다.<br>
+                        우리는 그 사소한 취향을 귀를 기울인다.
+                    </div>
+                </div>
+
+            </div>
+            <!--sub-banner-->
+
+            <div class="sub-wrap">
+                <div class="sub-inner">
+
+                    <div class="sub-title-wrap myp_order">
+                        <h2 class="sub-title">마이페이지</h2>
+                        <ul class="sub-tab">
+                            <li><a href="javascript:subPage('myp_userinfo_wrap')" lang="en" class="location1">나의 정보</a></li>
+                            <li><a href="javascript:subPage('myp_order_list')" lang="en" class="location2">주문 내역</a></li>
+                            <li><a href="javascript:subPage('myp_inquiry_list')" class="location3">문의 내역</a></li>
+                            <li><a href="javascript:subPage('myp_review_list')" lang="en" class="location4">고객 경험</a></li>
+                        </ul>
+                    </div>
+                    <!-- .sub-title-wrap end -->
+
+
+                    <div class="myp-wrap">
+                        <div class="myp-cont">
+                            
+                            <div class="myp-tbl tbl-ord">
+
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th>주문정보</th>
+                                            <th>주문상품상세정보</th>
+                                            <th>수량</th>
+                                            <th>결제금액</th>
+                                            <th>배송정보</th>
+                                            <th>주문상태</th>
+                                        </tr>
+                                    </thead>
+
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <p lang="en" class="ord-info">No.202110210008</p>
+                                                <p lang="en" class="ord-info">21-10-08 10:00</p>
+                                            </td>
+
+                                            <td class="ord-detail">
+                                                <a href="./myp_order_view.html">
+                                                <div class="ord-detail-img">
+                                                    <img src="https://i.pinimg.com/564x/d2/bb/60/d2bb60d74d6ae0be913ed2dfae4237a7.jpg" alt="">
+                                                </div>
+                                                <div class="ord-detail-text">
+                                                 <p>일자 5부 카라없음 무릎아래</p>
+                                                 <dl>
+                                                    
+                                                    <dd>원단 : 린넨</dd>
+                                                    <dd>원단량 : <span lang="en">3</span>야드</dd>
+                                                    <dd>수량 : <span lang="en">1</span>피스</dd>
+                                                </dl>
+                                                
+                                                </div>
+                                                
+                                                
+                                               </a>
+                                            </td>
+
+
+                                            <td lang="en">1</td>
+                                            <td class="price" lang="en">198,000원</td>
+                                            <td class="delivery">
+                                                <p>대한통운<span class="shoppingNum" lang="en"><a href="">-</a></span></p>
+                                            
+                                            </td>
+                                            <td class="wd-fix"><span class="state pending">결제대기</span></td>
+                                        </tr>
+                                        <!--  -->
+
+
+                                        <tr>
+                                            <td>
+                                                <p lang="en" class="ord-info">No.202110210008</p>
+                                                <p lang="en" class="ord-info">21-10-08 10:00</p>
+                                            </td>
+
+                                            <td class="ord-detail">
+                                                <a href="./myp_order_view.html">
+                                                <div class="ord-detail-img">
+                                                    <img src="https://i.pinimg.com/564x/d2/bb/60/d2bb60d74d6ae0be913ed2dfae4237a7.jpg" alt="">
+                                                </div>
+                                                <div class="ord-detail-text">
+                                                 <p>일자 5부 카라없음 무릎아래</p>
+                                                 <dl>
+                                                    
+                                                    <dd>원단 : 린넨</dd>
+                                                    <dd>원단량 : <span lang="en">3</span>야드</dd>
+                                                    <dd>수량 : <span lang="en">1</span>피스</dd>
+                                                </dl>   
+                                                </div>
+                                              </a>
+                                            </td>
+
+                                            <td lang="en">1</td>
+                                            <td class="price" lang="en">198,000원</td>
+                                            <td class="delivery">
+                                                <p>대한통운<span class="shoppingNum" lang="en"><a href="">122222</a></span></p>
+                                               
+                                            </td>
+                                            <td class="wd-fix"><span class="state processing">주문완료</span></td>
+                                        </tr>
+                                        <!--  -->
+
+
+
+                                        <tr>
+                                            <td>
+                                                <p lang="en" class="ord-info">No.202110210008</p>
+                                                <p lang="en" class="ord-info">21-10-08 10:00</p>
+                                            </td>
+
+                                            <td class="ord-detail">
+                                                <a href="./myp_order_view.html">
+                                                <div class="ord-detail-img">
+                                                    <img src="https://via.placeholder.com/98" alt="">
+                                                </div>
+                                                <div class="ord-detail-text">
+                                                 <p>일자 5부 카라없음 무릎아래</p>
+                                                 <dl>
+                                                    <dt>옵션</dt>
+                                                    <dd>원단 : 린넨</dd>
+                                                    <dd>원단량 : <span lang="en">3</span>야드</dd>
+                                                    <dd>수량 : <span lang="en">1</span>피스</dd>
+                                                </dl>   
+                                                </div>
+                                              </a>
+                                            </td>
+
+                                            <td lang="en">1</td>
+                                            <td class="price" lang="en">198,000원</td>
+                                            <td class="delivery">
+                                                <p>대한통운<span class="shoppingNum" lang="en"><a href="">1234545455 </a></span></p>
+                                            
+                                            </td>
+                                            <td class="wd-fix"><span class="state pending">배송중</span></td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>
+                                                <p lang="en" class="ord-info">No.202110210008</p>
+                                                <p lang="en" class="ord-info">21-10-08 10:00</p>
+                                            </td>
+
+                                            <td class="ord-detail">
+                                                <a href="./myp_order_view.html">
+                                                <div class="ord-detail-img">
+                                                    <img src="https://via.placeholder.com/98" alt="">
+                                                </div>
+                                                <div class="ord-detail-text">
+                                                 <p>일자 5부 카라없음 무릎아래</p>
+                                                 <dl>
+                                                    <dt>옵션</dt>
+                                                    <dd>원단 : 린넨</dd>
+                                                    <dd>원단량 : <span lang="en">3</span>야드</dd>
+                                                    <dd>수량 : <span lang="en">1</span>피스</dd>
+                                                </dl>   
+                                                </div>
+                                              </a>
+                                            </td>
+
+                                            
+                                            <td lang="en">1</td>
+                                            <td class="price" lang="en">198,000원</td>
+                                            <td class="delivery">
+                                                <p>대한통운<span class="shoppingNum" lang="en"><a href="">-</a></span></p>
+                                            
+                                            </td>
+                                            <td class="wd-fix"><span class="state done">배송완료</span></td>
+                                        </tr>
+
+
+
+
+
+
+
+                                     
+
+
+                                     
+                                    </tbody>
+                                </table>
+
+                                </div><!-- .myp-orderlist-table end -->
+
+                            </div>
+                            <!-- .myp-tbl end -->
+                        </div>
+                        <!-- .myp-cont end -->
+
+
+
+                    </div>
+                    <!-- .myp-wrap end -->
+               </div>
+               <!--sub-inner-->
+
+            </div>
+            <!--sub-wrap-->
+
+        </div>
+        <!-----끝 #sub-container----->
+
+
+
+        <!----------------------------FOOTER---------------------------->
+        <footer class="footer">
+
+            <div class="footer-top">
+                <div class="inner">
+                    <ul class="f-menu">
+                        <li><a href="#" class="wc">회사소개</a></li>
+                        <li><a href="#" class="wc ll">개인정보처리방침</a></li>
+                        <li><a href="#" class="wc ll">이용약관</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div class="inner">
+                    <h2 class="logo-f">
+                        <a href="#"><img src="../../img/common/logo-f.png" alt="테크노메이드로고-푸터"></a>
+                    </h2>
+                    <div class="f-contact wc">
+                        <h4 class="f-title" lang="en">Contact</h4>
+                        <p lang="en">1577-1234</p>
+                        <p lang="en">AM: 9:00 - PM: 6:00 <span lang="ko">(주말 및 공휴일 휴무)</span></p>
+                    </div>
+                    <div class="f-bank wc">
+                        <h4 class="f-title wc" lang="en">Bank Account</h4>
+                        <div>
+                            국민은행 <span lang="en">0000-0000-0000</span> <br>
+                            국민은행 <span lang="en">0000-0000-0000</span> <br>
+                            예금주 : <span></span> 테크노메이드
+                        </div>
+                    </div>
+                    <div class="f-info wc">
+                        <h4 class="f-title wc" lang="en">Company</h4>
+                        <div>
+                            <span>상호명: 테크노메이드</span>
+                            <span class="ll">owner : 홍길동</span>
+                            <span class="ll">tel: 000-000-0000</span>
+                        </div>
+                        <div>
+                            <span>business no: 000-00-00000</span>
+                            <span class="ll">personal info manager : 장동석</span>
+                        </div>
+                        <div>
+                            address. 대구광역시 북구 호암로 51, 2층 201호(침산동, 대구창조경제혁신센터)
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--footer-bottom-->
+
+        </footer>
+
+
+
+    </div>
+    <!--끝--#Wrap-->
+
+   
+
+</body>
+</html>

@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../css/common.css">
+    <link rel="stylesheet" href="../../css/reset.css">
+    <link rel="stylesheet" href="../../css/layout.css">
+    <link rel="stylesheet" href="../../css/admin.css">
+    <title>온디멘드 어드민 카테고리</title>
+</head>
+
+<body>
+
+
+    <div class="adm-wrap">
+
+
+        <!----------------------------HEADER---------------------------->
+
+        <header class="header adm-header">
+            <div class="header-top">
+                <div class="userInfo">
+                    <ul>
+                        <li><a href="" class="login">로그인</a></li>
+                        <li><a href="" class="login-out">관리자 로그아웃</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="header-bottom">
+                <div class="inner">
+                    <h1 class="logo">
+                        <a href="../main/admin_main.html"><img src="../../img/common/adm_logo_w01.png" alt="테크노메이드로고"></a>
+                    </h1>
+                    <nav>
+                        <ul class="nav-menu">
+                            <li><a href="../order/admin_order_list.html">주문관리</a></li>
+                            <li><a href="../user/admin_user_list.html">회원관리</a></li>
+                            <li><a href="../inquiry/admin_inquiry_list.html">문의관리</a></li>
+                            <li><a href="../review/admin_review_list.html">후기관리</a></li>
+                            <li><a href="../fabric/admin_fabric_list.html">원단관리</a></li>
+                            <li class="active">
+                                <a href="">카테고리</a>
+                                <ul class="nav-sub-menu">
+                                    <li><a href="admin_cate_inquiry.html">문의관리</a></li>
+                                    <li><a href="#">스타일관리</a></li>
+                                    <li><a href="admin_cate_fabric.html">원단관리</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="../partner/admin_partner_dtl.html">협력업체</a></li>
+                            <li class="last"><a href="../member/admin_member_list.html">관리자</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </header>
+
+        <!---------------------------- SUB CONTAINER ---------------------------->
+
+        <div class="sub-container">
+
+            <div class="sub-wrap">
+                <div class="sub-inner">
+
+                    <div class="wrap__adm-cont">
+
+                        <div class="inner__adm-cont">
+
+                            <div class="wrap__modal">
+
+                                <div id="myModal01" class="modal-custom modal">
+                                    <div class="modal-content">
+                                        <div class="modal-top">
+                                            <h2>스타일 카테고리 등록</h2>
+                                        </div>
+
+                                        <div class="modal-mdl">
+                                            <div class="cont__rd">
+                                                <div class="input-rd-cat">
+                                                    <h3>성별선택</h3>
+                                                </div>
+                                                <div class="wrap__rd">
+                                                    <input type="radio" id="man" name="gender">
+                                                    <label for="man">남성</label>
+                                                </div>
+                            
+                                                <div class="wrap__rd">
+                                                    <input type="radio" id="woman" name="gender">
+                                                    <label for="woman">여성</label>
+                                                </div>
+                                            </div>
+                                            <input type="text" placeholder="스타일 카테고리를 등록해주세요">
+                                        </div>
+
+                                        <div class="modal-bttm">
+                                            <div class="btn-wrap adm-cate-modal-btn">
+                                                <button type="button" class="btn close-modal"
+                                                    id="">취소</button>
+                                                <button type="button" class="btn btn-prm close-modal"
+                                                    id="">등록</button>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <!----- .modal-content end ----->
+                                </div>
+                                <!---- .modal-custom modal end ---->
+                            </div>
+                            <!-------------------------- 등록버튼 클릭 시 모달 활성화 ----------------------->
+                            <!------------------------------- .wrap__modal end ---------------------------->
+
+                            <div class="adm-cont-titl">
+                                <h1 class="">카테고리 - 스타일관리</h1>
+                            </div>
+
+                            <div class="filter-bar__admin adm-inq-filter">
+                                <div class="filter-left">
+                                    <ul>
+                                        <li class="filter-select">
+                                            <div class="wrap__sel sel-lbl-hide">
+                                                <label for="" class="label-tit">성별선택</label>
+                                                <select name="" class=" wd-shrt" id="">
+                                                    <option value="0" selected="selected">성별선택</option>
+                                                    <option value="남성">남성</option>
+                                                    <option value="여성">여성</option>
+                                                </select>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="adm-cont adm-cate cate-style">
+                                <div class="adm-cate-sect">
+                                    <div class="actl__adm-cate">
+                                        <div class="adm-cate-titl">
+                                            <h3>스타일관리 카테고리</h3>
+                                            <div class="wrap__btn-modal-active">
+                                                <a class="btn-modal-add" href="#myModal01">등록</a>
+                                            </div>
+                                        </div>
+
+                                        <div class="adm-cate-cont">
+                                            <div class="wrap__tbl-row">
+                                                <table class="cate">
+                                                    <colgroup>
+                                                        <col width="60%;">
+                                                        <col width="40%;">
+                                                    </colgroup>
+
+                                                    <tbody>
+
+                                                        <tr>
+                                                            <td colspan="2">등록된 카테고리가 없습니다.</td>
+                                                        </tr>
+
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <!-------------------- .wrap__adm-cate-sect end --------------------->
+
+                        </div>
+
+
+
+
+                    </div>
+                    <!-------------------- .wrap__adm-cont end ------------------>
+
+
+
+
+
+                </div>
+                <!------------------- .sub-inner end ------------------->
+
+
+            </div>
+            <!------------------- .sub-wrap end ------------------->
+
+
+        </div>
+        <!------------------- .sub-container end ------------------->
+
+
+    </div>
+    <!--------------- .adm-wrap end ---------------->
+
+
+    <script>
+        // table checkbox all select 
+        function selectAll(selectAll) {
+            const chckBox = document.getElementsByName("odr-list");
+
+            chckBox.forEach((checkbox) => {
+                checkbox.checked = selectAll.checked;
+            })
+        }
+
+
+        // inquiry list tab 
+        let tabLinks = document.querySelectorAll(".tab__adm-tbl-link")
+
+        Array.prototype.forEach.call(tabLinks, function (list) {
+
+            list.children[0].addEventListener('click', function (e) {
+                e.preventDefault()
+
+                let tabCont = document.querySelectorAll(".wrap__tbl-row")
+                let tabNum = this.parentElement.getAttribute("data-tabnum")
+
+                Array.prototype.forEach.call(tabCont, function (cont, i) {
+                    cont.style.display = 'none'
+                    tabLinks[i].className = 'tab__adm-tbl-link'
+                })
+
+                tabCont[tabNum].style.display = 'block'
+
+                if (list.className.indexOf("active") == -1) {
+                    list.className = "tab__adm-tbl-link active"
+                }
+            })
+        })
+
+
+
+        //modal script
+        // Get the button that opens the modal
+        let btn = document.querySelectorAll(".btn-modal-add"); //모달일어나기전에 눌러야하는 버튼
+
+        // All page modals
+        let modals = document.querySelectorAll('.modal-custom'); //모달 전체감싸는 box
+
+        // Get the <span> element that closes the modal
+        let spans = document.getElementsByClassName("close-modal"); //닫기 .확인버튼
+
+        // When the user clicks the button, open the modal
+        for (let i = 0; i < btn.length; i++) {
+            btn[i].onclick = function (e) {
+                e.preventDefault();
+                modal = document.querySelector(e.target.getAttribute("href"));
+                modal.style.display = "block";
+            }
+        }
+
+        // When the user clicks on <span> (x), close the modal
+        for (let i = 0; i < spans.length; i++) {
+            spans[i].onclick = function () {
+                for (let fabric in modals) {
+                    if (typeof modals[fabric].style !== 'undefined')
+                        modals[fabric].style.display = "none";
+                }
+            }
+        }
+
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function (event) {
+            if (event.target.classList.contains('modal-custom-cate01')) {
+                for (let fabric in modals) {
+                    if (typeof modals[fabric].style !== 'undefined') modals[fabric].style.display = "none";
+                }
+            }
+        }
+    </script>
+
+
+</body>
+
+</html>

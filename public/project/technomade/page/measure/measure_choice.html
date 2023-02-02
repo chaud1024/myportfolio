@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+    <title>치수측정- 모달창</title>
+    
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="../../css/reset.css">
+    <link rel="stylesheet" href="../../css/common.css">
+    <link rel="stylesheet" href="../../css/layout.css">
+    <link rel="stylesheet" href="../../css/page.css">
+    
+  
+
+</head>
+<body>
+
+
+<div class="wrap">
+ <!----------------------------HEADER---------------------------->
+ <header class="header">
+    <div class="header-top">
+        <div class="userInfo">
+            <ul>
+                <li><a href="../login/sign_in.html" class="login">로그인</a></li>
+                <li><a href="../mypage/myp_userinfo_wrap.html" class="mypage">마이페이지</a></li>
+                <li><a href="../../index.html" class="login-out">로그아웃</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="header-bottom">
+        <div class="inner">
+            <h1 class="logo">
+                <a href="../../index.html"><img src="../../img/common/logo.png" alt="테크노메이드로고"></a>
+            </h1>
+            <nav>
+                <ul class="nav-menu">
+                    <li><a href="../../index.html">테크노메이드</a></li>
+                    <li class="active"><a href="../measure/measure_first.html">제작하기</a></li>
+                    <li><a href="../inquiry/inquiry_list.html">문의하기</a></li>
+                    <li class="last"><a href="../review/review_list.html">고객경험</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</header>
+
+
+
+
+<!----------------------------SUB CONTAINER---------------------------->
+<div class="sub-container">
+
+    <div class="sub-banner">
+        <div class="inner">
+            <h3 lang="en" class="wc">Creat your own. Find your style</h3>
+            <div class="wc">
+                특정한 시기에 유행하는 복식의 형식. 패션.<br>
+                논리적이거나 추상적인 이유보다는 사소한 취향에 따라서 변한다.<br>
+                우리는 그 사소한 취향을 귀를 기울인다.
+            </div>
+        </div>
+    </div><!--sub-banner-->
+
+
+    <div class="sub-wrap">
+     
+      <div class="sub-inner">
+         <div class="sub-title-wrap">
+          <h2 class="sub-title">치수측정</h2>  
+         </div>
+
+        
+
+
+   <div class="measure-wrap">
+     <p class="mestxt">서비스를 이용하실려면 치수측정 설정해주세요.</p>
+       
+    <div class="btn-wrap inline">
+      <button type="button" id="#myModal1" class="modal-custom-button btn-newMeasure">새 치수측정 할래요</button>
+      <button type="button" id="#myModal2" class="modal-custom-button btn-usuallyMeasure">기존꺼 그대로 쓸래요</button>
+    </div>
+
+
+    <div id="myModal1" class="modal-custom modal">   
+     
+        <div class="modal-content size">
+            
+            <div class="modal-header">
+                <h2>치수측정</h2>
+                <p lang="en">QR코드를 찍고 모바일에서 사이즈 측정 해주세요.</p>
+            </div>
+
+            <div class="modal-body">
+               <div class="measuer-img">
+                <img src="http://placehold.it/300x300" alt="">
+               </div> 
+            </div>
+
+         
+
+           <div class="btn-wrap">
+            <button type="button" class="btn-cancel close-modal" id="">취소</button>
+            <button type="button" name= "" class="btn-confirm close-modal " id="" >확인</button>
+          </div>
+          
+        </div>
+    </div>
+
+
+    <div id="myModal2" class="modal-custom modal">   
+        
+     
+        <div class="modal-content size">
+            
+            <div class="modal-header">
+                <h2>치수선택</h2>
+                <p>등록했던 치수 중 하나를 선택해 주세요.</p>
+            </div>
+
+            <div class="modal-body">
+                     <div class="measure-radioBox">
+                        <input type="radio" id="first" name="measure" class="" required>
+                        <label for="first"><span>홍길동 ㅌㅌㅌ치수</span></label>
+                    </div>
+
+                    <div class="measure-radioBox">
+                        <input type="radio" id="second" name="measure" class="" required>
+                        <label for="second"><span>우리딸 치수</span></label>
+                    </div>
+            
+                    <div class="measure-radioBox">
+                        <input type="radio" id="third" name="measure" class="" required>
+                        <label for="third"><span>어머니 치수</span></label>
+                    </div>   
+            </div>
+
+
+
+            
+                <div class="btn-wrap">
+                <button type="button" class="btn-cancel close-modal" id="">취소</button>
+                <button type="button" name= "" class="btn-confirm close-modal " id="" >확인</button>
+              </div>
+
+          
+        </div>
+    </div>
+    
+    
+    
+
+   <!--modal-->
+
+
+
+
+<script>
+    //modal script
+    
+    
+        // Get the button that opens the modal
+     let btn = document.querySelectorAll(".modal-custom-button");
+                             
+     // All page modals
+     let modals = document.querySelectorAll('.modal-custom');
+     
+     // Get the <span> element that closes the modal
+     let spans = document.getElementsByClassName("close-modal");
+     
+     // When the user clicks the button, open the modal
+     for (let i = 0; i < btn.length; i++) {
+      btn[i].onclick = function (e) {
+          e.preventDefault();
+          modal = document.querySelector(e.target.getAttribute("id"));
+          modal.style.display = "block";
+      }
+     }
+     
+     // When the user clicks on <span> (x), close the modal
+     for (let i = 0; i < spans.length; i++) {
+      spans[i].onclick = function () {
+          for (let fabric in modals) {
+              if (typeof modals[fabric].style !== 'undefined') 
+              modals[fabric].style.display = "none";
+          }
+      }
+     }
+     
+     // When the user clicks anywhere outside of the modal, close it
+     window.onclick = function (event) {
+      if (event.target.classList.contains('modal-custom')) {
+          for (let fabric in modals) {
+              if (typeof modals[fabric].style !== 'undefined') modals[fabric].style.display = "none";
+          }
+      }
+     }
+    </script>
+
+   <!--modal-->
+
+
+
+
+
+</div>
+
+   </div><!--sub-inner-->
+  </div><!--sub-wrap-->
+
+
+
+
+</div><!-----끝 #sub-container-----> 
+
+
+
+
+ <!----------------------------FOOTER---------------------------->
+ <footer class="footer">
+
+
+    <div class="footer-top">
+        <div class="inner">
+            <ul class="f-menu">
+                <li><a href="#" class="wc">회사소개</a></li>
+                <li><a href="#" class="wc ll">개인정보처리방침</a></li>
+                <li><a href="#" class="wc ll">이용약관</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <div class="inner">
+            <h2 class="logo-f">
+                <a href="#"><img src="../../img/common/logo-f.png" alt="테크노메이드로고-푸터"></a>
+            </h2>
+            <div class="f-contact wc">
+                <h4 class="f-title" lang="en">Contact</h4>
+                <p lang="en">1577-1234</p>
+                <p lang="en">AM: 9:00 - PM: 6:00 <span lang="ko">(주말 및 공휴일 휴무)</span></p>
+            </div>
+            <div class="f-bank wc">
+                <h4 class="f-title wc" lang="en">Bank Account</h4>
+                <div>
+                    국민은행 <span lang="en">0000-0000-0000</span> <br>
+                    국민은행 <span lang="en">0000-0000-0000</span> <br>
+                    예금주 : <span></span> 테크노메이드
+                </div>
+            </div>
+            <div class="f-info wc">
+                <h4 class="f-title wc" lang="en">Company</h4>
+                <div>
+                    <span>상호명: 테크노메이드</span>
+                    <span class="ll">owner : 홍길동</span>
+                    <span class="ll">tel: 000-000-0000</span>
+                </div>
+                <div>
+                    <span>business no: 000-00-00000</span>
+                    <span class="ll">personal info manager : 장동석</span>
+                </div>
+                <div>
+                    address. 대구광역시 북구 호암로 51, 2층 201호(침산동, 대구창조경제혁신센터)
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--footer-bottom-->
+
+</div>
+
+
+
+
+
+</body>
+</html>

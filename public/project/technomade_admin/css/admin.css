@@ -1,0 +1,613 @@
+@charset "utf-8";
+
+
+body {background-color : #f0f0f0;}
+
+
+
+/***************************************  어드민 헤더  ******************************************/
+
+
+.header.adm-header {background-color : #040848; overflow :visible;}
+.header.adm-header .userInfo ul li a {color : #fff;}
+
+.header.adm-header .header-bottom .logo img {max-height : 100%;}
+.header.adm-header .header-bottom nav .nav-menu li a {color : #fff;}
+.header.adm-header .nav-menu > li:before {position: absolute; left: 50%; top : 88%; transform : translateX(-50%); display: block; content: ''; clear: both; width : 100%; height : 1px; background-color: #F2C551; opacity : 0;}
+.header.adm-header .nav-menu > li.active:before {opacity :1;}
+.header.adm-header .nav-menu > li:hover:before {opacity : 1;}
+
+.header.adm-header .header-bottom nav .nav-menu > li {position : relative; margin : 0 12px; padding: 10px 16px;}
+
+.header.adm-header .header-bottom nav .nav-menu > li:hover .nav-sub-menu {display : block;}
+.header.adm-header .header-bottom nav .nav-menu li .nav-sub-menu {position : absolute; background-color : #040848; z-index : 99999; left : 50%; top : 98%; transform : translateX(-50%); display : none;}
+.header.adm-header .header-bottom nav .nav-menu li .nav-sub-menu li {margin : 0;}
+.header.adm-header .header-bottom nav .nav-menu li .nav-sub-menu li:hover {background-color : #242479;}
+.header.adm-header .header-bottom nav .nav-menu li .nav-sub-menu li a {display : inline-block; padding: 6px 24px; font-size: 15px;}
+
+
+
+
+/***************************************  어드민 서브컨테이너  ******************************************/
+
+
+.sub-container {}
+.sub-container .sub-banner .inner { max-width: 1400px; height: 100%; display: flex; flex-direction: column; justify-content: center; margin: 0 auto;  text-align: center;}
+.sub-container .sub-banner .inner h3 { font-size: 55px; font-weight: 200; margin-bottom: 25px;}
+.sub-container .sub-banner .inner div{ font-size: 20px; font-weight: 300;}
+.sub-container .sub-wrap {width:100%; position: relative;padding: 70px 0 160px 0; min-height: 500px;}
+.sub-container .sub-inner {max-width: 1400px;  margin: 0 auto;}
+
+
+
+
+
+/************************** 서브컨테이너 내 공통 input, select 요소 css 가져옴 **********************/ 
+/************************** 색상, 높이, 폭 일부 커스텀 **************************/
+/********* cmn_input_style폴더 내 html, css 참고 ***********/
+
+/* 공통 select */
+.wrap__sel {width : 100%; display: flex; align-items: center; position : relative;}
+.wrap__sel label {width : 10%;}
+.wrap__sel select {box-sizing : border-box; border : 1px solid #ddd; padding : 0 16px; width : 12%; height : 40px; background : url(../img/icon/dir.png) calc(100% - 10px) center no-repeat; background-size: 8%; border-radius : 8px; background-color: #fff;}
+.wrap__sel select.wd-shrt {width : 26%;}
+.wrap__sel.sel-lbl-hide label {width: 0; visibility: hidden; font-size: 0; display : inline-block;}
+
+
+/* 공통 button */
+.btn {padding : 6px 12px; background-color : #fff; border : 1px solid #c4c4c4; border-radius : 8px; box-sizing : border-box; cursor : pointer; height: 36px;  vertical-align: middle; width : auto; font-size : 12px;}
+.btn.btn-prm {border: 0 none; background-color: #a2a2a2; color: #fff;}
+.btn.btn-cxl {border : 1px solid #050404; background-color : #050404; color : #fff; vertical-align: middle;}
+.btn.btn-dlt {border: 1px solid #c4c4c4; background-color: #fff; color: #a2a2a2;}
+
+
+
+/* 공통 input[type="search"] */
+.wrap__input input[type="search"] {background: url(../img/icon/icon_sch_outline-blk.png) calc(100% - 10px) center no-repeat;}
+.wrap__input.input-lbl-hide {display: flex; align-items: center; width : 100%;}
+.wrap__input.input-lbl-hide label {width: 0; visibility: hidden; font-size: 0;}
+.wrap__input.input-lbl-hide input {box-sizing : border-box; padding : 6px 16px; width : 16%; height : 40px; border : 0 none; background-color : #fff; border : 1px solid #ddd; border-radius : 8px;}
+.wrap__input.input-lbl-hide input:focus {border : 1px solid #ddd;}
+.wrap__input.input-lbl-hide input:focus-visible {background-color : #fff; outline : 0;}
+
+
+/* 공통 input[type="checkbox"] */
+.wrap__chk-dft {position: relative; display: inline-block; padding:10px;}
+.wrap__chk-dft label:before {content : url(../img/icon/icon_chk_sq.png); display : inline-block; vertical-align : middle; width : 18px; height : 18px; position : relative;}
+.wrap__chk-dft input[type="checkbox"] {box-sizing: border-box; width: 0; height: 0; opacity: 0;}
+.wrap__chk-dft input[type="checkbox"]:checked + label:before {content: url('../img/icon/icon_chk_sq_chkd.png'); opacity : 1;}
+
+
+/* 공통 textarea */
+.wrap__input.input-rad textarea.input-txt {resize : none; padding : 6px 16px; box-sizing: border-box; height : 40px; border : 1px solid #ddd; border-radius : 8px;}
+.wrap__input.input-rad textarea.input-txt:focus-visible {outline : 0 none;}
+
+
+
+
+
+
+/*********  공통 어드민 레이아웃 *********/
+
+.wrap__adm-cont {width : 100%; background-color : #fff; padding : 50px; border-radius : 20px; box-sizing : border-box;}
+
+.wrap__adm-cont .inner__adm-cont {width : 100%;  margin : 0 auto; background-color :#fff; border-radius : 20px;}
+
+
+.wrap__adm-cont .adm-cont-titl {max-width: 1220px; margin: 0 auto; padding-bottom: 20px; border-bottom: 1px solid #8d8ec4; font-size: 19px; font-weight: 700; display: flex; justify-content: space-between;}
+.wrap__adm-cont .adm-cont-titl h1 {display : inline-block; line-height: 40px; color : #040848; font-weight : 700;}
+.wrap__adm-cont .adm-cont-titl .btn-wr {background-color : #242479; border : 1px solid #242479;}
+
+
+.adm-cont {width: 100%; max-width: 1220px; margin: 0 auto;}
+
+
+
+
+
+
+/*********   공통 어드민 테이블 필터바   *********/
+
+.filter-bar__admin {width: 100%; max-width : 1220px; margin: 0 auto; padding: 27px 0; box-sizing: border-box; display: flex; justify-content: space-between;}
+.filter-bar__admin .filter-left {width : 49%; display : inline-block;}
+.filter-bar__admin .filter-right {width : 49%; display : inline-block;}
+
+.filter-bar__admin > div ul {width : 100%; display : flex;}
+.filter-bar__admin > div ul li {width : 100%;}
+.filter-bar__admin > div ul li button {height : 40px; box-sizing : border-box; vertical-align : middle;}
+.wrap__adm-cont .inner__adm-cont button.btn-dwnld {background-color : transparent; border : 1px solid #ccc; color : #858585; background : url("../img/icon/icon-dwnld.png") calc(0% + 8px) center no-repeat; padding : 0; padding-left : 26px; width : 154px; height : 40px;}
+
+.filter-bar__admin .filter-left ul li {display : inline-block;}
+.filter-bar__admin .filter-left ul li.filter-select .wrap__sel {width: 100%; display: inline-block; vertical-align: middle; position: relative;}
+.filter-bar__admin .filter-left ul li.filter-select .wrap__sel.sel-lbl-hide .wd-shrt {width : 30%;}
+
+.filter-bar__admin .filter-right ul {text-align : right;}
+.filter-bar__admin .filter-right ul li {display : inline-block;}
+.filter-bar__admin .filter-right ul li > div {width : 100%; display : inline-block;}
+.filter-bar__admin .filter-right ul li .wrap__sel.sel-lbl-hide .wd-shrt {width: 60%; margin-right: 2px;}
+.wrap__adm-cont .inner__adm-cont .filter-bar__admin .filter-right ul li .wrap__input.input-lbl-hide {display: flex; justify-content: space-between;}
+.filter-bar__admin .filter-right ul li .wrap__input.input-lbl-hide .wd-shrt {min-width : 78%;}
+
+
+
+
+
+
+
+/*********   공통 어드민 테이블   *********/
+
+table {width : 100%; table-layout: fixed;}
+table thead tr {height : 46px; background-color : #242479; vertical-align : middle; color : #fff;}
+table thead tr th {border-right : 1px solid #fff; vertical-align: middle; box-sizing :border-box;}
+table thead tr th:last-child {border-right : 0 none;}
+
+table tbody tr {border-bottom : 1px solid #fff; background-color : #F3F3F3;}
+table tbody tr:hover {background-color : #b4b5e7;}
+.wrap__tbl-row table tbody tr:hover {cursor : pointer;}
+
+table tbody td {text-align : center; height : 46px; vertical-align : middle; border-right : 1px solid #fff; box-sizing: border-box;}
+table tbody td:last-child {border-right : 0 none;}
+table tbody td.td--left {text-align : left;}
+table tbody td.tbl-ellipsis {padding : 0 16px;}
+
+table tbody td.td--left span.secret-icon, span.hide-icon {height : 18px;}
+
+
+
+
+
+
+/*********   공통 어드민 테이블 페이지네이션   *********/
+
+.wrap__adm-cont .inner__adm-cont .page-no {margin-top : 50px;}
+.wrap__adm-cont .inner__adm-cont .page-no .page-no-wrap a.active span {background-color : #040848;}
+
+
+
+
+
+/*********  공통 서브 콘텐츠 (사용중 : 문의&후기 콘텐츠화면)  *********/
+
+/* 서브 콘텐츠 탑 */
+.adm-sub-cont { position: relative;width : 100%;  display: flex; flex-direction: column; justify-content: center; align-items: center;}
+
+.adm-sub-cont .adm-sub-cont--top {width : 100%; display: flex; border-bottom : 1px solid #c4c4c4;}
+.adm-sub-cont .adm-sub-cont--top table tbody tr {background-color: initial; border: 0 none;}
+.adm-sub-cont .adm-sub-cont--top table tbody tr td.tbl-ellipsis {width : 100%; display : inline-block; line-height : 46px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;}
+
+
+/* 서브콘텐츠 미들 */
+.adm-sub-cont .adm-sub-cont--mdl {width : 100%; padding : 20px 0 50px;}
+.adm-sub-cont .adm-sub-cont--mdl .adm-sub-cont-txt {width : 100%; font-size:14px;}
+
+.adm-sub-cont .adm-sub-cont--mdl .adm-sub-cont-img {width : 100%; margin-top : 30px; display : flex; flex-wrap : wrap;}
+.adm-sub-cont .adm-sub-cont--mdl .adm-sub-cont-img .adm-sub-cont-rvw-img {width : 300px; height : 350px; overflow : hidden; border-radius : 5px; margin-right: 5px; margin-bottom: 5px; background-position : center; background-repeat: no-repeat; background-size: cover;}
+
+
+
+/* 서브콘텐츠 수정삭제버튼 */
+.adm-sub-cont .btn-wrap.comment {justify-content: flex-end; width: 100%;}
+
+
+/* 서브콘텐츠 바텀 */
+.adm-sub-cont--bttm {width : 100%;}
+.adm-sub-cont .adm-sub-cont--bttm .wrap__adm-reply {padding : 30px 0;}
+
+.adm-sub-cont .adm-sub-cont--bttm .wrap__adm-reply h3 {font-size : 16px; font-weight: 700; padding-bottom: 18px; border-bottom: 1px solid #c4c4c4;}
+
+.adm-sub-cont .adm-sub-cont--bttm .wrap__adm-reply .adm-reply {display: flex; justify-content: space-between; width: 100%; height: 120px; padding: 20px 0; box-sizing: border-box;}
+.adm-sub-cont .adm-sub-cont--bttm .wrap__adm-reply .adm-reply textarea {padding : 16px; width : 81.5%; resize : none; border-radius : 0; border : 1px solid #C4C4C4;}
+.adm-sub-cont .adm-sub-cont--bttm .wrap__adm-reply .adm-reply textarea:focus-visible {outline : 0;}
+
+.adm-sub-cont .adm-sub-cont--bttm .wrap__adm-reply .adm-reply .adm-reply-sub {width : 15.5%; height : 100%; display: flex; align-items: flex-end; justify-content: space-between;}
+.adm-sub-cont .adm-sub-cont--bttm .wrap__adm-reply .adm-reply .adm-reply-sub button {width : 100%; height : 100%;}
+.adm-sub-cont .adm-sub-cont--bttm .wrap__adm-reply .adm-reply .adm-reply-sub button.btn {border-radius : 0; border : 1px solid #C4C4C4;}
+
+
+
+
+
+
+/******************************  공통 섹션  *******************************/
+/********* (사용중 : 주문관리 > 주문상세 화면)  *********/
+/********* (사용중 : 회원관리 > 회원상세정보 화면)  *********/
+/********* (사용중 : 원단관리 > 원단상세정보 화면)  *********/
+/********* (사용중 : 원단관리 > 원단상세정보 수정 화면)  *********/
+/********* (사용중 : 협력업체 > 협력업체 화면)  *********/
+/********* (사용중 : 협력업체 > 협력업체 등록 화면)  *********/
+/********* (사용중 : 협력업체 > 협력업체 수정 화면)  *********/
+/********* (사용중 : 관리자 > 관리자 정보 화면)  *********/
+
+.wrap__adm-sect {width : 100%; margin-top : 40px;}
+
+
+.adm-sect {width : 100%; border-left : 2px solid #665FE6; padding : 30px 40px; box-sizing : border-box;  background-color : #FBFBFB; margin-bottom : 40px;}
+
+.adm-sect-titl {font-size : 18px; padding-bottom : 20px;  border-bottom : 1px solid #C4C4C4; align-items : center; display : flex; justify-content: space-between;}
+.adm-sect-titl h1 {width : 100%;}
+
+.wrap__adm-sect-cont {width : 100%; display : flex; flex-wrap: wrap;}
+.wrap__adm-sect-cont .adm-sect-cont {width : 100%; display : flex; flex-wrap : wrap;  padding-top : 20px;}
+
+.wrap__adm-sect-cont .adm-sect-cont > li {width : 48%; margin-left : 10px; padding : 10px 0; line-height : 30px; display : flex; align-items: flex-start; flex-wrap : wrap;}
+.wrap__adm-sect-cont .adm-sect-cont li > div {display : flex; align-items : center; width : 100%; position : relative; flex-wrap : wrap;}
+.wrap__adm-sect-cont .adm-sect-cont li .adm-sect-cont-titl {width : 18%; color : #A2A2A2;}
+.wrap__adm-sect-cont .adm-sect-cont li .adm-sect-cont-txt {width : 80%;}
+
+
+
+
+/******************************  공통 모달  *******************************/
+/********* (사용중 : 주문관리 > 주문상세 화면) **********/
+/********* (사용중 : 원단관리 > 원단상세 > 원단수정 화면) **********/
+/********* (사용중 : 카테고리 > 문의, 후기, 원단관리 페이지 화면) **********/
+/********* (사용중 : 협력업체 > 협력업체 수정 화면) **********/
+
+/******** 모달창 뜨게 하는 버튼 (등록) *********/
+.wrap__btn-modal-active .btn-modal-add {display: block; background-color: #242479; height: 40px; width: 62px; color: #fff; text-align: center; font-size: 14px; line-height: 40px; border-radius : 8px;}
+
+
+/******************* 모달창 ******************/
+
+.modal-custom {display : none; position: fixed; left: 0; top: 0; width: 100%; height: 100%; z-index: 9999; background: rgba(0, 0, 0, 0.5);}
+
+
+.modal-content {padding : 50px 0; background-color : #fff; border-radius : 20px; width : 400px; text-align : center; display : flex; flex-wrap : wrap; justify-content: center; position : absolute; top : 50%; left : 50%; transform : translate(-50%, -50%);}
+
+
+.modal-top {font-size: 19px; font-weight: 700; padding-bottom: 30px; width: 100%;}
+
+.modal-mdl {padding: 30px; width : 100%; border-top : 1px solid #8d8ec4;}
+.modal-mdl p {margin-bottom : 16px; font-size : 17px;}
+.modal-mdl input {width : 100%; box-sizing: border-box; padding: 6px 16px; height: 40px; background-color: #fff; border: 1px solid #ddd; border-radius: 8px;}
+.modal-mdl input:not(:last-of-type) {margin-bottom : 6px;}
+  
+.modal-mdl input:focus {outline: none;}
+
+.cont__rd {display : inline-block; vertical-align : middle; width : 100%; margin-bottom: 20px;}
+.cont__rd .input-rd-cat {display : inline-block; width : auto;}
+
+.cont__rd .wrap__rd {position : relative; display : inline-block; vertical-align : middle;}
+.cont__rd .wrap__rd label {display: inline-block; font-weight: 400; width: auto; padding-left: 10px; cursor : pointer;}
+.cont__rd .wrap__rd label:before {content: ''; display: inline-block; vertical-align: middle; width: 16px; height: 16px; background: #e8ecef; border-radius: 50%; margin-right : 10px;}
+
+.cont__rd .wrap__rd input[type="radio"] {box-sizing: border-box; width: 0; height: 0; opacity: 0;}
+.cont__rd .wrap__rd input[type="radio"]:checked + label:before {background : #F2C551;}
+
+
+
+
+.modal-bttm {width : 100%;}
+.modal-bttm .adm-cate-modal-btn button:last-child {margin-left : 10px;}
+
+/* 원단수정 모달 */
+
+.modal-mdf {display: none; position: fixed; left: 0; top: 0; width: 100%; height: 100%; z-index: 9999; background: rgba(0, 0, 0, 0.5);}
+.modal-mdf.open {display : block;}
+.modal-mdf .modal-top {border-bottom : 0 none;}
+
+
+
+
+
+
+
+/***************************************************************************************************/
+/******************************************  페  이  지 ********************************************/
+
+/********************************  어드민 페 이 지  ********************************/
+/********************************  로    그    인   *******************************/
+
+
+.inner__adm-login {margin : 0 auto; margin-top : 100px; background-color : #1C205F; border-radius : 20px; width : 640px; color : #fff; text-align : center;}
+.wrap__login h1 {font-size : 20px; font-weight : 700; margin-top : 60px;}
+
+.wrap__login {width : 70%; margin : 0 auto; padding : 120px 0;}
+.wrap__login .wrap__form-login {width : 100%; margin-top : 60px;}
+.wrap__login .wrap__form-login .wrap__input.vtc {margin-top : 26px; text-align : left;}
+.wrap__login .wrap__form-login .wrap__input.vtc label {text-align : left;}
+.wrap__login .wrap__form-login .wrap__input.vtc input {width : 100%; height : 50px; padding-left: 16px; box-sizing: border-box; border: 1px solid transparent; border-radius: 8px; margin-top : 8px;} 
+.wrap__login .wrap__form-login .wrap__input.vtc input:focus-visible {outline : none;} 
+
+.wrap__login .wrap__form-login .btn.btn-adm-login {width : 100%; background-color : #665FE6; border-radius : 20px; margin-top : 40px; height: 62px; font-size: 1rem; border: 1px solid #665FE6;}
+
+
+
+
+
+/********************************  어드민 페 이 지  ********************************/
+/********************************  어드민 메    인  ********************************/
+
+
+/*********  어드민 메인 > wrap__today  *********/
+
+.wrap__today {width : 100%; background-color :#fff; display : flex; align-items : center; border-radius : 20px;}
+.wrap__today div {width : 45%;}
+.wrap__today div ul {margin-left : 40px;}
+.wrap__today div ul li {font-size : 22px;}
+.wrap__today div ul li span {font-size : 16px;}
+
+.wrap__today div ul li.amt {color : #EF5DA8;}
+.wrap__today div ul li.amt span {color : initial; font-size : 16px;}
+
+
+
+.wrap__today .today-info {width : 10%; padding : 20px 0; background-color : #242479; border-radius : 20px 0 0 20px; color : #fff;}
+.wrap__today .today-info ul {margin-left : 0;}
+.wrap__today .today-info ul li {text-align : center; font-size : 16px;}
+.wrap__today .today-info ul li.tday {font-size : 19px; font-weight : 600;}
+
+.wrap__today .today-pay {border-left : 1px solid #f0f0f0;}
+
+
+.wrap__adm-main {width : 100%; margin-top : 40px; display : flex; justify-content: space-between; flex-wrap: wrap;}
+
+
+
+/*********  어드민 메인 > wrap__adm-main 사각 아티클  *********/
+
+.atcl {width : 48%; border-radius : 20px; background-color : #fff; margin-bottom: 60px;}
+.atcl > div {width : 100%;}
+.atcl .atcl-titl {background-color : #040848; color : #fff; box-sizing: border-box; padding : 5px 40px; height : 78px;  align-items: center; display: flex; justify-content: space-between; border-radius : 20px 20px 0 0;}
+.atcl .atcl-titl h3 {font-size : 20px; color : #fff; display : inline-block;}
+.atcl .atcl-titl .dir_w {display : inline-block; width : 70px;}
+.atcl .atcl-titl .dir_w a {width : 100%; display : inline-block; color : #fff; position : relative;}
+.atcl .atcl-titl .dir_w img {transform : rotate(-90deg); position: absolute; right : 0;}
+
+
+.atcl .atcl-cont {width : 100%; padding : 25px; box-sizing : border-box; min-height: 300px; display : flex;}
+.atcl .atcl-cont ul {width : 100%;}
+.atcl .atcl-cont ul li.top {display : flex; justify-content: space-between; border-bottom: 1px solid #c4c4c4; padding-bottom: 20px; padding-top : 0;}
+.atcl .atcl-cont ul li {display : flex; justify-content: space-between; border-bottom: 1px dashed #8D8EC4; padding : 20px;}
+
+.atcl .atcl-cont ul li.last {border-bottom : 0 none;}
+.atcl .atcl-cont ul li div.link-cont-smry a {padding : 0 20px;}
+
+.atcl .atcl-cont ul li.top .titl-cont-smry {font-weight : 700; font-size : 18px;}
+.atcl .atcl-cont ul li.top .link-cont-smry a {font-weight : 700; font-size : 18px;}
+.atcl .atcl-cont ul li .titl-cont-smry {display : inline-block; width : 80%; overflow : hidden; text-overflow : ellipsis; white-space : nowrap;}
+
+
+
+
+/********************************  어드민 페 이 지  ********************************/
+/********************************  어드민 주문관리  ***********************************/
+
+/*********  주문목록  *********/
+.wrap__adm-cont .inner__adm-cont .adm-cont-titl button.btn-dwnld:hover {color : #fff; background: url(../img/icon/icon-dwnld_w.png) calc(0% + 8px) center no-repeat; background-color : #ccc; }
+
+.adm-odr-tbl table thead tr .ord-dwnld {background: url(../img/icon/icon-dwnld_w.png) calc(0% + 8px) center no-repeat;}
+.adm-odr-tbl table thead tr th.tbl-ellipsis,
+.adm-odr-tbl table tbody tr td.tbl-ellipsis {width : 100%; display : inline-block; line-height : 46px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;}
+
+
+.adm-odr-tbl button.btn-dwnld.wd-sm {background-color: transparent; border: 0 none; background: url(../img/icon/icon-dwnld.png) calc(0% + 8px) center no-repeat; padding: 0; width: 100%; height: 40px; vertical-align: middle;}
+.adm-odr-tbl table tbody tr:hover button.btn-dwnld.wd-sm {background: url(../img/icon/icon-dwnld_w.png) calc(0% + 8px) center no-repeat;}
+
+
+
+/*********  주문 상세보기  *********/
+
+.wrap__adm-sect-cont .adm-sect-cont.payment {padding : 20px 0;}
+
+.wrap__adm-sect-cont .adm-sect-cont li .adm-sect-cont-txt .wrap__sel select.wd-shrt {width : 40%;}
+
+.wrap__adm-sect-cont .adm-gt-dtl {width : 100%; display : flex; flex-wrap : wrap; justify-content : flex-end; padding-top : 20px; border-top : 1px solid #C4C4C4;}
+.wrap__adm-sect-cont .adm-gt-dtl li {padding : 0 6px; text-align : right; line-height : 30px;}
+.wrap__adm-sect-cont .adm-gt-dtl li.adm-gt {font-size : 19px;}
+.wrap__adm-sect-cont .adm-gt-dtl li.adm-gt-num {width : 12%; font-size : 19px; font-weight : 700;}
+
+
+.wrap__adm-sect-cont .adm-sect-cont-txt .wrap__input.input-lbl-hide .wd-shrt {width : 68%;}
+.wrap__adm-sect-cont .adm-sect-cont-txt .wrap__input.input-lbl-hide .btn.btn-prm {width : 102px; margin-left : 10px; }
+
+
+.wrap__adm-sect-cont .adm-sect-cont-txt .wrap__adm-addr.wrap__input.input-lbl-hide {display: flex; align-items: initial; flex-direction: column; width : 100%;}
+.wrap__adm-sect-cont .adm-sect-cont-txt .wrap__adm-addr.wrap__input.input-lbl-hide > div {margin-bottom : 12px;}
+.wrap__adm-sect-cont .adm-sect-cont-txt .wrap__adm-addr.wrap__input.input-lbl-hide .wd-shrt {width : 68%;}
+.wrap__adm-sect-cont .adm-sect-cont-txt .wrap__adm-addr.wrap__input.input-lbl-hide .wd-mdm {width : 93%;}
+
+.wrap__input.input-rad a.btn {display : inline-block; width : 108px; margin-left : 4px;}
+.wrap__input.input-rad label.label-tit {color : #a2a2a2; display: inline-block; width: 18%; position : absolute;}
+.wrap__input.input-rad label.input-lbl-hide {visibility: hidden; width : 0; height : 0; display : block;}
+input {box-sizing: border-box; border: 1px solid #ddd; padding: 6px 16px;  border-radius : 8px; height: 40px; background-color : #fff;}
+input:focus-visible {outline : 0 none;}
+input.wd-mdm {width: 82%; margin-left : 18%; margin-right : 4px; border-radius : 8px;}
+input.wd-mdm.fbr-story {width: 70%;}
+
+.wrap__input.input-rad .wd-shrt {width: 40%; background-size: 6%;  margin-left : 18%; border-radius : 8px;}
+.wrap__input.input-rad input:focus-visible {outline : 0 none;}
+.wrap__input.input-rad.adm-addr {display: flex; flex-wrap: wrap; justify-content: flex-end; align-items: center; width : 100%;}
+.wrap__input .inner__adm-addr-zipcode {width : 100%; display: flex; align-items: center;}
+.wrap__input .inner__adm-addr-zipcode .btn.btn-prm {width : 116px; margin-left : 4px;}
+.wrap__input .inner__adm-addr {width: 100%; padding-left: calc(18% + 3px);}
+.wrap__input .inner__adm-addr .wd-mdm {width: calc(100% - 1px); margin-top : 10px; margin-left: -3px;} 
+
+/* .adm-odr-dtl .adm-sect .wrap__input.input-rad .wrap__sel {display : inline-block;} */
+
+.wrap__adm-sect-cont .adm-sect-cont.vw-fbr > li {width : 32%;}
+.wrap__adm-sect-cont .adm-sect-cont.vw-fbr .adm-sect-cont-img {display : flex;}
+.wrap__adm-sect-cont .adm-sect-cont.vw-fbr .adm-sect-cont-img .wrap__cont-img {width : 80px; height : 80px; display : inline-block; border-radius : 8px; overflow : hidden;}
+.wrap__adm-sect-cont .adm-sect-cont.vw-fbr .adm-sect-cont-img .vw-fbr-info {margin-left : 20px; display : flex; justify-content: center; flex-direction : column;}
+
+
+
+
+
+/********************************  어드민 페 이 지  ********************************/
+/********************************  어드민 회원관리  ***********************************/
+
+/*********  회원목록  *********/
+
+.adm-user-list table tbody tr {cursor : pointer;}
+.adm-user-list table thead tr th.tbl-ellipsis span,
+.adm-user-list table tbody tr td.tbl-ellipsis span {width : auto; max-width : 340px; display : inline-block; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; vertical-align : middle;}
+
+
+
+/*********  회원 상세보기  *********/
+
+.adm-user-dtl .wrap__adm-sect-cont .adm-sect-cont .adm-sect-cont-extr {width: 80%; display: inline-flex;}
+.adm-user-dtl .wrap__adm-sect-cont .adm-sect-cont .adm-sect-cont-extr li {width: fit-content; margin-right: 12px; padding : 0;}
+
+.adm-user-dtl .wrap__adm-sect-cont .adm-sect-cont.user-bd {width : 100%;}
+.adm-user-dtl .wrap__adm-sect-cont .adm-sect-cont.user-bd .tbl-ellipsis {width: 100%; display: inline-block; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; vertical-align: middle; line-height: 46px; padding: 0 16px; box-sizing: border-box; cursor : pointer; }
+.user-bd table thead tr {background-color : #666;}
+
+
+
+
+
+/********************************  어드민 페 이 지  ********************************/
+/********************************  어드민 문의관리  ***********************************/
+
+/*********  문의목록  *********/
+
+/* 목록타이틀 말줄임표 */
+.adm-inq-tbl table thead tr th.tbl-ellipsis span,
+.adm-inq-tbl table tbody tr td.tbl-ellipsis span {max-width: 500px; width: auto; display: inline-block; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; vertical-align: middle;}
+
+
+
+/* 문의카테고리별 탭 */
+.tab__adm-tbl {width : 100%; text-align: center; padding-top: 27px;}
+.tab__adm-tbl ul {display : inline-block;}
+.tab__adm-tbl ul .tab__adm-tbl-link {display : inline-block; padding : 6px; font-size : 16px; margin : 0 8px;}
+.tab__adm-tbl ul .tab__adm-tbl-link a {opacity : 0.5;}
+.tab__adm-tbl ul .tab__adm-tbl-link.active a {opacity : 1;}
+
+.adm-inq-tbl .wrap__tbl-row {display : none;}
+.adm-inq-tbl .wrap__tbl-row.active {display : block;}
+
+.adm-inq-filter .filter-left .btn-dwnld {display : none;}
+
+
+
+
+
+
+
+
+
+/********************************  어드민 페 이 지  ********************************/
+/********************************  어드민 후기관리  ***********************************/
+
+/*********  후기목록  *********/
+
+/* 목록타이틀 말줄임표 */
+.adm-rvw-tbl table thead tr th.tbl-ellipsis span,
+.adm-rvw-tbl table tbody tr td.tbl-ellipsis span {max-width: 360px; width: auto; display: inline-block; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; vertical-align: middle;}
+
+
+
+
+/*********  후기콘텐츠  *********/
+
+
+
+/* 후기콘텐츠 미들 */
+
+
+.adm-sub-cont .adm-sub-cont--mdl .adm-sub-cont-odrinfo {width : 100%; margin-bottom: 50px;}
+.adm-sub-cont .adm-sub-cont--mdl .adm-sub-cont-odrinfo ul {width : 100%;}
+.adm-sub-cont .adm-sub-cont--mdl .adm-sub-cont-odrinfo ul li {display : inline-block; padding-right : 20px;}
+.adm-sub-cont .adm-sub-cont--mdl .adm-sub-cont-odrinfo ul li div {display : inline-block;}
+.adm-sub-cont .adm-sub-cont--mdl .adm-sub-cont-odrinfo ul li .adm-odrinfo-cate {color : #242479; font-weight : 700;}
+.adm-sub-cont .adm-sub-cont--mdl .adm-sub-cont-odrinfo ul li .adm-odrinfo-val {padding-left : 4px;}
+
+
+/* 후기콘텐츠 댓글 */
+
+.adm-sub-cont .adm-sub-cont--bttm .wrap__adm-reply .adm-reply .adm-reply-area {width : 84%;}
+
+.adm-sub-cont .adm-sub-cont--bttm .wrap__adm-reply .adm-reply .adm-reply-sub .btn-re-mdf {width : 49%; height : 50%;}
+.adm-sub-cont .adm-sub-cont--bttm .wrap__adm-reply .adm-reply .adm-reply-sub .btn-re-dlt {width : 49%; height : 50%;}
+
+
+
+
+
+/********************************  어드민 페 이 지  ********************************/
+/********************************  어드민 원단관리  ***********************************/
+
+/*********  원단관리 필터바  *********/
+
+.filter-bar__admin.adm-fbr-filter .filter-left ul li.filter-select .wrap__sel {width : 30%;}
+.filter-bar__admin.adm-fbr-filter .filter-left ul li.filter-select .wrap__sel.sel-lbl-hide .wd-shrt {width: 98%;}
+
+
+
+/*********  원단관리 목록 이미지  *********/
+
+.adm-cont.adm-fbr-list table tbody tr {cursor : pointer;}
+
+.wrap__adm-fbr-img {width : 40px; height : 40px; overflow : hidden; display: inline-block; background : url(../img/sub/img-fab-01.png) center center no-repeat; background-size : cover; vertical-align: middle;}
+
+
+
+
+
+/*********  원단정보  *********/
+
+.adm-fbr-dtl .wrap__adm-sect .adm-sect .wrap__adm-sect-cont {flex-wrap: nowrap;}
+.adm-fbr-dtl .wrap__adm-sect .adm-sect .wrap__adm-sect-cont .adm-sect-cont-img {display: inline-block; text-align: center; padding-top: 30px; margin-right: 30px; box-sizing: border-box;}
+.wrap__cont-img {width: 160px; height: 160px; overflow: hidden; border-radius: 8px; background : url(../img/sub/img-fab-07.png) center center no-repeat;}
+
+
+
+/*********  원단수정  *********/
+
+.wrap__adm-input-file .adm-input-file .file-zone {    width: 160px; height: 160px; margin-bottom: 20px; overflow: hidden; position: relative;}
+.wrap__adm-input-file .adm-input-file .file-zone > div {display: inline-block; cursor: pointer; position: relative; width: 100%; height: 100%; margin-right: 5px; z-index: 1;}
+.wrap__adm-input-file .adm-input-file .file-zone > div:before {content : ''; width : 100%; height : 100%; background-color : rgba(0, 0, 0, 0.5); border-radius : 8px; position : absolute; top : 0; left : 0; opacity : 0; }
+.wrap__adm-input-file .adm-input-file .file-zone > div:hover:before {opacity : 1;}
+.wrap__adm-input-file .adm-input-file .file-zone:before {content : '200×200px 이미지를 권장합니다.'; position : absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); font-size: 12px;}
+
+.wrap__adm-sect-cont .adm-sect-cont li > div.fbr-story:not(:last-child) {margin-bottom : 8px;}
+
+
+
+/********************************  어드민 페 이 지  ********************************/
+/********************************  어드민 협력업체  ********************************/
+
+
+/*********  협력업체 등록  *********/
+
+.adm-cont.adm-ptn-add .wrap__adm-sect .adm-sect .wrap__input.input-lbl-hide .input-txt.wd-mdm {width : 30%; margin-left : 0;}
+
+
+
+/********************************  어드민 페 이 지  ********************************/
+/********************************  어드민 카테고리  ***********************************/
+
+
+.adm-cate {display: flex; justify-content: space-between; margin-top : 40px;}
+.adm-cate.cate-style {margin-top : 0;}
+.adm-cate-sect {width: 49%; box-sizing: border-box; border: 1px solid #ccc; padding: 20px 40px; border-radius: 20px;}
+.adm-cate-sect.cate-fbr-lwr {display : none;}
+.adm-cate-sect.cate-fbr-repl .actl__adm-cate {display: flex; align-items: center; justify-content: center; width: 100%; height: 100%;}
+.adm-cate-sect.cate-fbr-repl .actl__adm-cate p {display : inline-block; color : #858585; font-size : 17px;}
+
+.adm-cate-sect .adm-cate-titl {width : 100%; display : flex; justify-content: space-between; align-items: center; margin-bottom: 20px; padding : 20px; border-bottom: 1px solid #ccc; box-sizing :border-box}
+.adm-cate-sect .adm-cate-titl h3 {display : inline-block; font-size : 17px; align-items: center;}
+
+.adm-cate-cont table tr {background-color : #fff;}
+.adm-cate-cont table td {text-align: left; padding : 6px 20px; box-sizing: border-box; border-right: 0 none; font-size : 15px;}
+.adm-cate-cont table td span {display : inline-block;}
+.adm-cate-cont table td span.cate__fbr-eng {width : 40%;}
+.adm-cate-cont table td span.cate__fbr-kor {padding-left : 34px; border-left : 1px solid #ccc;}
+
+
+
+/********************************  어드민 페 이 지  ********************************/
+/********************************  어드민 카테고리 모달  ***********************************/
+  
+
+  
+/********************** 버튼랩 : 카테고리명 수정, 삭제 상태 버튼 *******************/
+  
+.btn-wrap.adm-cate-stt {display : flex; align-items : center; justify-content: flex-end;}
+.btn-wrap.adm-cate-stt .btn {margin-left : 10px;}
+   
+  
+

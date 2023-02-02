@@ -1,0 +1,23 @@
+@charset "utf-8";
+
+
+
+/**********************************************MAIN******************************************/
+
+
+.main-contanier{position: relative;}
+.visual-wrap{}
+
+.main-visual{position: relative;display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: 100%;place-items: center;max-width: 1400px;  height: 820px;  margin: 0 auto; padding: 150px 0;}
+.main-info{ width:100%;}
+.main-info .tit-arrow{  position: relative; font-size:21px;font-weight: 500;margin-bottom: 50px;}
+.main-info .tit-arrow::after{content: "";background: #191919; width: 1px;height: 30px;display: block; margin: 15px 0 0 ;}
+.main-info .visual-title{position: relative;}
+.main-info .visual-title h2{ font-size:95px; font-weight: 400; line-height: 1.25;margin-bottom: 30px;}
+
+.main-info .visual-title p{font-size:19px; }
+.btn-more{ background: #191919; width: 180px;height: 50px; line-height: 50px;text-align: center; margin-top: 50px;}
+.btn-more a{font-size:15px; color:#fff; }
+.main-visual .main-img{ display:flex;align-items:flex-end; background:url(../img/main/main-visual.jpg)no-repeat;width:100%; height:100%;margin-left: 20%;}
+.main-visual .caption{ position: absolute;top:50%;  right:-14%;  padding:0 0 10px 0;  transform:rotate(-90deg); border-bottom: 2px solid #191919;}
+.main-visual .caption h6{ font-size:15px; letter-spacing: 1;}

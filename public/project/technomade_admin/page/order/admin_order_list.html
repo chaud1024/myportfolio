@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../css/common.css">
+    <link rel="stylesheet" href="../../css/reset.css">
+    <link rel="stylesheet" href="../../css/layout.css">
+    <link rel="stylesheet" href="../../css/admin.css">
+    <title>온디멘드 어드민 주문관리-목록</title>
+</head>
+<body>
+    
+
+    <div class="adm-wrap">
+
+
+        <!----------------------------HEADER---------------------------->
+
+        <header class="header adm-header">
+            <div class="header-top">
+                <div class="userInfo">
+                    <ul>
+                      <li><a href="" class="login">로그인</a></li>
+                      <li><a href="" class="login-out">관리자 로그아웃</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="header-bottom">
+                <div class="inner">
+                    <h1 class="logo">
+                        <a href="../main/admin_main.html"><img src="../../img/common/adm_logo_w_x2.png" alt="테크노메이드로고"></a>
+                    </h1>
+                    <nav>
+                        <ul class="nav-menu">
+                            <li class="active"><a href="#">주문관리</a></li>
+                            <li><a href="../user/admin_user_list.html">회원관리</a></li>
+                            <li><a href="../inquiry/admin_inquiry_list.html">문의관리</a></li>
+                            <li><a href="../review/admin_review_list.html">후기관리</a></li>
+                            <li><a href="../fabric/admin_fabric_list.html">원단관리</a></li>
+                            <li>
+                                <a href="">카테고리</a>
+                                <ul class="nav-sub-menu">
+                                    <li><a href="../category/admin_cate_inquiry.html">문의관리</a></li>
+                                    <li><a href="../category/admin_cate_style.html">스타일관리</a></li>
+                                    <li><a href="../category/admin_cate_fabric.html">원단관리</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="../partner/admin_partner_dtl.html">협력업체</a></li>
+                            <li class="last"><a href="../member/admin_member_list.html">관리자</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </header>
+        <!----------------------------HEADER---------------------------->
+
+        <!---------------------------- SUB CONTAINER ---------------------------->
+
+        <div class="sub-container">
+
+            <div class="sub-wrap">
+                <div class="sub-inner">
+
+                    <div class="wrap__adm-cont">
+
+                        <div class="inner__adm-cont">
+
+                            <div class="adm-cont-titl">
+                                <h1 class="">주문관리</h1>
+                                <button class="btn btn-dft btn-dwnld">선택다운로드하기</button>
+                            </div>
+                            <!---.odr-list-titl end --->
+    
+                            <div class="filter-bar__admin adm-odr-filter">
+                                <div class="filter-left">
+                                    <ul>
+                                        <li class="filter-select">
+                                            <div class="wrap__sel sel-lbl-hide">
+                                                <label for="" class="label-tit">주문상태선택</label>
+                                                <select name="" class=" wd-shrt" id="">
+                                                    <option value="0" selected="selected">주문상태선택</option>
+                                                    <option value="결제대기">결제대기</option>
+                                                    <option value="결제완료">결제완료</option>
+                                                    <option value="제품준비중">제품준비중</option>
+                                                    <option value="배송중">배송중</option>
+                                                    <option value="배송완료">배송완료</option>
+                                                </select>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <!----------------- .filter-left end --------------->
+
+                                <div class="filter-right">
+                                    <ul>
+                                        <li>
+                                            <div class="wrap__sel sel-lbl-hide">
+                                                <label for="" class="label-tit">주문검색분류</label>
+                                                <select name="" class=" wd-shrt" id="">
+                                                    <option value="0" selected="selected">주문검색분류</option>
+                                                    <option value="닉네임">닉네임</option>
+                                                    <option value="주문번호">주문번호</option>
+                                                    <option value="송장번호">송장번호</option>
+                                                </select>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="wrap__input input-lbl-hide">
+                                                <label for="" class="label-tit">주문목록검색</label>
+                                                <input type="search" id="" class=" input-sch wd-shrt" placeholder="검색어 입력">
+                                                <button class="btn btn-prm">검색</button>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <!---------------- .filter-right end --------------->
+
+                            </div>
+                            <!------------------- .filter-bar end ------------------>
+
+
+                            <!---------------------- 리스트 첫번째 체크박스 필요 없을 시 삭제 가능 ---------------------->
+                            <div class="adm-cont adm-odr-tbl">
+
+                                <div class="wrap__tbl-row">
+                                    <table>
+                                        <colgroup>
+                                            <col width="3%;">
+                                            <col width="5%;">
+                                            <col width="12%;">
+                                            <col width="20%;">
+                                            <col width="8%;">
+                                            <col width="12%;">
+                                            <col width="8%;">
+                                            <col width="8%;">
+                                            <col width="10%;">
+                                            <col width="3%;">
+                                        </colgroup>
+
+                                        <thead>
+                                            <tr>
+                                                <th class="area--chck">
+                                                    <div class="wrap__chk-dft">
+                                                        <input type="checkbox" id="odr-list-sel-all" name="odr-list"
+                                                            value="selectall" onclick="selectAll(this)"><label
+                                                            for="odr-list-sel-all"></label>
+                                                    </div>
+                                                </th>
+                                                <th land="en">No.</th>
+                                                <th>주문번호</th>
+                                                <th class="tbl-ellipsis">
+                                                    <span>주문상세</span>
+                                                </th>
+                                                <th>닉네임</th>
+                                                <th>주문일시</th>
+                                                <th>결제금액</th>
+                                                <th>주문상태</th>
+                                                <th>송장번호</th>
+                                                <th class="ord-dwnld"></th>
+                                            </tr>
+                                        </thead>
+
+                                        <tbody>
+
+                                            <tr>
+                                                <td class="area--chck">
+                                                    <div class="wrap__chk-dft">
+                                                        <input type="checkbox" id="odr-list-sel05" name="odr-list"
+                                                            value="odr-no-04"><label for="odr-list-sel05"></label>
+                                                    </div>
+                                                </td>
+                                                <td lang="en">05</td>
+                                                <td lang="en">
+                                                    202110210008
+                                                </td>
+                                                <td class="td--left tbl-ellipsis" onclick=" location.href = 'admin_order_dtl.html' ">
+                                                    <span>플레어 반팔 칼라있음 무릎아래 플레어 반팔 칼라있음 무릎아래</span>
+                                                </td>
+                                                <td>answer_yes</td>
+                                                <td lang="en">2021-10-21 22:59</td>
+                                                <td lang="en">123,000 원</td>
+                                                <td>결제대기</td>
+                                                <td lang="en">-</td>
+                                                <td>
+                                                    <button class="btn btn-dwnld wd-sm"></button>
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td class="area--chck">
+                                                    <div class="wrap__chk-dft">
+                                                        <input type="checkbox" id="odr-list-sel04" name="odr-list"
+                                                            value="odr-no-04"><label for="odr-list-sel04"></label>
+                                                    </div>
+                                                </td>
+                                                <td lang="en">04</td>
+                                                <td lang="en">
+                                                    202110210008
+                                                </td>
+                                                <td class="td--left tbl-ellipsis" onclick=" location.href = 'admin_order_dtl.html' ">
+                                                    <span>플레어 반팔 칼라있음 무릎아래</span>
+                                                </td>
+                                                <td>Ishappy123</td>
+                                                <td lang="en">2021-10-21 22:59</td>
+                                                <td lang="en">123,000 원</td>
+                                                <td>결제완료</td>
+                                                <td lang="en">-</td>
+                                                <td>
+                                                    <button class="btn btn-dwnld wd-sm"></button>
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td class="area--chck">
+                                                    <div class="wrap__chk-dft">
+                                                        <input type="checkbox" id="odr-list-sel03" name="odr-list"
+                                                            value="odr-no-03"><label for="odr-list-sel03"></label>
+                                                    </div>
+                                                </td>
+                                                <td lang="en">03</td>
+                                                <td lang="en">
+                                                    202110210008
+                                                </td>
+                                                <td class="td--left tbl-ellipsis" onclick=" location.href = 'admin_order_dtl.html' ">
+                                                    <span>플레어 반팔 칼라있음 무릎아래</span>
+                                                </td>
+                                                <td>gday</td>
+                                                <td lang="en">2021-10-21 22:59</td>
+                                                <td lang="en">123,000 원</td>
+                                                <td>제품준비중</td>
+                                                <td lang="en">-</td>
+                                                <td>
+                                                    <button class="btn btn-dwnld wd-sm"></button>
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td class="area--chck">
+                                                    <div class="wrap__chk-dft">
+                                                        <input type="checkbox" id="odr-list-sel02" name="odr-list"
+                                                            value="odr-no-02"><label for="odr-list-sel02"></label>
+                                                    </div>
+                                                </td>
+                                                <td lang="en">02</td>
+                                                <td lang="en">
+                                                    202110210008
+                                                </td>
+                                                <td class="td--left tbl-ellipsis" onclick=" location.href = 'admin_order_dtl.html' ">
+                                                    <span>플레어 반팔 칼라있음 무릎아래</span>
+                                                </td>
+                                                <td>bespoke</td>
+                                                <td lang="en">2021-10-21 22:59</td>
+                                                <td lang="en">123,000 원</td>
+                                                <td>배송중</td>
+                                                <td lang="en">556930699664</td>
+                                                <td>
+                                                    <button class="btn btn-dwnld wd-sm"></button>
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td class="area--chck">
+                                                    <div class="wrap__chk-dft">
+                                                        <input type="checkbox" id="odr-list-sel01" name="odr-list"
+                                                            value="odr-no-01"><label for="odr-list-sel01"></label>
+                                                    </div>
+                                                </td>
+                                                <td lang="en">01</td>
+                                                <td lang="en">
+                                                    202110210008
+                                                </td>
+                                                <td class="td--left tbl-ellipsis" onclick=" location.href = 'admin_order_dtl.html' ">
+                                                    <span>플레어 반팔 칼라있음 무릎아래</span>
+                                                </td>
+                                                <td>홍길동</td>
+                                                <td lang="en">2021-10-21 22:59</td>
+                                                <td lang="en">123,000 원</td>
+                                                <td>배송완료</td>
+                                                <td lang="en">556930699664</td>
+                                                <td>
+                                                    <button class="btn btn-dwnld wd-sm"></button>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+
+                                    </table>
+
+                                </div>
+                                <!---------------------- .wrap__tbl-row end --------------->
+    
+                            </div>
+                            <!------------------- .adm-tbl adm-odr-list end --------------->
+
+
+                            <div class="page-no">
+                                <div class="page-no-wrap">
+                                    <a class="page-no-a" href="">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M17.41 17.2375L10.9757 11.5L17.41 5.7625L15.4291 4L7 11.5L15.4291 19L17.41 17.2375Z" fill="#2B2727"></path>
+                                        </svg>
+                                    </a>
+                                    <a class="page-no-a active" href="">
+                                        <span>1</span>
+                                    </a>
+                                    <a class="page-no-a" href="">
+                                        <span>2</span>
+                                    </a>
+                                    <a class="page-no-a" href="">
+                                        <span>3</span>
+                                    </a>
+                                    <a class="page-no-a" href="">
+                                        <span>4</span>
+                                    </a>
+                                    <a class="page-no-a" href="">
+                                        <span>5</span>
+                                    </a>
+                                    <a class="page-no-a" href="">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M7 17.2375L13.4343 11.5L7 5.7625L8.98085 4L17.41 11.5L8.98085 19L7 17.2375Z" fill="#2B2727"></path>
+                                        </svg>
+                                    </a>
+                                </div>
+                                <!----------- .page-no-wrap end ------------>
+
+                            </div>
+                            <!----------------- .page-no end --------------->
+
+                        </div>
+                        <!------------------- .inner__adm-cont end ------------------->
+
+
+                    </div>
+                        
+
+                </div>
+                <!------------------------ .sub-inner end --------------------------->
+
+
+            </div>
+            <!---------------------------- .sub-wrap end ---------------------------->
+
+
+        </div>
+        <!--------------------------- .sub-container end --------------------------->
+        <!----------------------------- SUB CONTAINER ------------------------------>
+
+    
+    </div>
+    <!--------------------------------- .adm-wrap end ------------------------------>
+
+
+    <script>
+
+        function selectAll(selectAll) {
+            const chckBox = document.getElementsByName("odr-list");
+
+            chckBox.forEach((checkbox) => {
+                checkbox.checked = selectAll.checked;
+            })
+        }
+
+
+    </script>
+
+
+</body>
+</html>

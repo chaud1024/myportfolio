@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../css/common.css">
+    <link rel="stylesheet" href="../../css/reset.css">
+    <link rel="stylesheet" href="../../css/layout.css">
+    <link rel="stylesheet" href="../../css/admin.css">
+    <title>온디멘드 어드민 주문관리-상세</title>
+</head>
+
+<body>
+
+
+    <div class="adm-wrap">
+
+
+        <!----------------------------HEADER---------------------------->
+
+        <header class="header adm-header">
+            <div class="header-top">
+                <div class="userInfo">
+                    <ul>
+                        <li><a href="" class="login">로그인</a></li>
+                        <li><a href="" class="login-out">관리자 로그아웃</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="header-bottom">
+                <div class="inner">
+                    <h1 class="logo">
+                        <a href="../main/admin_main.html"><img src="../../img/common/adm_logo_w_x2.png"
+                                alt="테크노메이드로고"></a>
+                    </h1>
+                    <nav>
+                        <ul class="nav-menu">
+                            <li class="active"><a href="../order/admin_order_list.html">주문관리</a></li>
+                            <li><a href="../user/admin_user_list.html">회원관리</a></li>
+                            <li><a href="../inquiry/admin_inquiry_list.html">문의관리</a></li>
+                            <li><a href="../review/admin_review_list.html">후기관리</a></li>
+                            <li><a href="../fabric/admin_fabric_list.html">원단관리</a></li>
+                            <li>
+                                <a href="">카테고리</a>
+                                <ul class="nav-sub-menu">
+                                    <li><a href="../category/admin_cate_inquiry.html">문의관리</a></li>
+                                    <li><a href="../category/admin_cate_style.html">스타일관리</a></li>
+                                    <li><a href="../category/admin_cate_fabric.html">원단관리</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="../partner/admin_partner_dtl.html">협력업체</a></li>
+                            <li class="last"><a href="../member/admin_member_list.html">관리자</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </header>
+        <!----------------------------HEADER---------------------------->
+
+        <!---------------------------- SUB CONTAINER ---------------------------->
+
+        <div class="sub-container">
+
+            <div class="sub-wrap">
+                <div class="sub-inner">
+
+                    <div class="wrap__adm-cont">
+
+                        <div class="inner__adm-cont">
+
+                            <div class="adm-cont-titl">
+                                <h1 class="">주문상세</h1>
+                            </div>
+                            <!---.odr-list-titl end --->
+
+                            <div class="adm-cont adm-odr-dtl">
+
+                                <div class="wrap__adm-sect">
+
+                                    <div class="adm-sect">
+                                        <div class="adm-sect-titl">
+                                            <h1>주문제품정보</h1>
+                                        </div>
+
+                                        <div class="wrap__adm-sect-cont">
+                                            <ul class="adm-sect-cont">
+                                                <li>
+                                                    <div class="adm-sect-cont-titl">주문번호</div>
+                                                    <div class="adm-sect-cont-txt" lang="en">202110210008</div>
+                                                </li>
+                                                <li>
+                                                    <div class="adm-sect-cont-titl">주문일자</div>
+                                                    <div class="adm-sect-cont-txt" lang="en">2021-10-06 22:59</div>
+                                                </li>
+                                                <li>
+                                                    <div class="adm-sect-cont-titl">주문원단</div>
+                                                    <div class="adm-sect-cont-txt">린넨</div>
+                                                </li>
+                                                <li>
+                                                    <div class="adm-sect-cont-titl">주문제품도면</div>
+                                                    <div class="adm-sect-cont-txt">캐드파일명.pdf</div>
+                                                </li>
+                                                <li>
+                                                    <div class="adm-sect-cont-titl">주문수량</div>
+                                                    <div class="adm-sect-cont-txt">1 피스</div>
+                                                </li>
+                                            </ul>
+                                            <!----- .wrap__adm-sect-cont end ---->
+
+                                        </div>
+                                        <!-------- wrap__adm-sect-cont end ----->
+
+                                    </div>
+                                    <!--------------- .adm-sect end ------------>
+
+                                    <div class="adm-sect">
+                                        <div class="adm-sect-titl">
+                                            <h1>주문자정보</h1>
+                                        </div>
+
+                                        <div class="wrap__adm-sect-cont">
+                                            <ul class="adm-sect-cont">
+                                                <li>
+                                                    <div class="adm-sect-cont-titl">닉네임</div>
+                                                    <div class="adm-sect-cont-txt" lang="en">Ishappy0123</div>
+                                                </li>
+                                            </ul>
+                                            <!----- .wrap__adm-sect-cont end ---->
+
+                                        </div>
+                                        <!-------- wrap__adm-sect-cont end ----->
+
+                                    </div>
+                                    <!--------------- .adm-sect end ------------>
+
+                                    <div class="adm-sect">
+                                        <div class="adm-sect-titl">
+                                            <h1>배송지정보</h1>
+                                        </div>
+
+                                        <div class="wrap__adm-sect-cont">
+                                            <ul class="adm-sect-cont">
+                                                <li>
+                                                    <div class="wrap__input input-rad">
+                                                        <label for="" class="label-tit">받는사람</label>
+                                                        <input type="text" name="" id="" class=" input-txt wd-mdm"
+                                                            value="홍길화">
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="wrap__input input-rad">
+                                                        <div class="wrap__sel ">
+                                                            <label for="" class="label-tit">주문상태선택</label>
+                                                            <select name="" class=" wd-shrt" id="">
+                                                                <option value="0" selected="selected">주문상태선택</option>
+                                                                <option value="결제대기">결제대기</option>
+                                                                <option value="결제완료">결제완료</option>
+                                                                <option value="제품준비중">제품준비중</option>
+                                                                <option value="배송중">배송중</option>
+                                                                <option value="배송완료">배송완료</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="wrap__input input-rad">
+                                                        <label for="" class="label-tit">송장번호</label>
+                                                        <input type="text" name="" id="" class=" input-txt wd-mdm"
+                                                            placeholder="송장번호를 입력해주세요">
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="wrap__input input-rad">
+                                                        <label for="" class="label-tit">연락처</label>
+                                                        <input type="tel" name="" id="" class=" input-txt wd-mdm"
+                                                            value="010-1234-5678">
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="wrap__input input-rad adm-addr">
+                                                        <div class="inner__adm-addr-zipcode">
+                                                            <label for="" class="label-tit">배송주소</label>
+                                                            <input type="text" name="" id="" class=" input-txt wd-shrt"
+                                                                value="48058" readonly>
+                                                            <button class="btn btn-prm">
+                                                                우편번호 검색
+                                                            </button>
+                                                        </div>
+                                                        <div class="inner__adm-addr">
+                                                            <label for="" class="input-lbl-hide">도로명주소</label>
+                                                            <input type="text" name="" id="" class=" input-txt wd-mdm"
+                                                                value="부산광역시 해운대구 센텀중앙로 97">
+                                                                <label for="" class="input-lbl-hide">상세주소</label>
+                                                            <input type="text" name="" id="" class=" input-txt wd-mdm"
+                                                                value="A동 3705호">
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="wrap__input input-rad">
+                                                        <label for="" class="label-tit">주문요청사항</label>
+                                                        <input type="text" name="" id="" class=" input-txt wd-mdm"
+                                                            value=" Lorem ipsum dolor sit, amet consectetur adipisicing elit.">
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                            <!------- .adm-sect-cont end -------->
+
+                                        </div>
+                                        <!-------- wrap__adm-sect-cont end ----->
+
+                                    </div>
+                                    <!--------------- .adm-sect end ------------>
+
+                                    <div class="adm-sect">
+                                        <div class="adm-sect-titl">
+                                            <h1>최종결제정보</h1>
+                                        </div>
+
+                                        <div class="wrap__adm-sect-cont">
+                                            <ul class="adm-sect-cont payment">
+                                                <li>
+                                                    <div class="adm-sect-cont-titl">원단가격</div>
+                                                    <div class="adm-sect-cont-txt" lang="en">30,000 원</div>
+                                                </li>
+                                                <li>
+                                                    <div class="adm-sect-cont-titl">필요원단량</div>
+                                                    <div class="adm-sect-cont-txt" lang="en">3야드</div>
+                                                </li>
+                                                <li>
+                                                    <div class="adm-sect-cont-titl">원단공임비</div>
+                                                    <div class="adm-sect-cont-txt" lang="en">30,000 원</div>
+                                                </li>
+                                                <li>
+                                                    <div class="adm-sect-cont-titl">배송비</div>
+                                                    <div class="adm-sect-cont-txt" lang="en">2,500 원</div>
+                                                </li>
+                                                <li>
+                                                    <div class="adm-sect-cont-titl">결제수단</div>
+                                                    <div class="adm-sect-cont-txt">신용카드</div>
+                                                </li>
+                                                <li>
+                                                    <div class="adm-sect-cont-titl">결제영수증</div>
+                                                    <div class="adm-sect-cont-txt" lang="en"><a href="">url is here</a>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                            <!--- .adm-sect-cont payment end --->
+
+                                            <ul class="adm-gt-dtl">
+                                                <li class="adm-gt-cate">(원단가격 × 필요원단량 + 공임비) × 수량 + 배송비 =</li>
+                                                <li class="adm-gt">최종결제금액</li>
+                                                <li class="adm-gt-num" lang="en">123,000 원</li>
+                                            </ul>
+                                            <!-------- .adm-gt-dtl end --------->
+
+                                        </div>
+                                        <!-------- wrap__adm-sect-cont end ----->
+
+
+                                    </div>
+                                    <!--------------- .adm-sect end ------------>
+
+
+                                    <div class="adm-sect">
+                                        <div class="adm-sect-titl">
+                                            <h1>원단열람정보</h1>
+                                        </div>
+
+                                        <div class="wrap__adm-sect-cont">
+                                            <ul class="adm-sect-cont vw-fbr">
+                                                <li>
+                                                    <div class="adm-sect-cont-img">
+                                                        <a href="" class="wrap__cont-img">
+                                                        </a>
+                                                        <ul class="vw-fbr-info">
+                                                            <li lang="en">
+                                                                코튼 체크 C-gr
+                                                            </li>
+                                                            <li lang="en">
+                                                                12회
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="adm-sect-cont-img">
+                                                        <a href="" class="wrap__cont-img">
+                                                        </a>
+                                                        <ul class="vw-fbr-info">
+                                                            <li lang="en">
+                                                                코튼 스트라이프 C-drkgr
+                                                            </li>
+                                                            <li lang="en">
+                                                                8회
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="adm-sect-cont-img">
+                                                        <a href="" class="wrap__cont-img">
+                                                        </a>
+                                                        <ul class="vw-fbr-info">
+                                                            <li lang="en">
+                                                                코튼 무지 C-bg
+                                                            </li>
+                                                            <li lang="en">
+                                                                8회
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="adm-sect-cont-img">
+                                                        <a href="" class="wrap__cont-img">
+                                                        </a>
+                                                        <ul class="vw-fbr-info">
+                                                            <li lang="en">
+                                                                실크 스트라이프 S-iv
+                                                            </li>
+                                                            <li lang="en">
+                                                                5회
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="adm-sect-cont-img">
+                                                        <a href="" class="wrap__cont-img">
+                                                        </a>
+                                                        <ul class="vw-fbr-info">
+                                                            <li lang="en">
+                                                                린넨 폴카도트 L-nv
+                                                            </li>
+                                                            <li lang="en">
+                                                                4회
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </li>
+                                                
+                                            </ul>
+                                            <!--- .adm-sect-cont vw-fbr end --->
+
+                                        </div>
+                                        <!-------- wrap__adm-sect-cont end ----->
+
+
+                                    </div>
+                                    <!--------------- .adm-sect end ------------>
+
+
+                                </div>
+                                <!------------- .wrap__adm-sect end ------------>
+
+                            </div>
+                            <!----------- .adm-tbl adm-odr-dtl end ------------->
+
+                            <div class="btn-wrap">
+                                <button type="button" id="" class="btn-list"
+                                    onclick=" location.href = 'admin_order_list.html' ">목록</button>
+                                <button type="button" id="" class="btn-list btn-modal-add">수정</button>
+                            </div>
+                            <!---------------- .btn-wrap end ------------------>
+
+                            <div class="wrap__modal">
+
+                                <div class="modal-mdf modal">
+                                    <div class="modal-content">
+                                        <div class="modal-top">
+                                            <h2>수정하시겠습니까?</h2>
+                                        </div>
+
+                                        <div class="modal-bttm">
+                                            <div class="btn-wrap adm-cate-modal-btn">
+                                                <button type="button" class="btn btn-cxl" id="">취소</button>
+                                                <button type="button" class="btn btn-cfm" id="">확인</button>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <!----- .modal-content end ----->
+                                </div>
+                                <!---- .modal-custom modal end ---->
+                            </div>
+                            <!-------------------------- 등록버튼 클릭 시 모달 활성화 ----------------------->
+                            <!------------------------------- .wrap__modal end ---------------------------->
+
+
+                        </div>
+                        <!------------------ .inner__adm-tbl end ----------------->
+
+
+                    </div>
+                    <!--------------------. wrap__adm-cont end-------------------->
+
+
+                </div>
+                <!------------------------- .sub-inner end ---------------------->
+
+
+            </div>
+            <!------------------------- .sub-wrap end --------------------------->
+
+
+        </div>
+        <!-------------------------- .sub-container end ------------------------->
+        <!---------------------------- SUB CONTAINER ---------------------------->
+
+
+    </div>
+    <!--------------- .adm-wrap end ---------------->
+
+
+    <script>
+        function selectAll(selectAll) {
+            const chckBox = document.getElementsByName("odr-list");
+
+            chckBox.forEach((checkbox) => {
+                checkbox.checked = selectAll.checked;
+            })
+        }
+
+
+        //modal script
+        // Get the button that opens the modal
+        let btn = document.querySelectorAll(".btn-modal-add"); //모달일어나기전에 눌러야하는 버튼
+
+        // All page modals
+        let modals = document.querySelectorAll('.modal-custom'); //모달 전체감싸는 box
+
+        // Get the <span> element that closes the modal
+        let spans = document.getElementsByClassName("close-modal"); //닫기 .확인버튼
+
+        // When the user clicks the button, open the modal
+        for (let i = 0; i < btn.length; i++) {
+            btn[i].onclick = function (e) {
+                e.preventDefault();
+                modal = document.querySelector(e.target.getAttribute("href"));
+                modal.style.display = "block";
+            }
+        }
+
+        // When the user clicks on <span> (x), close the modal
+        for (let i = 0; i < spans.length; i++) {
+            spans[i].onclick = function () {
+                for (let fabric in modals) {
+                    if (typeof modals[fabric].style !== 'undefined')
+                        modals[fabric].style.display = "none";
+                }
+            }
+        }
+
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function (event) {
+            if (event.target.classList.contains('modal-custom-cate01')) {
+                for (let fabric in modals) {
+                    if (typeof modals[fabric].style !== 'undefined') modals[fabric].style.display = "none";
+                }
+            }
+        }
+
+
+        //button modal script
+        const openModal = () => {
+            document.querySelector(".modal-mdf").classList.add("open");
+        }
+
+        const closeModal = () => {
+            document.querySelector(".modal-mdf").classList.remove("open");
+        }
+
+        document.querySelector(".btn-modal-add").addEventListener("click", openModal);
+        document.querySelector(".btn-cxl").addEventListener("click", closeModal);
+        document.querySelector(".btn-cfm").addEventListener("click", closeModal);
+    </script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+    <title>유저 고객경험 리스트</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="../../css/reset.css">
+    <link rel="stylesheet" href="../../css/common.css">
+    <link rel="stylesheet" href="../../css/layout.css">
+    <link rel="stylesheet" href="../../css/page.css">
+  
+    
+
+</head>
+<body>
+    <div id="wrap">
+
+        <!----------------------------HEADER---------------------------->
+        <header class="header">
+            <div class="header-top">
+                <div class="userInfo">
+                    <ul>
+                        <li><a href="../login/sign_in.html" class="login">로그인</a></li>
+                        <li><a href="../../page/mypage/myp_userinfo_wrap.html" class="mypage">마이페이지</a></li>
+                        <li><a href="../login/sign_in.html" class="login-out">로그아웃</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="header-bottom">
+                <div class="inner">
+                    <h1 class="logo">
+                        <a href="../../index.html"><img src="../../img/common/logo.png" alt="테크노메이드로고"></a>
+                    </h1>
+                    <nav>
+                        <ul class="nav-menu">
+                           <li ><a href="../../index.html">테크노메이드</a></li>
+                           <li><a href="../measure/measure_first.html">제작하기</a></li>
+                           <li><a href="../inquiry/inquiry_list.html">문의하기</a></li>
+                           <li class="active last"><a href="./review_list.html">고객경험</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </header>
+
+
+        <!----------------------------SUB CONTAINER---------------------------->
+        <div class="sub-container">
+
+            <div class="sub-banner">
+                <div class="inner">
+                    <h3 lang="en" class="wc">Creat your own. Find your style</h3>
+                    <div class="wc">
+                        특정한 시기에 유행하는 복식의 형식. 패션.<br>
+                        논리적이거나 추상적인 이유보다는 사소한 취향에 따라서 변한다.<br>
+                        우리는 그 사소한 취향을 귀를 기울인다.
+                    </div>
+                </div>
+
+            </div>
+            <!--sub-banner-->
+
+            <div class="sub-wrap">
+                <div class="sub-inner">
+
+                <div class="sub-title-wrap">
+                    <h2 class="sub-title">고객 경험</h2>
+                    <p class="sub-title-desc">당신의 특별한 경험을 들려주세요.</p>                    
+                </div>
+
+
+                <div class="sub-cont-wrap revw-cont">
+
+                    <div class="sub-cont-filter">
+                        
+                        <ul class="filter-list left">
+                            <select class="sel-box inp-select halfadd" id="" value="실루엣" title="실루엣 필터">
+                            <option value="Silhouettes">Silhouettes</option>                   
+                            <option value="Stright">Stright</option>                   
+                            <option value="Pencil">Pencil</option>                   
+                            <option value="A-line">A-line</option>
+                            <option value="Very Flared">Very Flared</option> 
+                            <option value="Flared">Flared</option>
+                            <option value="Gored">Gored</option>
+                            <option value="half-circle">Half-circle</option>
+                        </select>
+
+                        <select class="sel-box inp-select halfadd" id="" title="허리라인 필터">
+                            <option value="Waist">Waist</option>                   
+                            <option value="No Waist">No Waist</option>                   
+                            <option value="Natural waist">Natural waist</option>                   
+                            <option value="Empire waist">Empire waist</option> 
+                            <option value="High waist">High waist</option>                      
+                        </select>
+
+                        <select class="sel-box inp-select halfadd" id="" title="슬리브 필터">
+                            <option value="Sleeveless">Sleeveless</option>                   
+                            <option value="3/4">3/4</option>                   
+                            <option value="Elbow">Elbow</option>                   
+                            <option value="Above Elbow">Above Elbow</option>
+                            <option value="Short">Short</option>  
+                                             
+                        </select>
+
+
+                        <select class="sel-box inp-select halfadd" id="" title="넥라인">
+                            <option value="Necklines">Necklines</option>
+                            <option value="No collar">No collar</option>                   
+                            <option value="With collar">With collar</option>                   
+                                               
+                        </select>
+
+                        <select class="sel-box inp-select halfadd" id="" title="총기장">
+                            <option value="Length option">Length option</option>
+                            <option value="Above knees">Above knees</option>                   
+                            <option value="Knee length">Knee length</option>                   
+                            <option value="Below knees">Below knees</option>                   
+                            <option value="Midi">Midi</option>                       
+                        </select>
+
+                       
+                            <button type="button" id="" class="btn-review-filter">검색</button>
+                        
+                    </ul>
+
+                   <div class="filter-list right">
+                    <div class="revw-reimg"><img src="../../img/icon/refresh.png" alt=""><div>필터초기화</div></div>
+                   </div>
+                  
+                </div>
+
+                <div class="revw-photo">
+                    <ul>
+                        <li class="photo-list">
+                            <div class="photo-img"><a href="./review_view.html"> <img src="http://placehold.it/400x500" alt=""></a></div>
+                            <div class="photo-txt">
+                                
+                                
+                                <ul class="ul-detail">
+                                  <li>
+                                    좋아요
+                                    <svg width="25" height="22" fill="none" xmlns="http://www.w3.org/2000/svg" class="active"><path d="m11.5 19.57-1.39-1.21c-4.935-4.28-8.193-7.103-8.193-10.568 0-2.824 2.32-5.042 5.27-5.042 1.668 0 3.269.743 4.313 1.916 1.045-1.174 2.645-1.916 4.313-1.916 2.952 0 5.27 2.218 5.27 5.042 0 3.465-3.258 6.288-8.193 10.578l-1.39 1.2Z" fill="#F2C551"></path></svg>
+                                    <span lang="en">1205</span>
+                                  </li>
+
+                                  <li>
+                                    <div class="star-rated">
+                                        <span>★</span>
+                                        <span>★</span>
+                                        <span>★</span>
+                                        <span>★</span>
+                                        <span>★</span>
+                                    </div>
+                                </li>
+                                
+                                  <li class="txt-line">
+                                    <a href="./review_view.html">
+                                    완전 좋아요 제가 생각하던대로 나왔어요ㅎㅎ 덕분에 셀프 웨딩촬영 진짜 멋지게 했어요 
+                                    제주바다랑 찰떡이 글자잘리게하기제주바다랑 찰떡이 글자잘리게하기제주바다랑 찰떡이 글자잘리게하기
+                                    </a>
+                                  </li>
+                                </ul>
+
+                                  <ul class="ul-detail date">
+                                  <li>작성자 : <span>홍**</span></li>
+                                  <li>작성일시 : <span lang="en">21-10-28 23:00</span></li>
+                                </ul>
+                            </div>
+                        
+                        </li>
+
+                        <li class="photo-list">
+                            <div class="photo-img"><a href="./review_view.html"> <img src="http://placehold.it/400x500" alt=""></a></div>
+                            <div class="photo-txt">
+                                
+                                
+                                <ul class="ul-detail">
+                                  <li>
+                                    좋아요
+                                    <svg width="25" height="22" fill="none" xmlns="http://www.w3.org/2000/svg" class="active"><path d="m11.5 19.57-1.39-1.21c-4.935-4.28-8.193-7.103-8.193-10.568 0-2.824 2.32-5.042 5.27-5.042 1.668 0 3.269.743 4.313 1.916 1.045-1.174 2.645-1.916 4.313-1.916 2.952 0 5.27 2.218 5.27 5.042 0 3.465-3.258 6.288-8.193 10.578l-1.39 1.2Z" fill="#F2C551"></path></svg>
+                                    <span lang="en">1205</span>
+                                  </li>
+
+                                  <li>
+                                    <div class="star-rated">
+                                        <span>★</span>
+                                        <span>★</span>
+                                        <span>★</span>
+                                        <span>★</span>
+                                        <span>★</span>
+                                    </div>
+                                </li>
+                                
+                                  <li class="txt-line">
+                                    <a href="./review_view.html">
+                                    완전 좋아요 제가 생각하던대로 나왔어요ㅎㅎ 덕분에 셀프 웨딩촬영 진짜 멋지게 했어요 
+                                    제주바다랑 찰떡이 글자잘리게하기제주바다랑 찰떡이 글자잘리게하기제주바다랑 찰떡이 글자잘리게하기
+                                    </a>
+                                  </li>
+                                </ul>
+
+                                  <ul class="ul-detail date">
+                                  <li>작성자 : <span>홍**</span></li>
+                                  <li>작성일시 : <span lang="en">21-10-28 23:00</span></li>
+                                </ul>
+                            </div>
+                        
+                        </li>
+
+
+
+                        <li class="photo-list">
+                            <div class="photo-img"><a href="./review_view.html"> <img src="http://placehold.it/400x500" alt=""></a></div>
+                            <div class="photo-txt">
+                                
+                                
+                                <ul class="ul-detail">
+                                  <li>
+                                    좋아요
+                                    <svg width="25" height="22" fill="none" xmlns="http://www.w3.org/2000/svg" class="active"><path d="m11.5 19.57-1.39-1.21c-4.935-4.28-8.193-7.103-8.193-10.568 0-2.824 2.32-5.042 5.27-5.042 1.668 0 3.269.743 4.313 1.916 1.045-1.174 2.645-1.916 4.313-1.916 2.952 0 5.27 2.218 5.27 5.042 0 3.465-3.258 6.288-8.193 10.578l-1.39 1.2Z" fill="#F2C551"></path></svg>
+                                    <span lang="en">1205</span>
+                                  </li>
+
+                                  <li>
+                                    <div class="star-rated">
+                                        <span>★</span>
+                                        <span>★</span>
+                                        <span>★</span>
+                                        <span>★</span>
+                                        <span>★</span>
+                                    </div>
+                                </li>
+                                
+                                  <li class="txt-line">
+                                    <a href="./review_view.html">
+                                    완전 좋아요 제가 생각하던대로 나왔어요ㅎㅎ 덕분에 셀프 웨딩촬영 진짜 멋지게 했어요 
+                                    제주바다랑 찰떡이 글자잘리게하기제주바다랑 찰떡이 글자잘리게하기제주바다랑 찰떡이 글자잘리게하기
+                                    </a>
+                                  </li>
+                                </ul>
+
+                                  <ul class="ul-detail date">
+                                  <li>작성자 : <span>홍**</span></li>
+                                  <li>작성일시 : <span lang="en">21-10-28 23:00</span></li>
+                                </ul>
+                            </div>
+                        
+                        </li>
+
+
+
+
+                    </ul>
+                </div><!--photo end-->
+
+
+                <div class="myp-tbl">
+
+            
+
+                    <table>
+                        <colgroup>
+
+                            <col width="8%">
+                            <col width="8%">
+                            <col width="8%">
+                            <col width="40%">
+                            <col width="5%">
+                            <col width="10%">
+                    
+                        </colgroup>
+                    
+                        <thead>
+                            <tr>
+                                <th><span lang="en">No.</span></th>
+                                <th>
+                                    <svg width="23" height="22" fill="none" xmlns="http://www.w3.org/2000/svg" class="active"><path d="m11.5 19.57-1.39-1.21c-4.935-4.28-8.193-7.103-8.193-10.568 0-2.824 2.32-5.042 5.27-5.042 1.668 0 3.269.743 4.313 1.916 1.045-1.174 2.645-1.916 4.313-1.916 2.952 0 5.27 2.218 5.27 5.042 0 3.465-3.258 6.288-8.193 10.578l-1.39 1.2Z" fill="#F2C551"></path></svg>
+                                    <span lang="en">좋아요</span></th>
+                                <th>원단</th>
+                                <th>제목</th>
+                                <th>평점</th>
+                                <th>작성일</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="view">
+                                
+                                <td><span lang="en">08</span></td>
+                                <td>
+                                    <svg width="23" height="22" fill="none" xmlns="http://www.w3.org/2000/svg" class="active"><path d="m11.5 19.57-1.39-1.21c-4.935-4.28-8.193-7.103-8.193-10.568 0-2.824 2.32-5.042 5.27-5.042 1.668 0 3.269.743 4.313 1.916 1.045-1.174 2.645-1.916 4.313-1.916 2.952 0 5.27 2.218 5.27 5.042 0 3.465-3.258 6.288-8.193 10.578l-1.39 1.2Z" fill="#F2C551"></path></svg>
+                                    <span lang="en">1205</span>
+                                </td>
+                               <td>코튼</td>
+                               
+                                <td class="ord-detail">
+                                
+                                    <a href="./review_view.html" class="link">
+                                    <div class="ord-detail-img"><img src="https://ww.namu.la/s/8062ae35721d39f78a3120d46d4b038cfab27d9db436d4f9c6f801e2b96557444a92decd783af66bfce48f27fbf83ad893186b9662f93f8c636a9584e8cb1d656d75fedfd9573cf195007adb7a8b8c27287a306fc01dadc9c2895b6b02c06902
+                                        " alt=""></div>
+                                    <div class="ord-detail-text">딱 제가 원하던 스타일대로 나왔어요!</div>
+                                    </a>
+                                </td>
+                                <td>
+                                    <div class="reply-area">
+                                        <div class="star-rated">
+                                            <span>★</span>
+                                            <span>★</span>
+                                            <span>★</span>
+                                            <span>★</span>
+                                            <span>★</span>
+                                        </div>
+                                       
+                                    </div>
+
+                                   
+                                </td>
+                                <td><span lang="en">21-10-08 10:00</span></td>
+                           
+                            </tr>
+
+
+                            <tr class="view">
+                                <td><span lang="en">08</span></td>
+                                <td>
+                                    <svg width="23" height="22" fill="none" xmlns="http://www.w3.org/2000/svg" class="active">
+                                        <path d="m11.5 19.57-1.39-1.21c-4.935-4.28-8.193-7.103-8.193-10.568 0-2.824 2.32-5.042 5.27-5.042 1.668 0 3.269.743 4.313 1.916 1.045-1.174 2.645-1.916 4.313-1.916 2.952 0 5.27 2.218 5.27 5.042 0 3.465-3.258 6.288-8.193 10.578l-1.39 1.2Z" fill="#F2C551"></path></svg>
+                                    <span lang="en">1205</span>
+                                </td>
+                               <td>코튼</td>
+                               
+                               <td class="ord-detail">
+                                <a href="./review_view.html" class="link">
+                                <div class="ord-detail-img"><img src="https://via.placeholder.com/120" alt=""></div>
+                                <div class="ord-detail-text">딱 제가 원하던 스타일대로 나왔어요!</div>
+                              </a>   
+                               </td>
+
+                                <td>
+                                    <div class="reply-area">
+                                        <div class="star-rated">
+                                            <span>★</span>
+                                            <span>★</span>
+                                            <span>★</span>
+                                            <span>★</span>
+                                            <span>★</span>
+                                        </div>
+                                    </div>
+                                   
+                                </td>
+                                <td><span lang="en">21-10-08 10:00</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                  
+                </div>
+
+
+                <div class="page-no">
+                    <div class="page-no-wrap">
+                        <a class="page-no-a" href="">
+                            <svg width="30" height="30" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M17.41 17.2375L10.9757 11.5L17.41 5.7625L15.4291 4L7 11.5L15.4291 19L17.41 17.2375Z" fill="#2B2727"></path>
+                            </svg>
+                        </a>
+                        <a class="page-no-a active" href="">
+                            <span>1</span>
+                        </a>
+                        <a class="page-no-a" href="">
+                            <span>2</span>
+                        </a>
+                        <a class="page-no-a" href="">
+                            <span>3</span>
+                        </a>
+                        <a class="page-no-a" href="">
+                            <span>4</span>
+                        </a>
+                        <a class="page-no-a" href="">
+                            <span>5</span>
+                        </a>
+                        <a class="page-no-a" href="">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M7 17.2375L13.4343 11.5L7 5.7625L8.98085 4L17.41 11.5L8.98085 19L7 17.2375Z" fill="#2B2727"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                    
+
+
+                   
+
+
+                </div><!-- .-wrap end -->
+
+            
+
+               </div> <!--sub-inner-->
+            </div>
+            <!--sub-wrap-->
+
+        </div>
+        <!-----끝 #sub-container----->
+
+        <!----------------------------FOOTER---------------------------->
+        <footer class="footer">
+
+            <div class="footer-top">
+                <div class="inner">
+                    <ul class="f-menu">
+                        <li><a href="#" class="wc">회사소개</a></li>
+                        <li><a href="#" class="wc ll">개인정보처리방침</a></li>
+                        <li><a href="#" class="wc ll">이용약관</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div class="inner">
+                    <h2 class="logo-f">
+                        <a href="#"><img src="../../img/common/logo-f.png" alt="테크노메이드로고-푸터"></a>
+                    </h2>
+                    <div class="f-contact wc">
+                        <h4 class="f-title" lang="en">Contact</h4>
+                        <p lang="en">1577-1234</p>
+                        <p lang="en">AM: 9:00 - PM: 6:00 <span lang="ko">(주말 및 공휴일 휴무)</span></p>
+                    </div>
+                    <div class="f-bank wc">
+                        <h4 class="f-title wc" lang="en">Bank Account</h4>
+                        <div>
+                            국민은행 <span lang="en">0000-0000-0000</span> <br>
+                            국민은행 <span lang="en">0000-0000-0000</span> <br>
+                            예금주 : <span></span> 테크노메이드
+                        </div>
+                    </div>
+                    <div class="f-info wc">
+                        <h4 class="f-title wc" lang="en">Company</h4>
+                        <div>
+                            <span>상호명: 테크노메이드</span>
+                            <span class="ll">owner : 홍길동</span>
+                            <span class="ll">tel: 000-000-0000</span>
+                        </div>
+                        <div>
+                            <span>business no: 000-00-00000</span>
+                            <span class="ll">personal info manager : 장동석</span>
+                        </div>
+                        <div>
+                            address. 대구광역시 북구 호암로 51, 2층 201호(침산동, 대구창조경제혁신센터)
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--footer-bottom-->
+
+        </footer>
+
+
+
+    </div>
+    <!--끝--#Wrap-->
+
+   
+
+</body>
+</html>

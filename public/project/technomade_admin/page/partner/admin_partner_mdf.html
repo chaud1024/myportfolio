@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../css/common.css">
+    <link rel="stylesheet" href="../../css/reset.css">
+    <link rel="stylesheet" href="../../css/layout.css">
+    <link rel="stylesheet" href="../../css/admin.css">
+    <title>온디멘드 어드민 협력업체-상세</title>
+</head>
+
+<body>
+
+
+    <div class="adm-wrap">
+
+
+        <!----------------------------HEADER---------------------------->
+
+        <header class="header adm-header">
+            <div class="header-top">
+                <div class="userInfo">
+                    <ul>
+                        <li><a href="" class="login">로그인</a></li>
+                        <li><a href="" class="login-out">관리자 로그아웃</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="header-bottom">
+                <div class="inner">
+                    <h1 class="logo">
+                        <a href="../main/admin_main.html"><img src="../../img/common/adm_logo_w_x2.png"
+                                alt="테크노메이드로고"></a>
+                    </h1>
+                    <nav>
+                        <ul class="nav-menu">
+                            <li><a href="../order/admin_order_list.html">주문관리</a></li>
+                            <li><a href="../user/admin_user_list.html">회원관리</a></li>
+                            <li><a href="../inquiry/admin_inquiry_list.html">문의관리</a></li>
+                            <li><a href="../review/admin_review_list.html">후기관리</a></li>
+                            <li><a href="../fabric/admin_fabric_list.html">원단관리</a></li>
+                            <li>
+                                <a href="">카테고리</a>
+                                <ul class="nav-sub-menu">
+                                    <li><a href="../category/admin_cate_inquiry.html">문의관리</a></li>
+                                    <li><a href="../category/admin_cate_style.html">스타일관리</a></li>
+                                    <li><a href="../category/admin_cate_fabric.html">원단관리</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="../partner/admin_partner_dtl.html">협력업체</a></li>
+                            <li class="last"><a href="../member/admin_member_list.html">관리자</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </header>
+
+        <!---------------------------- SUB CONTAINER ---------------------------->
+
+        <div class="sub-container">
+
+            <div class="sub-wrap">
+                <div class="sub-inner">
+
+                    <div class="wrap__adm-cont">
+
+                        <div class="inner__adm-cont">
+
+                            <div class="adm-cont-titl">
+                                <h1 class="">협력업체 - 수정</h1>
+                                <button type="button" class="btn btn-prm btn-wr"
+                                    onclick="location.href = 'admin_partner_add.html' ">등록</button>
+                            </div>
+                            <!---.odr-list-titl end --->
+
+                            <div class="adm-cont adm-ptn-mdf">
+
+                                <div class="wrap__adm-sect">
+
+
+                                    <div class="adm-sect">
+                                        <div class="adm-sect-titl">
+                                            <h1>원단 관리 업체</h1>
+                                            <button type="button" class="btn btn-prm btn-mdf btn-modal-add" onclick=" ">제출</button>
+                                        </div>
+
+                                        <div class="wrap__adm-sect-cont">
+                                            <ul class="adm-sect-cont">
+                                                <li>
+                                                    <div class="wrap__input input-rad">
+                                                        <label for="" class="label-tit">업체명</label>
+                                                        <input type="text" name="" id="" class=" input-txt wd-mdm"
+                                                            placeholder="업체명을 입력해주세요">
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="wrap__input input-rad">
+                                                        <label for="" class="label-tit">업체 연락처</label>
+                                                        <input type="tel" name="" id="" class=" input-txt wd-mdm"
+                                                            placeholder="업체 연락처를 입력해주세요">
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="wrap__input input-rad">
+                                                        <label for="" class="label-tit">정산일</label>
+                                                        <input type="text" name="" id="" class=" input-txt wd-mdm"
+                                                            placeholder="정산일을 입력해주세요">
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="wrap__input input-rad">
+                                                        <label for="" class="label-tit">계좌번호</label>
+                                                        <input type="text" name="" id="" class=" input-txt wd-mdm"
+                                                            placeholder="계좌번호를 입력해주세요">
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="wrap__input input-rad">
+                                                        <label for="" class="label-tit">계좌은행</label>
+                                                        <input type="text" name="" id="" class=" input-txt wd-mdm"
+                                                            placeholder="계좌은행을 입력해주세요">
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="wrap__input input-rad">
+                                                        <label for="" class="label-tit">담당자명</label>
+                                                        <input type="text" name="" id="" class=" input-txt wd-mdm"
+                                                            placeholder="담당자명을 입력해주세요">
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="wrap__input input-rad">
+                                                        <label for="" class="label-tit">담당자 연락처</label>
+                                                        <input type="tel" name="" id="" class=" input-txt wd-mdm"
+                                                            placeholder="담당자 연락처를 입력해주세요">
+                                                    </div>
+                                                </li>
+
+                                            </ul>
+                                            <!----- .wrap__adm-sect-cont end ---->
+
+                                        </div>
+                                        <!----- wrap__adm-sect-cont end ---->
+
+                                    </div>
+                                    <!---- .adm-sect end ----->
+
+
+                                </div>
+                                <!----- .wrap__adm-sect end ---->
+
+
+                            </div>
+                            <!----------- .adm-cont adm-ptn-mdf end ------------>
+
+                            
+                            <div class="btn-wrap">
+                                <button type="button" id="" class="btn-list" onclick=" location.href = 'admin_partner_dtl.html' " >목록</button>
+                            </div>
+                            <!----------------- .btn-wrap end ----------------->
+
+                            <div class="wrap__modal">
+
+                                <div class="modal-mdf modal">
+                                    <div class="modal-content">
+                                        <div class="modal-top">
+                                            <h2>수정하시겠습니까?</h2>
+                                        </div>
+
+                                        <div class="modal-bttm">
+                                            <div class="btn-wrap adm-cate-modal-btn">
+                                                <button type="button" class="btn btn-cxl" id="">취소</button>
+                                                <button type="button" class="btn btn-cfm" id="">확인</button>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <!----- .modal-content end ----->
+                                </div>
+                                <!---- .modal-custom modal end ---->
+                            </div>
+                            <!-------------------------- 등록버튼 클릭 시 모달 활성화 ----------------------->
+                            <!------------------------------- .wrap__modal end ---------------------------->
+
+
+                        </div>
+                        <!---------- .inner__adm-tbl end ----------->
+
+
+                    </div>
+
+
+
+                </div>
+                <!------------------- .sub-inner end ------------------->
+
+
+            </div>
+            <!------------------- .sub-wrap end ------------------->
+
+
+        </div>
+        <!------------------- .sub-container end ------------------->
+
+
+    </div>
+    <!--------------- .adm-wrap end ---------------->
+
+
+    <script>
+        function selectAll(selectAll) {
+            const chckBox = document.getElementsByName("odr-list");
+
+            chckBox.forEach((checkbox) => {
+                checkbox.checked = selectAll.checked;
+            })
+        }
+
+        //button modal script
+        const openModal = () => {
+            document.querySelector(".modal-mdf").classList.add("open");
+        }
+
+        const closeModal = () => {
+            document.querySelector(".modal-mdf").classList.remove("open");
+        }
+
+        document.querySelector(".btn-modal-add").addEventListener("click", openModal);
+        document.querySelector(".btn-cxl").addEventListener("click", closeModal);
+        document.querySelector(".btn-cfm").addEventListener("click", closeModal);
+    </script>
+
+
+</body>
+
+</html>

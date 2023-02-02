@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+    <title>마이페이지 후기내역</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="../../css/reset.css">
+    <link rel="stylesheet" href="../../css/common.css">
+    <link rel="stylesheet" href="../../css/layout.css">
+    <link rel="stylesheet" href="../../css/page.css">
+
+    <script src="../../js/sub-menu.js"></script>
+
+
+
+</head>
+
+<body>
+    <div class="wrap">
+
+        <!----------------------------HEADER---------------------------->
+        <header class="header">
+            <div class="header-top">
+                <div class="userInfo">
+                    <ul>
+                        <li><a href="../login/sign_in.html" class="login">로그인</a></li>
+                        <li><a href="../mypage/myp_useinfo_wrap.html" class="mypage">마이페이지</a></li>
+                        <li><a href="../login/sign_in.html" class="login-out">로그아웃</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="header-bottom">
+                <div class="inner">
+                    <h1 class="logo">
+                        <a href="index.html"><img src="../../img/common/logo.png" alt="테크노메이드로고"></a>
+                    </h1>
+                    <nav>
+                        <ul class="nav-menu">
+                            <li class="active"><a href="../../index.html">테크노메이드</a></li>
+                            <li><a href="../measure/measure_first.html">제작하기</a></li>
+                            <li><a href="../inquiry/inquiry_list.html">문의하기</a></li>
+                            <li class="last"><a href="../review/review_list.html">고객경험</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </header>
+
+
+        <!----------------------------SUB CONTAINER---------------------------->
+        <div class="sub-container">
+
+            <div class="sub-banner">
+                <div class="inner">
+                    <h3 lang="en" class="wc">Creat your own. Find your style</h3>
+                    <div class="wc">
+                        특정한 시기에 유행하는 복식의 형식. 패션.<br>
+                        논리적이거나 추상적인 이유보다는 사소한 취향에 따라서 변한다.<br>
+                        우리는 그 사소한 취향을 귀를 기울인다.
+                    </div>
+                </div>
+
+            </div>
+            <!--sub-banner-->
+
+            <div class="sub-wrap">
+                <div class="sub-inner">
+
+                    <div class="sub-title-wrap myp_review">
+                        <h2 class="sub-title">마이페이지</h2>
+                        <ul class="sub-tab">
+                            <li><a href="javascript:subPage('myp_userinfo_wrap')" lang="en" class="location1">나의 정보</a></li>
+                            <li><a href="javascript:subPage('myp_order_list')" lang="en" class="location2">주문 내역</a></li>
+                            <li><a href="javascript:subPage('myp_inquiry_list')" class="location3">문의 내역</a></li>
+                            <li><a href="javascript:subPage('myp_review_list')" lang="en" class="location4">나의 경험</a></li>
+                        </ul>
+                    </div>
+
+
+                    <div class="myp-wrap">
+                        <div class="myp-cont">
+                            <div class="myp-cont-title">
+                                <h1>나의 후기 작성하기</h1>
+                            </div><!-- .myp-qna-cont-title end -->
+
+                            <div class="myp-tbl tbl-revw">
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th>주문정보</th>
+                                            <th>주문상품상세정보</th>
+                                            <th>결제금액</th>
+                                            <th>후기등록</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+
+                                        <tr>
+                                           
+                                               
+ 
+                                              
+                                            <td>
+                                                <p lang="en" class="ord-info">No.202110210008</p>
+                                                <p lang="en" class="ord-info">21-10-08 10:00</p>
+                                            </td>
+
+                                                <td class="ord-detail">
+                                                    <div class="ord-detail-img">
+                                                        <img src="https://i.pinimg.com/564x/d2/bb/60/d2bb60d74d6ae0be913ed2dfae4237a7.jpg" alt="">
+                                                    </div> 
+                                                    <div class="ord-detail-text">
+                                                        <p>일자 5부 카라없음 무릎아래</p>
+                                                        <dl>
+                                                           
+                                                            <dd>원단 : 린넨</dd>
+                                                            <dd>원단량 : <span lang="en">3</span>야드</dd>
+                                                            <dd>수량 : <span lang="en">1</span>피스</dd>
+                                                        </dl>
+                                                    </div>
+                                                   </td>
+
+                                               
+                                                    <td>
+                                                        <div class="ord-detail-price">
+                                                            <span lang="en">500,000</span>원
+                                                            <!--한달 지난 리뷰는 못쓰게끔-->
+                                                        </div>
+                                                    </td>
+                                              
+                                                   
+
+
+                                               
+                                                    <td>
+                                                        <div class="btn-wrap">
+                                                            <a href="" class="btn-expired-mdm myp-btn">등록</a>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                   
+                                                    
+
+                                                    <!--modal 후기 기간 지났을 때 나타나는-->
+                                                  
+                                                     <div id="myModal2" class="modal-custom modal">   
+                                                        <div class="modal-content">
+                                                    
+                                                            <div class="modal-header">
+                                                                <h2>후기등록안내</h2>
+                                                                <p>구매 후 한달지난 후기는 등록할 수 없습니다.</p>
+                                                            </div>
+                                                            
+                                                                    <div class="btn-wrap">
+                                                                        <button type="button" class="btn-confirm close-modal " id="" >확인</button>
+                                                                      </div>
+                                                                      
+                                                              </div>
+                                                            </div> 
+
+
+
+                                                                <script>
+       
+       
+                                                                    // Get the button that opens the modal
+                                                                    let btn = document.querySelectorAll(".modal-custom-button");
+                                                                                         
+                                                                    // All page modals
+                                                                    let modals = document.querySelectorAll('.modal-custom');
+                                                                    
+                                                                    // Get the <span> element that closes the modal
+                                                                    let spans = document.getElementsByClassName("close-modal");
+                                                                    
+                                                                    // When the user clicks the button, open the modal
+                                                                    for (let i = 0; i < btn.length; i++) {
+                                                                     btn[i].onclick = function (e) {
+                                                                         e.preventDefault();
+                                                                         modal = document.querySelector(e.target.getAttribute("id"));
+                                                                         modal.style.display = "block";
+                                                                     }
+                                                                    }
+                                                                    
+                                                                    // When the user clicks on <span> (x), close the modal
+                                                                    for (let i = 0; i < spans.length; i++) {
+                                                                     spans[i].onclick = function () {
+                                                                         for (let fabric in modals) {
+                                                                             if (typeof modals[fabric].style !== 'undefined') 
+                                                                             modals[fabric].style.display = "none";
+                                                                         }
+                                                                     }
+                                                                    }
+                                                                    
+                                                                    // When the user clicks anywhere outside of the modal, close it
+                                                                    window.onclick = function (event) {
+                                                                     if (event.target.classList.contains('modal-custom')) {
+                                                                         for (let fabric in modals) {
+                                                                             if (typeof modals[fabric].style !== 'undefined') modals[fabric].style.display = "none";
+                                                                         }
+                                                                     }
+                                                                    }
+                                                             </script>
+                                            
+                                            </td>
+                                        </tr>
+
+
+                                    </tbody>
+                                </table>
+                            </div>
+                            <!-- .myp-tbl tbl-revw end -->
+
+                            <div class="myp-cont-title">
+                                <h1>나의 경험 작성내역</h1>
+                            </div><!-- .myp-qna-cont-title end -->
+
+                            <div class="myp-tbl tbl-revw-li">
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th>주문정보</th>
+                                            <th>주문상품상세정보</th>
+                                            <th>평점</th>
+                                            <th>작성일</th>
+                                            <th>댓글상태</th>
+                                        </tr>
+                                    </thead>
+
+                                    <tbody>
+                                        <tr class="view">
+                                            <td>
+                                                <p lang="en" class="ord-info">No.202110210008</p>
+                                                <p lang="en" class="ord-info">21-10-08 10:00</p>
+                                            </td>
+
+                                            <td class="ord-detail">
+                                             
+                                                <div class="ord-detail-img">
+                                                    <img src="https://i.pinimg.com/564x/d2/bb/60/d2bb60d74d6ae0be913ed2dfae4237a7.jpg" alt="">
+                                                </div>    
+                                                    <div class="ord-detail-text">
+                                                        <p>일자 5부 카라없음 무릎아래</p>
+                                                        <dl>
+                                                           
+                                                            <dd>원단 : 린넨</dd>
+                                                            <dd>원단량 : <span lang="en">3</span>야드</dd>
+                                                            <dd>수량 : <span lang="en">1</span>피스</dd>
+                                                        </dl>
+                                                    </div>
+                                              
+                                            </td>
+                                            <td lang="en">
+                                                <div class="star-rated">
+                                                    <span>&#9733;</span>
+                                                    <span>&#9733;</span>
+                                                    <span>&#9733;</span>
+                                                    <span>&#9733;</span>
+                                                    <span>&#9733;</span>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <p lang="en">21-11-02 10:27</p>
+                                            </td>
+                                            <td>
+                                                <div class="reply-area">
+                                                    <span class="state pending">댓글대기</span>
+                                                    <span class="dir">
+                                                        <!-- 검정 아이콘 -->
+                                                        <svg width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <path d="M5 5.30284L0.717493 1.1417L1.17538 0.69679L4.65196 4.06748L5 4.40492L5.34804 4.06748L8.82462 0.69679L9.28251 1.1417L5 5.30284Z" fill="#191919" stroke="#191919"/>
+                                                        </svg>
+                                                            
+                                                            
+                                                    </span>
+                                                </div>
+                                            </td>
+                                        </tr>
+
+
+
+
+                                        <tr class="fold">
+                                            <td colspan="5">
+                                                <div class="fold-content">
+                                                    <p>생각했던대로 딱 맞게 예쁘게 나왔어요!
+                                                    </p>  
+                                                </div>
+                                                <div class="btn-wrap">
+                                                    <button type="button" class="btn-mdf-sm" id="">수정</button>
+                                                    <button type="button" class="btn-dlt-sm" id="">삭제</button>
+                                                </div>
+                                                <div class="fold-reply">
+                                                    <h3>댓글내용</h3>
+                                                    <p>등록된 댓글이 없습니다.
+                                                    </p>
+                                                </div>
+                                            </td>
+                                        </tr>
+
+                                        <tr class="view">
+                                            <td>
+                                                <p lang="en" class="ord-info">No.202110210008</p>
+                                                <p lang="en" class="ord-info">21-10-08 10:00</p>
+                                            </td>
+                                            <td class="ord-detail">
+                                               
+                                                <div class="ord-detail-img">
+                                                    <img src="https://via.placeholder.com/98" alt="">
+                                                </div>
+                                                    <div class="ord-detail-text">
+                                                        <p>일자 5부 카라없음 무릎아래</p>
+                                                        <dl>
+                                                           
+                                                            <dd>원단 : 린넨</dd>
+                                                            <dd>원단량 : <span lang="en">3</span>야드</dd>
+                                                            <dd>수량 : <span lang="en">1</span>피스</dd>
+                                                        </dl>
+                                                    </div>
+                                               
+                                            </td>
+                                            <td lang="en">
+                                                <div class="star-rated">
+                                                    <span>&#9733;</span>
+                                                    <span>&#9733;</span>
+                                                    <span>&#9733;</span>
+                                                    <span>&#9733;</span>
+                                                    <span>&#9733;</span>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <p lang="en">21-11-02 10:27</p>
+                                            </td>
+
+                                           <td>
+                                                <div class="reply-area">
+                                                    <span class="state done">답변완료</span> 
+                                                        <span class="dir">
+                                                        <!-- 하얀아이콘 -->
+                                                        <svg width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <path d="M5 5.30284L0.717493 1.1417L1.17538 0.69679L4.65196 4.06748L5 4.40492L5.34804 4.06748L8.82462 0.69679L9.28251 1.1417L5 5.30284Z" fill="black" stroke="white"/>
+                                                          </svg>
+                                                    </span>
+                                                
+                                                </div>
+                                            </td>
+                                        
+                                        </tr>
+
+                                        <tr class="fold">
+                                            <td colspan="5">
+                                                <div class="fold-content">
+                                                    <p>생각한대로 딱 맞게 예쁘게 나왔어요!</br>
+                                                        덕분에 웨딩촬영 만족스럽게 끝낼 수 있었어요!
+                                                    </p>
+                                                </div>
+
+                                                <div class="btn-wrap">
+                                                    <button type="button" class="btn-mdf-sm" id="">수정</button>
+                                                    <button type="button" class="btn-dlt-sm" id="">삭제</button>
+                                                </div>
+
+                                                <div class="fold-reply">
+                                                    <h3>댓글내용</h3>
+                                                    <div class="adm-wrap">
+                                                        <p class="wr-adm">
+                                                            <span><img src="../../img/icon/mbr.png" alt=""></span>
+                                                            <span>관리자</span>
+                                                        </p>
+                                                        <p class="wr-date" lang="en">
+                                                            21-10-08 10:27
+                                                        </p>
+                                                    </div>
+                                                    <p>안녕하세요. 저희 온디멘드를 이용해주셔서 감사드립니다.</br>
+                                                        고객님만을 위한 하나뿐인 오더메이드 드레스 경험을 공유해주셔서 감사합니다. 좋은 하루 되시길 바랍니다.
+                                                    </p>
+                                                </div>
+                                            </td>
+                                        </tr>
+
+                                     
+                                        
+
+                                       
+
+                                        
+
+                              
+
+                                       
+                                  
+                                    </tbody>
+                                </table>
+                            </div>
+                            <!-- .myp-tbl tbl-revw-li end -->
+
+
+
+
+
+                            <div class="page-no">
+                                <div class="page-no-wrap">
+                                    <a class="page-no-a" href="">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M17.41 17.2375L10.9757 11.5L17.41 5.7625L15.4291 4L7 11.5L15.4291 19L17.41 17.2375Z"
+                                                fill="#2B2727" />
+                                        </svg>
+                                    </a>
+                                    <a class="page-no-a active" href="">
+                                        <span>1</span>
+                                    </a>
+                                    <a class="page-no-a" href="">
+                                        <span>2</span>
+                                    </a>
+                                    <a class="page-no-a" href="">
+                                        <span>3</span>
+                                    </a>
+                                    <a class="page-no-a" href="">
+                                        <span>4</span>
+                                    </a>
+                                    <a class="page-no-a" href="">
+                                        <span>5</span>
+                                    </a>
+                                    <a class="page-no-a" href="">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M7 17.2375L13.4343 11.5L7 5.7625L8.98085 4L17.41 11.5L8.98085 19L7 17.2375Z"
+                                                fill="#2B2727" />
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- .myp-cont end -->
+                    </div>
+                    <!--sub-inner-->
+                </div>
+                <!--sub-wrap-->
+
+            </div>
+            <!-----끝 #sub-container----->
+
+
+
+            <!----------------------------FOOTER---------------------------->
+            <footer class="footer">
+
+                <div class="footer-top">
+                    <div class="inner">
+                        <ul class="f-menu">
+                            <li><a href="#" class="wc">회사소개</a></li>
+                            <li><a href="#" class="wc ll">개인정보처리방침</a></li>
+                            <li><a href="#" class="wc ll">이용약관</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="footer-bottom">
+                    <div class="inner">
+                        <h2 class="logo-f">
+                            <a href="#"><img src="../../img/common/logo-f.png" alt="테크노메이드로고-푸터"></a>
+                        </h2>
+                        <div class="f-contact wc">
+                            <h4 class="f-title" lang="en">Contact</h4>
+                            <p lang="en">1577-1234</p>
+                            <p lang="en">AM: 9:00 - PM: 6:00 <span lang="ko">(주말 및 공휴일 휴무)</span></p>
+                        </div>
+                        <div class="f-bank wc">
+                            <h4 class="f-title wc" lang="en">Bank Account</h4>
+                            <div>
+                                국민은행 <span lang="en">0000-0000-0000</span> <br>
+                                국민은행 <span lang="en">0000-0000-0000</span> <br>
+                                예금주 : <span></span> 테크노메이드
+                            </div>
+                        </div>
+                        <div class="f-info wc">
+                            <h4 class="f-title wc" lang="en">Company</h4>
+                            <div>
+                                <span>상호명: 테크노메이드</span>
+                                <span class="ll">owner : 홍길동</span>
+                                <span class="ll">tel: 000-000-0000</span>
+                            </div>
+                            <div>
+                                <span>business no: 000-00-00000</span>
+                                <span class="ll">personal info manager : 장동석</span>
+                            </div>
+                            <div>
+                                address. 대구광역시 북구 호암로 51, 2층 201호(침산동, 대구창조경제혁신센터)
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--footer-bottom-->
+
+            </footer>
+
+
+
+        </div>
+        <!--끝--#Wrap-->
+
+        <script>
+            const views = document.querySelectorAll(".view");
+            const folds = document.querySelectorAll(".fold");
+
+            console.log(views.constructor.name);
+
+            for (let i = 0; i < views.length; i++) {
+                views[i].addEventListener("click", function () {
+                    views[i].classList.toggle("open");
+                    folds[i].classList.toggle("open");
+                });
+            }
+        </script>
+
+</body>
+
+</html>

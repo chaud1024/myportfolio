@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../css/common.css">
+    <link rel="stylesheet" href="../../css/reset.css">
+    <link rel="stylesheet" href="../../css/layout.css">
+    <link rel="stylesheet" href="../../css/admin.css">
+    <title>온디멘드 어드민 관리자-목록</title>
+</head>
+<body>
+    
+
+    <div class="adm-wrap">
+
+
+        <!----------------------------HEADER---------------------------->
+
+        <header class="header adm-header">
+            <div class="header-top">
+                <div class="userInfo">
+                    <ul>
+                      <li><a href="" class="login">로그인</a></li>
+                      <li><a href="" class="login-out">관리자 로그아웃</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="header-bottom">
+                <div class="inner">
+                    <h1 class="logo">
+                        <a href="../main/admin_main.html"><img src="../../img/common/adm_logo_w_x2.png" alt="테크노메이드로고"></a>
+                    </h1>
+                    <nav>
+                        <ul class="nav-menu">
+                            <li><a href="../order/admin_order_list.html">주문관리</a></li>
+                            <li><a href="../user/admin_user_list.html">회원관리</a></li>
+                            <li><a href="../inquiry/admin_inquiry_list.html">문의관리</a></li>
+                            <li><a href="../review/admin_review_list.html">후기관리</a></li>
+                            <li><a href="../fabric/admin_fabric_list.html">원단관리</a></li>
+                            <li>
+                                <a href="">카테고리</a>
+                                <ul class="nav-sub-menu">
+                                    <li><a href="../category/admin_cate_inquiry.html">문의관리</a></li>
+                                    <li><a href="../category/admin_cate_style.html">스타일관리</a></li>
+                                    <li><a href="../category/admin_cate_fabric.html">원단관리</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="../partner/admin_partner_dtl.html">협력업체</a></li>
+                            <li class="last active"><a href="#">관리자</a></li>
+
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </header>
+        <!----------------------------HEADER---------------------------->
+
+        <!---------------------------- SUB CONTAINER ---------------------------->
+
+        <div class="sub-container">
+
+            <div class="sub-wrap">
+                <div class="sub-inner">
+
+                    <div class="wrap__adm-cont">
+
+                        <div class="inner__adm-cont">
+
+                            <div class="adm-cont-titl">
+                                <h1 class="">관리자</h1>
+                            </div>
+                            <!---.odr-list-titl end --->
+    
+                            <div class="filter-bar__admin adm-user-filter">
+                                <div class="filter-left">
+                                    <ul>
+                                        <li class="filter-select">
+                                            <div class="wrap__sel sel-lbl-hide">
+                                                <label for="" class="label-tit">관리자구분</label>
+                                                <select name="" class=" wd-shrt" id="">
+                                                    <option value="0" selected="selected">관리자구분</option>
+                                                    <option value="메인관리자">메인관리자</option>
+                                                    <option value="관리자">관리자</option>
+                                                </select>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <!-------------- .filter-left end ----------->
+
+                                <div class="filter-right">
+                                    <ul>
+                                        <li>
+                                            <div class="wrap__sel sel-lbl-hide">
+                                                <label for="" class="label-tit">관리자검색분류</label>
+                                                <select name="" class=" wd-shrt" id="">
+                                                    <option value="0" selected="selected">관리자검색분류</option>
+                                                    <option value="이름">이름</option>
+                                                    <option value="연락처">연락처</option>
+                                                    <option value="메일">메일</option>
+                                                </select>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="wrap__input input-lbl-hide">
+                                                <label for="" class="label-tit">관리자검색</label>
+                                                <input type="search" id="" class=" input-sch wd-shrt" placeholder="검색어 입력">
+                                                <button class="btn btn-prm">검색</button>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <!-------------- .filter-right end ---------->
+                            </div>
+                            <!--------------- .filter-bar end --------------->
+    
+
+                            <!---------------------- 리스트 첫번째 체크박스 필요 없을 시 삭제 가능 ---------------------->
+
+                            <div class="adm-cont adm-user-list">
+                                <div class="wrap__tbl-row">
+                                    <table>
+                                        <colgroup>
+                                            <col width= "5%;">
+                                            <col width= "15%;">
+                                            <col width= "20%;">
+                                            <col width= "20%;">
+                                            <col width= "40%;">
+                                        </colgroup>
+                                        <thead>
+                                            <tr onclick = " location.href= 'admin_member_dtl.html' ">
+                                                <th>번호</th>
+                                                <th>구분</th>
+                                                <th>이름</th>
+                                                <th>연락처</th>
+                                                <th>메일</th>
+                                            </tr>
+                                        </thead>
+        
+                                        <tbody>
+    
+                                            <tr onclick = " location.href= 'admin_member_dtl.html' ">
+                                                <td lang="en">04</td>
+                                                <td>메인관리자</td>
+                                                <td>
+                                                    김가나
+                                                </td>
+                                                <td lang="en">010-1234-5678</td>
+                                                <td lang="en" class="td--left">kakao_account@email.com</td>
+                                            </tr>
+    
+                                            <tr onclick = " location.href= 'admin_member_dtl.html' ">
+                                                <td lang="en">03</td>
+                                                <td>관리자</td>
+                                                <td>
+                                                    이다라
+                                                </td>
+                                                <td lang="en">010-1234-5678</td>
+                                                <td lang="en" class="td--left">kakao_account@email.com</td>
+                                            </tr>
+    
+                                            <tr onclick = " location.href= 'admin_member_dtl.html' ">
+                                                <td lang="en">02</td>
+                                                <td>관리자</td>
+                                                <td>
+                                                    최하나
+                                                </td>
+                                                <td lang="en">010-1234-5678</td>
+                                                <td lang="en" class="td--left">kakao_account@email.com</td>
+                                            </tr>
+    
+                                            <tr onclick = " location.href= 'admin_member_dtl.html' ">
+                                                <td lang="en">01</td>
+                                                <td>관리자</td>
+                                                <td>
+                                                    황나나
+                                                </td>
+                                                <td lang="en">010-1234-5678</td>
+                                                <td lang="en" class="td--left">kakao_account@email.com</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <!------------ .wrap__tbl-row end ------------>
+    
+                            </div>
+                            <!---------- .adm-tbl adm-user-list end ---------->
+
+
+                            <div class="page-no">
+                                <div class="page-no-wrap">
+                                    <a class="page-no-a" href="">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M17.41 17.2375L10.9757 11.5L17.41 5.7625L15.4291 4L7 11.5L15.4291 19L17.41 17.2375Z" fill="#2B2727"></path>
+                                        </svg>
+                                    </a>
+                                    <a class="page-no-a active" href="">
+                                        <span>1</span>
+                                    </a>
+                                    <a class="page-no-a" href="">
+                                        <span>2</span>
+                                    </a>
+                                    <a class="page-no-a" href="">
+                                        <span>3</span>
+                                    </a>
+                                    <a class="page-no-a" href="">
+                                        <span>4</span>
+                                    </a>
+                                    <a class="page-no-a" href="">
+                                        <span>5</span>
+                                    </a>
+                                    <a class="page-no-a" href="">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M7 17.2375L13.4343 11.5L7 5.7625L8.98085 4L17.41 11.5L8.98085 19L7 17.2375Z" fill="#2B2727"></path>
+                                        </svg>
+                                    </a>
+                                </div>
+                                <!----------- .page-no-wrap end -------->
+                            </div>
+                            <!-------------- .page-no end -------------->
+
+
+                        </div>
+                        <!------------- .inner__adm-cont end ----------->
+
+
+                    </div>
+                    <!---------------- .wrap__adm-cont end ------------->
+
+
+                </div>
+                <!------------------- .sub-inner end ------------------->
+
+
+            </div>
+            <!--------------------- .sub-wrap end ---------------------->
+
+
+        </div>
+        <!------------------------- .sub-container end -------------------------->
+        <!---------------------------- SUB CONTAINER ---------------------------->
+
+    
+    </div>
+    <!--------------- .adm-wrap end ---------------->
+
+
+    <script>
+
+        function selectAll(selectAll) {
+            const chckBox = document.getElementsByName("tbl-list");
+
+            chckBox.forEach((checkbox) => {
+                checkbox.checked = selectAll.checked;
+            })
+        }
+
+
+    </script>
+
+
+</body>
+</html>

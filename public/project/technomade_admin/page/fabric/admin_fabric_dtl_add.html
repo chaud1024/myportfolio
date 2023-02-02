@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../css/common.css">
+    <link rel="stylesheet" href="../../css/reset.css">
+    <link rel="stylesheet" href="../../css/layout.css">
+    <link rel="stylesheet" href="../../css/admin.css">
+    <title>온디멘드 어드민 원단관리-상세</title>
+</head>
+
+<body>
+
+
+    <div class="adm-wrap">
+
+
+        <!----------------------------HEADER---------------------------->
+
+        <header class="header adm-header">
+            <div class="header-top">
+                <div class="userInfo">
+                    <ul>
+                        <li><a href="" class="login">로그인</a></li>
+                        <li><a href="" class="login-out">관리자 로그아웃</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="header-bottom">
+                <div class="inner">
+                    <h1 class="logo">
+                        <a href="../main/admin_main.html"><img src="../../img/common/adm_logo_w01.png" alt="테크노메이드로고"></a>
+                    </h1>
+                    <nav>
+                        <ul class="nav-menu">
+                            <li><a href="../order/admin_order_list.html">주문관리</a></li>
+                            <li><a href="../user/admin_user_list.html">회원관리</a></li>
+                            <li><a href="../inquiry/admin_inquiry_list.html">문의관리</a></li>
+                            <li><a href="../review/admin_review_list.html">후기관리</a></li>
+                            <li class="active"><a href="../fabric/admin_fabric_list.html">원단관리</a></li>
+                            <li>
+                                <a href="">카테고리</a>
+                                <ul class="nav-sub-menu">
+                                    <li><a href="../category/admin_cate_inquiry.html">문의관리</a></li>
+                                    <li><a href="../category/admin_cate_style.html">스타일관리</a></li>
+                                    <li><a href="../category/admin_cate_fabric.html">원단관리</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="../partner/admin_partner_dtl.html">협력업체</a></li>
+                            <li class="last"><a href="../member/admin_member_list.html">관리자</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </header>
+
+        <!---------------------------- SUB CONTAINER ---------------------------->
+
+        <div class="sub-container">
+
+            <div class="sub-wrap">
+                <div class="sub-inner">
+
+                    <div class="wrap__adm-cont">
+
+                        <div class="inner__adm-cont">
+
+                            <div class="adm-cont-titl">
+                                <h1 class="">원단관리</h1>
+                            </div>
+                            <!---.odr-list-titl end --->
+
+                            <div class="adm-cont adm-fbr-dtl">
+
+                                <div class="wrap__adm-sect">
+
+                                    <div class="adm-sect">
+                                        <div class="adm-sect-titl">
+                                            <h1>원단등록</h1>
+                                        </div>
+
+                                        <div class="wrap__adm-sect-cont">
+                                            <div class="adm-sect-cont-img">
+                                                <div class="wrap__adm-input-file">
+                                                    <div class="adm-input-file">
+                                                        <div id="att_zone" class="file-zone" data-pladeholder="파일첨부를 위해 파일선택버튼을 클릭해주세요."></div>
+                                                        <label class="" for="">원단이미지 첨부</label>
+                                                        <div class="wrap__adm-img-prevw">
+                                                            <label for="btnAtt" class="btn btn-prm">파일업로드</label>
+                                                            <input type="file" id="btnAtt" class="btn"  multiple="multiple" />
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <ul class="adm-sect-cont">
+                                                <li>
+                                                    <div class="wrap__input input-rad">
+                                                        <div class="wrap__sel ">
+                                                            <label for="" class="label-tit">원단대분류</label>
+                                                            <select name="" class=" wd-shrt" id="">
+                                                                <option value="0" selected="selected">원단대분류선택</option>
+                                                                <option value="코튼">코튼</option>
+                                                                <option value="린넨">린넨</option>
+                                                                <option value="실크">실크</option>
+                                                                <option value="TR">TR</option>
+                                                                <option value="레이온">레이온</option>
+                                                                <option value="텐셀">텐셀</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="wrap__input input-rad">
+                                                        <div class="wrap__sel adm-fbr">
+                                                            <label for="" class="label-tit">원단소분류</label>
+                                                            <select name="" class=" wd-shrt" id="">
+                                                                <option value="0" selected="selected">원단소분류선택</option>
+                                                                <option value="무지">무지</option>
+                                                                <option value="스트라이프">스트라이프</option>
+                                                                <option value="폴카도트">폴카도트</option>
+                                                                <option value="깅엄체크">깅엄체크</option>
+                                                                <option value="하운드투스">하운드투스</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="wrap__input input-rad">
+                                                        <label for="" class="label-tit">원단타입</label>
+                                                        <input type="text" name="" id="" class=" input-txt wd-mdm" value="" lang="en" placeholder="원단타입을 입력해주세요">
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="wrap__input input-rad">
+                                                        <label for="" class="label-tit">원단코드</label>
+                                                        <input type="text" name="" id="" class=" input-txt wd-mdm" value="" lang="en" placeholder="원단코드를 입력해주세요">
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="wrap__input input-rad">
+                                                        <label for="" class="label-tit">원단혼용률</label>
+                                                        <input type="text" name="" id="" class=" input-txt wd-mdm" value="" lang="en" placeholder="원단혼용율을 입력해주세요">
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="wrap__input input-rad fbr-story">
+                                                        <label for="" class="label-tit">스토리텔링01</label>
+                                                        <input type="text" name="" id="" class=" input-txt wd-mdm fbr-story" value="" lang="en" placeholder="원단스토리텔링을 입력해주세요">
+                                                        <button class="btn btn-prm">추가</button>
+                                                    </div>
+                                                    <div class="wrap__input input-rad fbr-story">
+                                                        <label for="" class="label-tit">스토리텔링02</label>
+                                                        <input type="text" name="" id="" class=" input-txt wd-mdm fbr-story" value="" lang="en" placeholder="원단스토리텔링을 입력해주세요">
+                                                        <button class="btn btn-dlt">삭제</button>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="wrap__input input-rad">
+                                                        <label for="" class="label-tit">단가</label>
+                                                        <input type="text" name="" id="" class=" input-txt wd-mdm" lang="en" value="" placeholder="1yrd당 단가를 입력해주세요">
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="wrap__input input-rad">
+                                                        <label for="" class="label-tit">공임비</label>
+                                                        <input type="text" name="" id="" class=" input-txt wd-mdm" lang="en" value="" placeholder="공임비를 입력해주세요">
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="wrap__input input-rad">
+                                                        <label for="" class="label-tit">재고량</label>
+                                                        <input type="text" name="" id="" class=" input-txt wd-mdm" lang="en" value="" placeholder="판매재고량을 입력해주세요">
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="wrap__input input-rad">
+                                                        <div class="wrap__sel ">
+                                                            <label for="" class="label-tit">판매여부</label>
+                                                            <select name="" class=" wd-shrt" id="">
+                                                                <option value="0" selected="selected">판매여부선택</option>
+                                                                <option value="판매중">판매중</option>
+                                                                <option value="입고예정">입고예정</option>
+                                                                <option value="일시품절">일시품절</option>
+                                                                <option value="판매중지">판매중지</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                            <!----- .wrap__adm-sect-cont end ---->
+
+                                        </div>
+                                        <!----- wrap__adm-sect-cont end ---->
+
+                                    </div>
+                                    <!---- .adm-sect end ----->
+
+
+
+                                </div>
+                                <!----- .wrap__adm-sect end ---->
+
+                            </div>
+                            <!----------- .adm-tbl adm-odr-dtl end ------------>
+
+                            <div class="btn-wrap">
+                                <button type="button" id="" class="btn-list" onclick="location.href='admin_fabric_list.html' ">목록</button>
+                                <button type="button" id="" class="btn-list">등록</button>
+                            </div>
+
+
+                        </div>
+                        <!---------- .inner__adm-tbl end ----------->
+
+
+                    </div>
+
+
+
+                </div>
+                <!------------------- .sub-inner end ------------------->
+
+
+            </div>
+            <!------------------- .sub-wrap end ------------------->
+
+
+        </div>
+        <!------------------- .sub-container end ------------------->
+
+
+    </div>
+    <!--------------- .adm-wrap end ---------------->
+
+
+    <script>
+        function selectAll(selectAll) {
+            const chckBox = document.getElementsByName("odr-list");
+
+            chckBox.forEach((checkbox) => {
+                checkbox.checked = selectAll.checked;
+            })
+        }
+
+        ( /* att_zone : 이미지들이 들어갈 위치 id, btn : file tag id */
+            imageView = function imageView(att_zone, btn) {
+
+                let attZone = document.getElementById(att_zone);
+                let btnAtt = document.getElementById(btn)
+                let sel_files = [];
+
+                // 미리보기 이미지 속성
+                let img_style = 'width:100%;height:100%;z-index:none;border-radius : 8px';
+                // 이미지안에 표시되는 체크박스의 속성
+                let chk_style = 'width:30px;height:30px;position:absolute;font-size:18px;' +
+                    'right:6px;top:0px;z-index:999;background-color:transparent;color:#fff;border:none';
+
+                btnAtt.onchange = function (e) {
+                    let files = e.target.files;
+                    let fileArr = Array.prototype.slice.call(files)
+                    for (f of fileArr) {
+                        imageLoader(f);
+                    }
+                }
+
+
+                /*첨부된 이미지를을 배열에 넣고 미리보기 */
+                imageLoader = function (file) {
+                    sel_files.push(file);
+                    let reader = new FileReader();
+                    reader.onload = function (ee) {
+                        let div = document.createElement("div");
+                        div.setAttribute('style', "background-image:url("+ee.target.result+"); background-size : cover; background-position : center center;"+img_style);
+                        // let img = document.createElement('img')
+                        // img.setAttribute('style', img_style)
+                        // img.src = ee.target.result;
+                        attZone.appendChild(makeDiv(div, file));
+                    }
+
+                    reader.readAsDataURL(file);
+                }
+
+                /*첨부된 파일이 있는 경우 checkbox와 함께 attZone에 추가할 div를 만들어 반환 */
+                makeDiv = function (img, file) {
+                    let div = document.createElement('div')
+
+                    let btn = document.createElement('input')
+                    btn.setAttribute('type', 'button')
+                    btn.setAttribute('value', '✕')
+                    btn.setAttribute('class', 'close-img')
+                    btn.setAttribute('delFile', file.name);
+                    btn.setAttribute('style', chk_style);
+                    btn.onclick = function (ev) {
+                        let ele = ev.srcElement;
+                        let delFile = ele.getAttribute('delFile');
+                        for (let i = 0; i < sel_files.length; i++) {
+                            if (delFile == sel_files[i].name) {
+                                sel_files.splice(i, 1);
+                            }
+                        }
+
+                        dt = new DataTransfer();
+                        for (f in sel_files) {
+                            let file = sel_files[f];
+                            dt.items.add(file);
+                        }
+                        btnAtt.files = dt.files;
+                        let p = ele.parentNode;
+                        attZone.removeChild(p)
+                    }
+                    div.appendChild(img)
+                    div.appendChild(btn)
+                    return div
+                }
+            }
+        )('att_zone', 'btnAtt')
+
+    </script>
+
+
+</body>
+
+</html>

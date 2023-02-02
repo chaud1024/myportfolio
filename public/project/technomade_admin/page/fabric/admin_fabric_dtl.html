@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../css/common.css">
+    <link rel="stylesheet" href="../../css/reset.css">
+    <link rel="stylesheet" href="../../css/layout.css">
+    <link rel="stylesheet" href="../../css/admin.css">
+    <title>온디멘드 어드민 원단관리-상세</title>
+</head>
+
+<body>
+
+
+    <div class="adm-wrap">
+
+
+        <!----------------------------HEADER---------------------------->
+
+        <header class="header adm-header">
+            <div class="header-top">
+                <div class="userInfo">
+                    <ul>
+                        <li><a href="" class="login">로그인</a></li>
+                        <li><a href="" class="login-out">관리자 로그아웃</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="header-bottom">
+                <div class="inner">
+                    <h1 class="logo">
+                        <a href="../main/admin_main.html"><img src="../../img/common/adm_logo_w01.png" alt="테크노메이드로고"></a>
+                    </h1>
+                    <nav>
+                        <ul class="nav-menu">
+                            <li><a href="../order/admin_order_list.html">주문관리</a></li>
+                            <li><a href="../user/admin_user_list.html">회원관리</a></li>
+                            <li><a href="../inquiry/admin_inquiry_list.html">문의관리</a></li>
+                            <li><a href="../review/admin_review_list.html">후기관리</a></li>
+                            <li class="active"><a href="../fabric/admin_fabric_list.html">원단관리</a></li>
+                            <li>
+                                <a href="">카테고리</a>
+                                <ul class="nav-sub-menu">
+                                    <li><a href="../category/admin_cate_inquiry.html">문의관리</a></li>
+                                    <li><a href="../category/admin_cate_style.html">스타일관리</a></li>
+                                    <li><a href="../category/admin_cate_fabric.html">원단관리</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="../partner/admin_partner_dtl.html">협력업체</a></li>
+                            <li class="last"><a href="../member/admin_member_list.html">관리자</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </header>
+
+        <!---------------------------- SUB CONTAINER ---------------------------->
+
+        <div class="sub-container">
+
+            <div class="sub-wrap">
+                <div class="sub-inner">
+
+                    <div class="wrap__adm-cont">
+
+                        <div class="inner__adm-cont">
+
+                            <div class="adm-cont-titl">
+                                <h1 class="">원단관리</h1>
+                                <button type="button" class="btn btn-prm btn-wr" onclick="location.href='admin_fabric_dtl_add.html' ">등록</button>
+
+                            </div>
+                            <!---.odr-list-titl end --->
+
+                            <div class="adm-cont adm-fbr-dtl">
+
+                                <div class="wrap__adm-sect">
+
+                                    <div class="adm-sect">
+                                        <div class="adm-sect-titl">
+                                            <h1>원단상세정보</h1>
+                                        </div>
+
+                                        <div class="wrap__adm-sect-cont">
+                                            <div class="adm-sect-cont-img">
+                                                <div class="wrap__cont-img"></div>
+                                            </div>
+                                            <ul class="adm-sect-cont">
+                                                <li>
+                                                    <div class="adm-sect-cont-titl">원단대분류</div>
+                                                    <div class="adm-sect-cont-txt" lang="en">코튼</div>
+                                                </li>
+                                                <li>
+                                                    <div class="adm-sect-cont-titl">원단소분류</div>
+                                                    <div class="adm-sect-cont-txt" lang="en">체크</div>
+                                                </li>
+                                                <li>
+                                                    <div class="adm-sect-cont-titl">원단타입</div>
+                                                    <div class="adm-sect-cont-txt">코튼 체크 <span lang="en">C-gr</span></div>
+                                                </li>
+                                                <li>
+                                                    <div class="adm-sect-cont-titl">원단코드</div>
+                                                    <div class="adm-sect-cont-txt"><span lang="en">CTN123</span></div>
+                                                </li>
+                                                <li>
+                                                    <div class="adm-sect-cont-titl">원단혼용률</div>
+                                                    <div class="adm-sect-cont-txt">코튼 <span lang="en">50%</span>, 실크 <span lang="en">30%</span>, 폴리 <span lang="en">20%</span></div>
+                                                </li>
+                                                <li>
+                                                    <div class="adm-sect-cont-titl">스토리텔링</div>
+                                                    <div class="adm-sect-cont-txt">전체폭은 <span lang="en">54-58”</span> 이지만 가용폭은 <span lang="en">52-56” </span> 입니다.</div>
+                                                </li>
+                                                <li>
+                                                    <div class="adm-sect-cont-titl">단가</div>
+                                                    <div class="adm-sect-cont-txt">10,000원</div>
+                                                </li>
+                                                <li>
+                                                    <div class="adm-sect-cont-titl">공임비</div>
+                                                    <div class="adm-sect-cont-txt"><span lang="en">5,000원</span></div>
+                                                </li>
+                                                <li>
+                                                    <div class="adm-sect-cont-titl">재고량</div>
+                                                    <div class="adm-sect-cont-txt"><span lang="en">100</span></div>
+                                                </li>
+                                                <li>
+                                                    <div class="adm-sect-cont-titl">판매여부</div>
+                                                    <div class="adm-sect-cont-txt">판매중</div>
+                                                </li>
+                                            </ul>
+                                            <!----- .wrap__adm-sect-cont end ---->
+
+                                        </div>
+                                        <!----- wrap__adm-sect-cont end ---->
+
+                                    </div>
+                                    <!---- .adm-sect end ----->
+
+
+
+                                </div>
+                                <!----- .wrap__adm-sect end ---->
+
+                            </div>
+                            <!----------- .adm-tbl adm-odr-dtl end ------------>
+
+                            <div class="btn-wrap">
+                                <button type="button" id="" class="btn-list" onclick="location.href='admin_fabric_list.html' ">목록</button>
+                                <button type="button" id="" class="btn-list" onclick="location.href='admin_fabric_dtl_mdf.html' ">수정</button>
+                            </div>
+
+
+                        </div>
+                        <!---------- .inner__adm-tbl end ----------->
+
+
+                    </div>
+
+
+
+                </div>
+                <!------------------- .sub-inner end ------------------->
+
+
+            </div>
+            <!------------------- .sub-wrap end ------------------->
+
+
+        </div>
+        <!------------------- .sub-container end ------------------->
+
+
+    </div>
+    <!--------------- .adm-wrap end ---------------->
+
+
+    <script>
+        function selectAll(selectAll) {
+            const chckBox = document.getElementsByName("odr-list");
+
+            chckBox.forEach((checkbox) => {
+                checkbox.checked = selectAll.checked;
+            })
+        }
+    </script>
+
+
+</body>
+
+</html>
