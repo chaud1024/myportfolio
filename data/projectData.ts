@@ -4,7 +4,7 @@ export interface ProjectProps {
   description: string;
   category: string;
   site: string;
-  skill: Array<string>;
+  skill: string[];
 }
 
 export const projectData: ProjectProps[] = [
