@@ -96,6 +96,6 @@ const useStyles = createStyles((theme, _params) => ({
     marginBottom: "32px",
     paddingBottom: "32px",
     borderBottom: "1px solid",
-    borderColor: theme.colors.dark[0],
+    borderColor: theme.colors.gray[6],
   },
 }));
