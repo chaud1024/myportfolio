@@ -64,8 +64,7 @@ const useStyles = createStyles((theme) => ({
     alignItems: "flex-start",
     backgroundSize: "cover",
     backgroundPosition: "center",
-    boxShadow:
-      "2px 2px 8px 0px rgba(17, 0, 0, 0.29),7px -5px 10px -11px rgba(39, 39, 39, 0.79);",
+    boxShadow: theme.shadows.sm,
     borderRadius: theme.spacing.md,
   },
 
@@ -77,11 +76,11 @@ const useStyles = createStyles((theme) => ({
     fontSize: 32,
     marginTop: theme.spacing.xs,
     marginBottom: theme.spacing.xs,
-    filter: "drop-shadow(4px 6px 6px rgba(0, 0, 0, 0.66))",
+    filter: theme.shadows.lg,
   },
 
   category: {
-    color: theme.colors.gray[0],
+    color: theme.colors.gray[1],
     opacity: 0.7,
     fontWeight: 700,
     textTransform: "uppercase",
@@ -90,7 +89,7 @@ const useStyles = createStyles((theme) => ({
   description: {
     color: theme.white,
     fontWeight: 400,
-    filter: "drop-shadow(2px 4px 6px rgba(0, 0, 0, 0.8))",
+    filter: theme.shadows.lg,
   },
 
   badge: {
@@ -100,7 +99,7 @@ const useStyles = createStyles((theme) => ({
   },
 
   wrapInfo: {
-    background: "linear-gradient(to top, rgba(0,0,0,0.684), rgba(0,0,0,0.3))",
+    background: theme.shadows.xl,
     padding: "24px",
     boxSizing: "border-box",
     height: "100%",
