@@ -10,12 +10,12 @@ export interface ExpProps {
 
 export const expData: ExpProps[] = [
   {
-    title: "Dev-rel 프론트 개발",
+    title: "DEVREL 프론트 개발",
     where: "팀 데브렐",
     from: "2022. 10.",
     to: "2023. 01.",
     description:
-      "기업 기술블로그를 큐레이션하는 사이드프로젝트 Dev-rel에서 디자이너/프론트엔드 개발자로 참여했습니다.",
+      "기업 기술블로그를 큐레이션하는 사이드프로젝트 DEVREL에서 디자이너/프론트엔드 개발자로 참여했습니다.",
     content:
       "1차 프로토타입 디자이너 및 프론트엔드 개발자로 참가했습니다. 1차때는 emotion을 사용해 모든 컴포넌트의 디자인을 직접 한 반면, 2차 때에는 React component library인 Mantine을 도입해 디자인적으로 훨씬 정돈되고 빠르게 프론트 개발을 진행할 수 있었습니다. 특히 현업 관계자들이 관심을 가질 콘텐츠를 바탕으로 프로젝트에 참가했다는 점에서 자신감과 보람을 느꼈습니다.",
     site: "https://dev-rel.com/develop",
