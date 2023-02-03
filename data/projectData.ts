@@ -10,7 +10,7 @@ export interface ProjectProps {
 export const projectData: ProjectProps[] = [
   {
     image: "/img/devrel.png",
-    title: "Dev-rel",
+    title: "DEVREL",
     description: "기업 기술블로그 큐레이션 사이트의 프론트엔드 개발",
     category: "팀 데브렐",
     site: "https://dev-rel.com/",
