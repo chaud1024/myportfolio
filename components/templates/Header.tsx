@@ -1,6 +1,5 @@
 import { createStyles } from "@mantine/core";
 import { Flex, Text, Box, Title } from "@mantine/core";
-import Image from "next/image";
 import { Link } from "react-scroll";
 import { arsenal } from "types/TextType";
 
@@ -57,7 +56,7 @@ const useStyles = createStyles((theme, _params) => ({
     justifyContent: "space-between",
     padding: theme.spacing.sm,
     borderBottom: "1px solid",
-    borderColor: theme.colors.dark[0],
+    borderColor: theme.colors.gray[6],
     position: "fixed",
     top: 0,
     left: "auto",
