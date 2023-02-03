@@ -51,7 +51,7 @@ const Experience = () => {
 
 export default Experience;
 
-const useStyles = createStyles((theme, _params, getRef) => ({
+const useStyles = createStyles((theme, _params) => ({
   wrap: {
     width: "100%",
     display: "flex",
