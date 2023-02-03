@@ -87,7 +87,7 @@ const AboutSkills = () => {
 
 export default AboutSkills;
 
-const useStyles = createStyles((theme, _params, getRef) => ({
+const useStyles = createStyles((theme, _params) => ({
   wrapSkillBox: {
     width: "100%",
   },
