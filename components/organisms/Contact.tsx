@@ -1,4 +1,4 @@
-import { Box, Flex, createStyles } from "@mantine/core";
+import { Box, createStyles } from "@mantine/core";
 import {
   IconBrandGithub,
   IconMailForward,
