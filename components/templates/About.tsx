@@ -121,7 +121,10 @@ const useStyles = createStyles((theme, _params, getRef) => ({
       content: `""`,
       width: "1px",
       height: "114px",
-      backgroundColor: "#000",
+      backgroundColor:
+        theme.colorScheme === "dark"
+          ? theme.colors.dark[1]
+          : theme.colors.dark[9],
       position: "absolute",
       bottom: "-58%",
       left: "50%",
