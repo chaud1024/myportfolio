@@ -1,5 +1,7 @@
-import { createStyles } from "@mantine/core";
+import { createStyles, useMantineColorScheme } from "@mantine/core";
 import { Flex, Text, Box, Title } from "@mantine/core";
+import { ActionIcon } from "@mantine/core";
+import { IconMoonStars, IconSun } from "@tabler/icons-react";
 import { Link } from "react-scroll";
 import { arsenal } from "types/TextType";
 
@@ -20,8 +22,10 @@ const headersData = [
 
 const Header = () => {
   const { classes } = useStyles();
+  const { colorScheme, toggleColorScheme } = useMantineColorScheme();
+  const dark = colorScheme === "dark";
   return (
-    <Box className={classes.wrapHeader}>
+    <Box className={classes.wrapHeader} bg={dark ? "#1A1B1E" : "white"}>
       <Title className={arsenal.className}>BORA&apos;s Portfolio</Title>
       <Flex
         gap="lg"
@@ -42,6 +46,14 @@ const Header = () => {
             </Link>
           </Text>
         ))}
+        <ActionIcon
+          variant="filled"
+          color={dark ? "yellow" : "violet.3"}
+          onClick={() => toggleColorScheme()}
+          title="Toggle color scheme"
+        >
+          {dark ? <IconSun size={18} /> : <IconMoonStars size={18} />}
+        </ActionIcon>
       </Flex>
     </Box>
   );
@@ -60,7 +72,6 @@ const useStyles = createStyles((theme, _params) => ({
     position: "fixed",
     top: 0,
     left: "auto",
-    backgroundColor: theme.white,
     zIndex: 999,
   },
   menu: {
@@ -71,7 +82,10 @@ const useStyles = createStyles((theme, _params) => ({
       content: `""`,
       width: "100%",
       height: "1px",
-      backgroundColor: theme.black,
+      backgroundColor:
+        theme.colorScheme === "dark"
+          ? theme.colors.dark[1]
+          : theme.colors.dark[9],
       position: "absolute",
       bottom: 0,
       left: "calc(-100%)",
