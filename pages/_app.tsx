@@ -34,8 +34,10 @@ export default function App({ Component, pageProps }: AppProps) {
         },
 
         shadows: {
+          sm: "rgb(17 0 0 / 29%) 2px 2px 8px 0px, rgb(39 39 39 / 79%) 7px -5px 10px -11px",
           md: "1px 1px 3px rgba(0, 0, 0, .25)",
-          xl: "5px 5px 3px rgba(0, 0, 0, .25)",
+          lg: "drop-shadow(rgba(0, 0, 0, 0.8) 2px 4px 6px)",
+          xl: "linear-gradient(to top, rgba(0, 0, 0, 0.682), rgba(0, 0, 0, 0.3))",
         },
 
         breakpoints: {
