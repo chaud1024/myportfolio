@@ -5,12 +5,28 @@ import { projectData } from "data/projectData";
 import { arsenal } from "types/TextType";
 import ProjectCard from "components/organisms/ProjectCard";
 
+import { useTranslation } from "next-i18next";
+
+export interface projectDataProps {
+  image: string;
+  title: string;
+  description: string;
+  category: string;
+  site: string;
+  skill: string[];
+}
+
 const Project = () => {
   const theme = useMantineTheme();
   const { classes } = useStyles();
   const mobile = useMediaQuery(`(max-width: ${theme.breakpoints.sm}px)`);
-  const slides = projectData.map((item) => (
-    <Carousel.Slide key={item.title}>
+
+  const { t } = useTranslation("project");
+
+  const projectDataJson = t<string, projectDataProps[]>("project.items", {returnObjects: true})
+
+  const slides = projectDataJson.map((item: projectDataProps, index: number) => (
+    <Carousel.Slide key={index}>
       <ProjectCard {...item} />
     </Carousel.Slide>
   ));

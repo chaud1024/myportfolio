@@ -7,7 +7,8 @@ import {
   Title,
   createStyles,
 } from "@mantine/core";
-import { ProjectProps } from "data/projectData";
+import { projectDataProps } from "components/templates/Project";
+
 
 const ProjectCard = ({
   image,
@@ -16,7 +17,7 @@ const ProjectCard = ({
   category,
   site,
   skill,
-}: ProjectProps) => {
+}: projectDataProps) => {
   const { classes } = useStyles();
   return (
     <Paper sx={{ backgroundImage: `url(${image})` }} className={classes.card}>
@@ -58,6 +59,7 @@ export default ProjectCard;
 const useStyles = createStyles((theme) => ({
   card: {
     height: 440,
+    width: "100%",
     display: "flex",
     flexDirection: "column",
     justifyContent: "space-between",
@@ -80,10 +82,15 @@ const useStyles = createStyles((theme) => ({
   },
 
   category: {
-    color: theme.colors.gray[1],
+    color: theme.colors.gray[9],
     opacity: 0.7,
     fontWeight: 700,
     textTransform: "uppercase",
+    backgroundColor: theme.white,
+    paddingRight: theme.spacing.xs,
+    paddingLeft: theme.spacing.xs,
+    display: "inline-block",
+    borderRadius: 6
   },
 
   description: {
@@ -93,8 +100,8 @@ const useStyles = createStyles((theme) => ({
   },
 
   badge: {
-    color: theme.colors.cyan[0],
-    backgroundColor: theme.colors.cyan[9],
+    color: theme.colors.gray[0],
+    backgroundColor: theme.colors.pink[6],
     fontWeight: 400,
   },
 
@@ -103,6 +110,7 @@ const useStyles = createStyles((theme) => ({
     padding: "24px",
     boxSizing: "border-box",
     height: "100%",
+    width: "100%",
     display: "flex",
     flexDirection: "column",
     justifyContent: "space-between",
