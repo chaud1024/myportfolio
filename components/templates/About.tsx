@@ -1,14 +1,17 @@
 import { useEffect, useRef } from "react";
 import { Text, Box, Flex } from "@mantine/core";
 import { createStyles } from "@mantine/core";
-import { ibmKr, montserrat } from "types/TextType";
+import { ibmKr } from "types/TextType";
 
 import AboutSkills from "components/organisms/AboutSkills";
 import Contact from "components/organisms/Contact";
 import AboutProfile from "components/organisms/AboutProfile";
 import HandAnimation from "components/atoms/HandAnimation";
 
+import { useTranslation } from "next-i18next";
+
 const About = () => {
+  const { t } = useTranslation(); 
   const { classes } = useStyles();
 
   const ref = useRef(null);
@@ -40,27 +43,20 @@ const About = () => {
             <Box className={classes.wrapHandAnimation}>
               <HandAnimation symbol="👋" label="sheep" />
             </Box>
-            안녕하세요,
+            {t("home:hello")}
           </Text>
           <Text className={ibmKr.className}>
-            더 나은 코드, 더 효율적인 개발을 위해 끊임없이 공부하고 노력하는
-            프론트엔드 개발자 김보라입니다.
+            {t('home:me')}
           </Text>
           <Text className={ibmKr.className}>
-            다양한 경험에서 비롯된 빠른 적응과 커뮤니케이션 스킬, 그리고
-            도전정신이 저의 장점입니다.
+            {t('home:strength')}
           </Text>
         </Flex>
       </Box>
 
       <Box className={classes.wrapRight}>
         <Text className={ibmKr.className}>
-          현재 포트폴리오는
-          <span className={montserrat.className}>
-            {" "}
-            Next.js, TypeScript, Mantine(emotion)
-          </span>
-          으로 제작했습니다.
+          {t('home:current_project')}
         </Text>
         <AboutSkills />
       </Box>
@@ -96,19 +92,20 @@ const useStyles = createStyles((theme, _params, getRef) => ({
   },
 
   wrapDesc: {
-    width: "66%",
+    width: "94%",
     padding: theme.spacing.xl,
     gap: theme.spacing.xl,
     flexDirection: "column",
-    position: "absolute",
-    bottom: 0,
-    right: 0,
+    position: "relative",
+    [`.${getRef("wrapHandAnimation")}`] : {
+      left: "100px",
+      top: "-16px",
+    }
   },
 
   wrapHandAnimation: {
+    ref: getRef("wrapHandAnimation"),
     position: "absolute",
-    left: "-56px",
-    top: "-34px",
   },
 
   descIcon: {
