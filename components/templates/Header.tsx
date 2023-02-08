@@ -1,9 +1,12 @@
-import { createStyles, useMantineColorScheme } from "@mantine/core";
+import { Button, createStyles, useMantineColorScheme } from "@mantine/core";
 import { Flex, Text, Box, Title } from "@mantine/core";
 import { ActionIcon } from "@mantine/core";
 import { IconMoonStars, IconSun } from "@tabler/icons-react";
+import { useRouter } from "next/router";
 import { Link } from "react-scroll";
 import { arsenal } from "types/TextType";
+import LinkLocale from "next/link";
+import { useTranslation } from "next-i18next";
 
 const headersData = [
   {
@@ -24,6 +27,10 @@ const Header = () => {
   const { classes } = useStyles();
   const { colorScheme, toggleColorScheme } = useMantineColorScheme();
   const dark = colorScheme === "dark";
+
+  const router = useRouter()
+  const { t } = useTranslation("home");
+
   return (
     <Box className={classes.wrapHeader} bg={dark ? "#1A1B1E" : "white"}>
       <Title className={arsenal.className}>BORA&apos;s Portfolio</Title>
@@ -34,6 +41,18 @@ const Header = () => {
         direction="row"
         wrap="wrap"
       >
+
+      <LinkLocale
+        href={router.pathname}
+        locale={router.locale === "en" ? "ko-KR" : "en"}
+        passHref
+        className={classes.lang}
+      >
+        <span className={arsenal.className}>
+          {t("lang.title")}
+        </span>
+      </LinkLocale>
+        
         {headersData.map((item) => (
           <Text key={item.id} className={classes.menu}>
             <Link
@@ -48,7 +67,7 @@ const Header = () => {
         ))}
         <ActionIcon
           variant="filled"
-          color={dark ? "yellow" : "violet.3"}
+          color={dark ? "pink.4" : "violet.3"}
           onClick={() => toggleColorScheme()}
           title="Toggle color scheme"
         >
@@ -97,4 +116,22 @@ const useStyles = createStyles((theme, _params) => ({
       },
     },
   },
+  lang: {
+    cursor: "pointer",
+    paddingLeft: theme.spacing.sm,
+    paddingRight: theme.spacing.sm,
+    borderRadius: theme.spacing.sm,
+    color: theme.colorScheme == "dark"
+    ? theme.colors.gray[1]
+    : theme.black,
+    backgroundColor:
+      theme.colorScheme == "dark"
+        ? theme.colors.pink[4]
+        : theme.colors.pink[2],
+    "&:hover": {
+      backgroundColor: theme.colorScheme == "dark"
+      ? theme.colors.pink[6]
+      : theme.colors.pink[4],
+    }
+  }
 }));
