@@ -1,0 +1,47 @@
+{"project":
+    {
+        "items": [
+            {
+                "image": "/img/devrel.png",
+                "title": "DEVREL",
+                "description": "Developing UI/UX",
+                "category": "Team Devrel",
+                "site": "https://dev-rel.com/",
+                "skill": ["Next.js", "TypeScript", "Mantine"]
+            },
+            {
+                "image": "/img/busanbeachweather.png",
+                "title": "Busan beach weather",
+                "description": "Developing UI/UX, design UI",
+                "category": "DX Sprint",
+                "site": "https://busanbeachweather.com/",
+                "skill": ["Next.js", "TypeScript", "emotion", "illustrator", "Figma"]
+            },
+            {
+                "image": "/img/technomade_admin.png",
+                "title": "Technomade Admin Web",
+                "description": "Web developing for the back office system of e-commerce",
+                "category": "로앤피플",
+                "site": "/project/technomade_admin/index.html",
+                "skill": ["html", "css", "js", "Figma"]
+            },
+            {
+                "image": "/img/technomade_user.png",
+                "title": "Technomade User Web",
+                "description": "Web developing for the user-side of e-commerce, in charge of boards UI/UX",
+                "category": "로앤피플",
+                "site": "/project/technomade/index.html",
+                "skill": ["html", "css", "js", "Figma"]
+            },
+            {
+                "image": "/img/seahan.png",
+                "title": "Creating Promotion Images",
+                "description": "Designing detailed products images to promote",
+                "category": "새한그레인",
+                "site": "https://smartstore.naver.com/orandamarket",
+                "skill": ["photoshop", "illustrator"]
+            }
+        ]
+    }
+}
+

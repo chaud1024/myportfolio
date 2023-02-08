@@ -1,0 +1,63 @@
+{"experience":
+    {
+        "items":
+            [
+                {
+                    "title": "DEVREL Front",
+                    "where": "Team Devrel",
+                    "from": "2022. 10.",
+                    "to": "2023. 01.",
+                    "description": "I designed and developed the responsive UI/UX by using mainly Next.js, TypeScript and Mantine",
+                    "content": "The purpose of this project is providing high-quality tech blogs written by curated IT companies in Korea. I designed the site using Figma, developed the front UI/UX. When it was v.1, I styled every components by Emotion, which is a css-in-js library. Whearas in v.2, I adopted Mantine, figured out that it helped me to work efficiently and quickly with high and stable quality. Furthermore, I experienced Git and git-fork to control branches with co-operators to preserve main branch and avoid any conflicts.",
+                    "site": "https://dev-rel.com/develop"
+                },
+                {
+                    "title": "DX Spirnt Awarded",
+                    "where": "DX Challange",
+                    "from": "2022. 08.",
+                    "to": "2022. 08.",
+                    "description": "Awarded Best Product prize by Hacker-ton: DX Challange in Busan during 14 days.",
+                    "content": "I participated a Hacker-ton event took place in Busan, from 5th August to 19th 2022. I created the main design and developed a responsive front-end based on Atomic Design System by using Next.js, Typescript and axios. This was the best oppurtunity to test myself as a front-end developer. Moreover, I was able to achived confidence through developing the product under pressure with very intensively limited environment.",
+                    "site": "https://busanbeachweather.com"
+                },
+                {
+                    "title": "Web Developer(HTML, CSS, JS)",
+                    "where": "로앤피플",
+                    "from": "2021. 09.",
+                    "to": "2022. 05.",
+                    "description": "I designed and created website pages considering clients' requests with strong understanding of HTML, CSS and JS.",
+                    "content": "I played a junior web developer role with basic competence in scripting using HTML, CSS and JavaScript. I created demonstrating web site pages with mock data. I experienced git to co-operate coworkers. I learnt how to manage my agile work flow, communicate and synchronise with  colleagues to prevent misunderstanding.",
+                    "site": null
+                },
+                {
+                    "title": "Web Design",
+                    "where": "새한그레인",
+                    "from": "2021. 04.",
+                    "to": "2021. 08.",
+                    "description": "I designed e-commerce promotning images of the products, managed stocks and e-commerce platforms.",
+                    "content": "I made product promotion images by photoshop, illustrator, I managed product stock by ordering to restock and preparing packages for custormers.",
+                    "site": "https://smartstore.naver.com/orandamarket"
+                },
+                {
+                    "title": "Educated Web Developer",
+                    "where": "그린컴퓨터학원 부산본관",
+                    "from": "2020. 11.",
+                    "to": "2021. 03.",
+                    "description": "I have strong understanding of HTML5, CSS3 and JavaScript(ECMA6).",
+                    "content": "Returned to South Korea, I signed the web developer education course supported by government. After graduated the course, I was able to be proficient in web markup, including HTML5 and CSS3, creating landing pages in implementing fully responsive designs.",
+                    "site": null
+                },
+                {
+                    "title": "Language & Working Holiday",
+                    "where": "Auckland, New Zealand",
+                    "from": "2019. 01.",
+                    "to": "2020. 09.",
+                    "description":
+                    "Achieved IELTS Academic 6.5 level, perfomed as a barista at  Columbus Coffee - the NZ local cafe.",
+                    "content":
+                    "After attending language course, I tested IELTS Academic and gained 6.5 level. As I received working holiday visa, I worked at Columbus Coffee Mt.Wellington branch as a barista over 8 months. Through this experence, I was able to communcate with multi-culture English speaking people, express my opinion confidently, and broaden my idea.",
+                    "site": null
+                }
+            ]
+    }
+}
