@@ -7,8 +7,9 @@ import {
 } from "@mantine/core";
 import Head from "next/head";
 import { useState } from "react";
+import { appWithTranslation } from "next-i18next";
 
-export default function App({ Component, pageProps }: AppProps) {
+function App({ Component, pageProps }: AppProps) {
   const [colorScheme, setColorScheme] = useState<ColorScheme>("light");
   const toggleColorScheme = (value?: ColorScheme) =>
     setColorScheme(value || (colorScheme === "dark" ? "light" : "dark"));
@@ -74,3 +75,5 @@ export default function App({ Component, pageProps }: AppProps) {
     </ColorSchemeProvider>
   );
 }
+
+export default appWithTranslation(App)
