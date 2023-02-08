@@ -1,9 +1,20 @@
-import { Title, Text, Accordion, Box } from "@mantine/core";
-import { arsenal } from "types/TextType";
+import { Title, Text, Accordion, Box, Group, Badge } from "@mantine/core";
+import { arsenal, ibmKr, montserrat } from "types/TextType";
 import { createStyles } from "@mantine/core";
 import { useEffect, useRef } from "react";
+
+import { useTranslation } from "next-i18next";
 import ExperienceItem from "components/organisms/ExperienceItem";
-import { expData } from "data/experienceData";
+
+export interface expDataProps {
+  title: string;
+  where: string;
+  from: string;
+  to: string;
+  description: string;
+  content: string;
+  site: string | null;
+}
 
 const Experience = () => {
   const { classes } = useStyles();
@@ -13,16 +24,22 @@ const Experience = () => {
     import("@lottiefiles/lottie-player");
   });
 
-  const itemList = expData.map((item, index) => (
+  const { t } = useTranslation("experience");
+
+  const expDataJson = t<string, expDataProps[]>("experience.items", {returnObjects: true})
+
+  const itemList = expDataJson.map((item: expDataProps, index:number) => (
     <Accordion.Item value={item.title} key={index}>
       <Accordion.Control>
-        <ExperienceItem {...item} />
+        <ExperienceItem {...item}/>
       </Accordion.Control>
       <Accordion.Panel>
-        <Text size="sm">{item.content}</Text>
+        <Text size="sm" className={ibmKr.className}>{item.content}</Text>
       </Accordion.Panel>
     </Accordion.Item>
   ));
+
+
 
   return (
     <Box className={classes.wrap} id="experiences">
@@ -39,6 +56,7 @@ const Experience = () => {
             autoplay
           ></lottie-player>
         </Box>
+
       </Box>
       <Box className={classes.wrapAccordion}>
         <Accordion chevronPosition="right" variant="contained">
@@ -79,17 +97,4 @@ const useStyles = createStyles((theme, _params) => ({
     flexDirection: "column",
   },
 
-  wrapBadge: {
-    display: "flex",
-    justifyContent: "center",
-    alignItems: "center",
-    position: "relative",
-  },
-
-  wrapLottieTwinkle: {
-    position: "absolute",
-    top: "-18px",
-    left: "-29px",
-    transform: "rotate(-9deg)",
-  },
 }));

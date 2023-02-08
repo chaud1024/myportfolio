@@ -1,7 +1,8 @@
 import { Badge, Box, Group, Text } from "@mantine/core";
 import { createStyles } from "@mantine/core";
-import { ExpProps } from "data/experienceData";
 import { ibmKr, montserrat } from "types/TextType";
+
+import { expDataProps } from "components/templates/Experience";
 
 const ExperienceItem = ({
   title,
@@ -10,15 +11,18 @@ const ExperienceItem = ({
   to,
   description,
   site,
-}: ExpProps) => {
+}: expDataProps) => {
+
   const { classes } = useStyles();
+
   return (
     <Group noWrap>
       <Box className={classes.wrapItemTitle}>
         <Badge color="indigo" radius="sm" className={ibmKr.className}>
           {where}
         </Badge>
-        <Text fz="lg" fw={600} sx={{ paddingTop: "4px" }}>
+        
+        <Text fz="lg" fw={600} sx={{ paddingTop: "4px" }} className={ibmKr.className}>
           {title}
         </Text>
       </Box>
@@ -58,6 +62,7 @@ const ExperienceItem = ({
           {description}
         </Text>
       </Box>
+    
     </Group>
   );
 };
