@@ -65,6 +65,7 @@ const Header = () => {
             </Link>
           </Text>
         ))}
+
         <ActionIcon
           variant="filled"
           color={dark ? "pink.4" : "violet.3"}
@@ -80,9 +81,10 @@ const Header = () => {
 
 export default Header;
 
-const useStyles = createStyles((theme, _params) => ({
+const useStyles = createStyles((theme, _params, getRef) => ({
   wrapHeader: {
-    width: "1280px",
+    width: "100%",
+    maxWidth: "1280px",
     display: "flex",
     justifyContent: "space-between",
     padding: theme.spacing.sm,
@@ -92,8 +94,14 @@ const useStyles = createStyles((theme, _params) => ({
     top: 0,
     left: "auto",
     zIndex: 999,
+    [`@media (max-width: ${theme.breakpoints.sm}px)`]: {
+      [`.${getRef("menu")}`] : {
+        display : "none"
+      }
+    }
   },
   menu: {
+    ref: getRef("menu"),
     cursor: "pointer",
     position: "relative",
     overflow: "hidden",

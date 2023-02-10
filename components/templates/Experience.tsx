@@ -1,7 +1,6 @@
 import { Title, Text, Accordion, Box, Group, Badge } from "@mantine/core";
 import { arsenal, ibmKr, montserrat } from "types/TextType";
 import { createStyles } from "@mantine/core";
-import { useEffect, useRef } from "react";
 
 import { useTranslation } from "next-i18next";
 import ExperienceItem from "components/organisms/ExperienceItem";
@@ -18,11 +17,6 @@ export interface expDataProps {
 
 const Experience = () => {
   const { classes } = useStyles();
-
-  const ref = useRef(null);
-  useEffect(() => {
-    import("@lottiefiles/lottie-player");
-  });
 
   const { t } = useTranslation("experience");
 
@@ -45,18 +39,6 @@ const Experience = () => {
     <Box className={classes.wrap} id="experiences">
       <Box className={classes.wrapExperienceTitle}>
         <Title className={arsenal.className}>What I have done</Title>
-        <Box className={classes.wrapLottieProject}>
-          <lottie-player
-            ref={ref}
-            src="https://assets8.lottiefiles.com/packages/lf20_DbCYKfCXBZ.json"
-            background="transparent"
-            speed="1.5"
-            style={{ width: "300px", height: "300px" }}
-            loop
-            autoplay
-          ></lottie-player>
-        </Box>
-
       </Box>
       <Box className={classes.wrapAccordion}>
         <Accordion chevronPosition="right" variant="contained">
@@ -75,26 +57,25 @@ const useStyles = createStyles((theme, _params) => ({
     display: "flex",
     justifyContent: "space-between",
     padding: "64px 16px 72px",
+    [`@media (max-width: ${theme.breakpoints.md}px)`]: {
+      flexDirection: "column"
+   }
   },
 
   wrapExperienceTitle: {
     display: "flex",
-    flexDirection: "column",
     justifyContent: "space-between",
     position: "relative",
     marginTop: theme.spacing.md,
   },
 
-  wrapLottieProject: {
-    position: "absolute",
-    top: "200px",
-    left: "0",
-  },
-
   wrapAccordion: {
-    width: "66%",
+    width: "70%",
     display: "flex",
     flexDirection: "column",
+    [`@media (max-width: ${theme.breakpoints.md}px)`]: {
+      width: "100%"
+   }
   },
 
 }));

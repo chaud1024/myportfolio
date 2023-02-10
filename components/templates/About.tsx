@@ -24,20 +24,7 @@ const About = () => {
     <Box className={classes.wrap} id="about">
       <Box className={classes.wrapLeft}>
         <AboutProfile />
-        <Box className={classes.wrapLottieHello}>
-          <lottie-player
-            ref={ref}
-            src="https://assets4.lottiefiles.com/packages/lf20_rbtawnwz.json"
-            background="transparent"
-            speed="1.5"
-            style={{ width: "300px", height: "300px" }}
-            loop
-            autoplay
-          ></lottie-player>
-        </Box>
-        <Box className={classes.wrapContact}>
-          <Contact />
-        </Box>
+
         <Flex className={classes.wrapDesc}>
           <Text className={ibmKr.className}>
             <Box className={classes.wrapHandAnimation}>
@@ -52,6 +39,9 @@ const About = () => {
             {t('home:strength')}
           </Text>
         </Flex>
+      </Box>
+      <Box className={classes.wrapContact}>
+          <Contact />
       </Box>
 
       <Box className={classes.wrapRight}>
@@ -72,6 +62,15 @@ const useStyles = createStyles((theme, _params, getRef) => ({
     display: "flex",
     justifyContent: "space-between",
     padding: "128px 16px 72px",
+    [`@media (max-width: ${theme.breakpoints.md}px)`]: {
+        flexDirection: "column"
+    },
+    [`.${getRef("wrapContact")}`]: {
+      position: "fixed",
+      margin: "0 auto",
+      transform: "translateX(-72px)",
+      bottom: "120px",
+    },
   },
 
   wrapLeft: {
@@ -82,12 +81,10 @@ const useStyles = createStyles((theme, _params, getRef) => ({
     gap: theme.spacing.md,
     position: "relative",
     paddingTop: theme.spacing.lg,
-
-    [`.${getRef("wrapContact")}`]: {
-      position: "fixed",
-      margin: "0 auto",
-      transform: "translateX(-72px)",
-      bottom: "120px",
+    [`@media (max-width: ${theme.breakpoints.md}px)`]: {
+      width: "100%",
+      flexDirection: "row",
+      gap: 0,
     },
   },
 
@@ -100,7 +97,11 @@ const useStyles = createStyles((theme, _params, getRef) => ({
     [`.${getRef("wrapHandAnimation")}`] : {
       left: "100px",
       top: "-16px",
-    }
+    },
+    [`@media (max-width: ${theme.breakpoints.md}px)`]: {
+      width: "70%",
+      padding: theme.spacing.sm
+  },
   },
 
   wrapHandAnimation: {
@@ -136,13 +137,12 @@ const useStyles = createStyles((theme, _params, getRef) => ({
     alignItems: "flex-start",
     gap: theme.spacing.md,
     marginTop: "64px",
+    [`@media (max-width: ${theme.breakpoints.md}px)`]: {
+      width: "100%",
+
+    },
   },
 
-  wrapLottieHello: {
-    position: "absolute",
-    top: "-150px",
-    left: "-72px",
-  },
 
   wrapLottieMail: {
     position: "absolute",

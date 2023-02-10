@@ -31,7 +31,7 @@ const Footer = () => {
             I am looking forward to hearing from you.
           </Text>
         </Box>
-        <Flex gap={"xl"} justify={"end"}>
+        <Flex className={classes.wrapContact}>
           <Flex gap={8}>
             <IconDeviceMobile size={24} stroke={1} />
             <Text className={montserrat.className}>
@@ -90,12 +90,29 @@ const useStyles = createStyles((theme, _params) => ({
   wrapFooter: {
     width: "100%",
     padding: "32px",
+    marginLeft: "32px",
+    boxSizing: "border-box"
   },
 
   wrapThanks: {
     marginBottom: "32px",
     paddingBottom: "32px",
+    paddingRight: "16px",
     borderBottom: "1px solid",
     borderColor: theme.colors.gray[6],
+    [`@media (max-width: ${theme.breakpoints.md}px)`]: {
+      textAlign: "right"
+    }
   },
+
+  wrapContact: {
+    display: "flex",
+    justifyContent: "end",
+    paddingRight: "16px",
+    gap: theme.spacing.xl,
+    [`@media (max-width: ${theme.breakpoints.md}px)`]: {
+      flexDirection: "column",
+      alignItems: "end"
+    }
+  }
 }));
