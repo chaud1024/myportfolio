@@ -26,6 +26,10 @@ const skillData: SkillProps = {
       imgsrc: "/logo/emotion.png",
     },
     {
+      title: "TailwindCSS",
+      imgsrc: "/logo/tailwind.png",
+    },
+    {
       title: "JavaScript",
       imgsrc: "/logo/js.png",
     },
@@ -40,6 +44,10 @@ const skillData: SkillProps = {
     {
       title: "Next.js",
       imgsrc: "/logo/nextjs.png",
+    },
+    {
+      title: "Vue3.js",
+      imgsrc: "/logo/vue3.png",
     },
   ],
   design: [
