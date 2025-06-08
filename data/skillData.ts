@@ -61,10 +61,6 @@ const skillData: SkillProps = {
       title: "GitHub",
       imgsrc: "/logo/github.png",
     },
-    {
-      title: "git-fork",
-      imgsrc: "/logo/gitfork.png",
-    },
   ],
 };
 

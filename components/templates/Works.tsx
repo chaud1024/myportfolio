@@ -1,9 +1,10 @@
-import { Title, Text, Accordion, Box, Group, Badge } from "@mantine/core";
+import { Title, Text, Accordion, Box, Group, Badge, List, ThemeIcon } from "@mantine/core";
 import { arsenal, ibmKr, montserrat } from "types/TextType";
 import { createStyles } from "@mantine/core";
 import { expData } from "data/experienceData";
 import { useTranslation } from "next-i18next";
 import ExperienceItem from "components/organisms/ExperienceItem";
+import { IconLink } from "@tabler/icons-react";
 
 export interface expDataProps {
   title: string;
@@ -12,39 +13,57 @@ export interface expDataProps {
   to: string;
   description: string;
   content: string;
-  sort: string;
   site: string | null;
-  projectList?: object[]; 
+  sort: string;
+  projectList?: object[];
 }
 
-const Experience = () => {
+const Work = () => {
   const { classes } = useStyles();
 
   const { t } = useTranslation("experience");
 
   // const expDataJson = t<string, expDataProps[]>("experience.items", {returnObjects: true})
 
-  
-  const expList = expData.filter((item: expDataProps, index:number) => {
-    return item.sort === 'experience'
+  const workList = expData.filter((item: expDataProps, index:number) => {
+    return item.sort === 'work'
   })
 
-  const itemList = expList.map((item: expDataProps, index:number) => (
+  const itemList = workList.map((item: expDataProps, index:number) => (
     <Accordion.Item value={item.title} key={index}>
       <Accordion.Control>
         <ExperienceItem {...item}/>
       </Accordion.Control>
       <Accordion.Panel>
         <Text size="sm" className={ibmKr.className}>{item.content}</Text>
+        <List spacing="xs" size="sm" center icon={
+          <ThemeIcon color="teal" size={24} radius="xl">
+            <IconLink size={16} />
+          </ThemeIcon>
+        }>
+          { item.projectList && item.projectList.length > 0 &&
+            item.projectList.map((item, idx) => (
+              <List.Item key={idx} className={ibmKr.className} style={{marginTop: '0.5rem'}}>
+                <a href={item.url} target="_blank">{item.title}</a>
+              </List.Item>
+            ))
+          }
+          {
+            item.site &&
+              <List.Item className={ibmKr.className} style={{marginTop: '0.5rem'}}>
+                  <a href={item.site} target="_blank">Go to the Site</a>
+              </List.Item>
+          }
+        </List>
       </Accordion.Panel>
     </Accordion.Item>
   ));
 
 
   return (
-    <Box className={classes.wrap} id="experiences">
+    <Box className={classes.wrap} id="works">
       <Box className={classes.wrapExperienceTitle}>
-        <Title className={arsenal.className}>What I have done</Title>
+        <Title className={arsenal.className}>What I have worked</Title>
       </Box>
       <Box className={classes.wrapAccordion}>
         <Accordion chevronPosition="right" variant="contained">
@@ -55,7 +74,7 @@ const Experience = () => {
   );
 };
 
-export default Experience;
+export default Work;
 
 const useStyles = createStyles((theme, _params) => ({
   wrap: {

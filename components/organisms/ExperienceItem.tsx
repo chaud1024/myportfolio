@@ -11,6 +11,7 @@ const ExperienceItem = ({
   to,
   description,
   site,
+  projectList
 }: expDataProps) => {
 
   const { classes } = useStyles();
@@ -29,9 +30,9 @@ const ExperienceItem = ({
       <Box sx={{ width: "54%" }}>
         <Box className={classes.wrapItemContent}>
           <Text className={montserrat.className} size={12}>
-            {from} ~ {to}
+            {from} - {to}
           </Text>
-          {site ? (
+          {site || projectList ? (
             <Box className={classes.wrapBadge}>
               <div className={classes.wrapLottieTwinkle}>
                 <lottie-player
@@ -47,9 +48,6 @@ const ExperienceItem = ({
                 radius="sm"
                 variant="gradient"
                 gradient={{ from: "#ed6ea0", to: "#ff9c75", deg: 35 }}
-                component="a"
-                href={site}
-                target="_blank"
                 className={montserrat.className}
                 fw={400}
               >

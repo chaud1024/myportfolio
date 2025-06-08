@@ -14,13 +14,17 @@ const headersData = [
     id: "about",
   },
   {
+    label: "Works",
+    id: "works",
+  },
+  {
     label: "Experiences",
     id: "experiences",
   },
-  {
-    label: "Projects",
-    id: "projects",
-  },
+  // {
+  //   label: "Projects",
+  //   id: "projects",
+  // },
 ];
 
 const Header = () => {
@@ -42,7 +46,7 @@ const Header = () => {
         wrap="wrap"
       >
 
-      <LinkLocale
+      {/* <LinkLocale
         href={router.pathname}
         locale={router.locale === "en" ? "ko-KR" : "en"}
         passHref
@@ -51,7 +55,7 @@ const Header = () => {
         <span className={arsenal.className}>
           {t("lang.title")}
         </span>
-      </LinkLocale>
+      </LinkLocale> */}
         
         {headersData.map((item) => (
           <Text key={item.id} className={classes.menu}>
