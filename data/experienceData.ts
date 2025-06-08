@@ -1,3 +1,8 @@
+interface Project {
+  title: string;
+  url: string;
+}
+
 export interface ExpProps {
   title: string;
   where: string;
@@ -7,7 +12,7 @@ export interface ExpProps {
   content: string;
   sort: string;
   site: string | null;
-  projectList?: object[];
+  projectList?: Project[];
 }
 
 export const expData: ExpProps[] = [

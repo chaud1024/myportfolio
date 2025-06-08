@@ -5,6 +5,11 @@ import { expData } from "data/experienceData";
 import { useTranslation } from "next-i18next";
 import ExperienceItem from "components/organisms/ExperienceItem";
 
+interface Project {
+  title: string;
+  url: string;
+}
+
 export interface expDataProps {
   title: string;
   where: string;
@@ -14,7 +19,7 @@ export interface expDataProps {
   content: string;
   sort: string;
   site: string | null;
-  projectList?: object[]; 
+  projectList?: Project[]; 
 }
 
 const Experience = () => {

@@ -5,18 +5,8 @@ import { expData } from "data/experienceData";
 import { useTranslation } from "next-i18next";
 import ExperienceItem from "components/organisms/ExperienceItem";
 import { IconLink } from "@tabler/icons-react";
+import { expDataProps } from "./Experience";
 
-export interface expDataProps {
-  title: string;
-  where: string;
-  from: string;
-  to: string;
-  description: string;
-  content: string;
-  site: string | null;
-  sort: string;
-  projectList?: object[];
-}
 
 const Work = () => {
   const { classes } = useStyles();
