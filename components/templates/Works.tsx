@@ -44,14 +44,14 @@ const Work = () => {
           { item.projectList && item.projectList.length > 0 &&
             item.projectList.map((item, idx) => (
               <List.Item key={idx} className={ibmKr.className} style={{marginTop: '0.5rem'}}>
-                <a href={item.url} target="_blank">{item.title}</a>
+                <a href={item.url} target="_blank" rel="noopener noreferrer">{item.title}</a>
               </List.Item>
             ))
           }
           {
             item.site &&
               <List.Item className={ibmKr.className} style={{marginTop: '0.5rem'}}>
-                  <a href={item.site} target="_blank">Go to the Site</a>
+                  <a href={item.site} target="_blank" rel="noopener noreferrer">Go to the Site</a>
               </List.Item>
           }
         </List>
